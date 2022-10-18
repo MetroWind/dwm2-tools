@@ -178,6 +178,19 @@ impl MonsterVis
         }
     }
 
+    fn label(&self) -> String
+    {
+        let plus_str = if self.monster.plus_level_min > 0
+        {
+            format!("+{}", self.monster.plus_level_min)
+        }
+        else
+        {
+            String::new()
+        };
+        self.monster.name.clone() + &plus_str
+    }
+
     fn toDotSpec(&self) -> String
     {
         let color = match self.monster.sex
@@ -198,7 +211,7 @@ impl MonsterVis
 
         format!("\"{}\"[label=\"{}\", style=\"filled\", fillcolor=\"{}\"{}, \
                  URL=\"https://darksair.org/dwm2-breed/monster/{}\"];",
-                self.monster.to_string(), self.monster.name, color, border_str,
+                self.monster.to_string(), self.label(), color, border_str,
                 self.monster.name)
     }
 
@@ -207,6 +220,10 @@ impl MonsterVis
         if self.role == None
         {
             self.role = new.role;
+        }
+        if new.monster.plus_level_min > self.monster.plus_level_min
+        {
+            self.monster.plus_level_min = new.monster.plus_level_min;
         }
     }
 }
