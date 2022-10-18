@@ -66,7 +66,8 @@ fn main() -> Result<(), Error>
             .help("Output file")).arg(
         clap::Arg::new("output_type").short('t').long("output-type")
             .value_name("TYPE").default_value("pdf")
-            .help("Output file type. E.g. 'pdf', 'svg', etc."))
+            .help("Output file type. E.g. 'pdf', 'svg', etc. \
+                   This argument is passed to the dot -T option."))
         .get_matches();
 
     let filename = options.get_one::<String>("FILE").unwrap();

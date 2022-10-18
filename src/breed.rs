@@ -40,19 +40,29 @@ impl FromStr for Sex
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
+enum Role { Base, Mate }
+
+/// A monster of some kind, like “a female RainHawk”. In a breed plan,
+/// a monster is uniquely identified (only) by the name, the sex, and
+/// the index.
+#[derive(Debug, Clone)]
 struct Monster
 {
+    /// Name of the kind of monster, e.g. “RainHawk”.
     name: String,
     sex: Sex,
+    /// This is used to distiguish two monsters of the same kind in a
+    /// breed plan. If the plan has 2 slimes, one can have index 0
+    /// (default) and the other can have index 1.
     index: u16,
+    /// The minimal plus level required of this monster. 0 means no
+    /// requirements.
     plus_level_min: u16,
 }
 
-#[derive(Clone, PartialEq, Eq)]
-enum Role { Base, Mate }
-
 impl Monster
 {
+    #[allow(dead_code)]
     fn new(name: &str, sex: Sex) -> Self
     {
         Self {
@@ -63,6 +73,17 @@ impl Monster
          }
     }
 }
+
+impl PartialEq for Monster
+{
+    fn eq(&self, other: &Self) -> bool
+    {
+        self.name == other.name && self.sex == other.sex &&
+            self.index == other.index
+    }
+}
+
+impl Eq for Monster {}
 
 impl Hash for Monster
 {
@@ -76,6 +97,9 @@ impl Hash for Monster
 
 impl fmt::Display for Monster
 {
+    /// How to display a monster as a string. Note that if the sex is
+    /// `Any`, it’s not included in the string. Similarly, 0 plus
+    /// level requirements and/or 0 index is not included.
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result
     {
         let sex_str = if self.sex == Sex::Any
@@ -106,6 +130,8 @@ impl fmt::Display for Monster
 impl FromStr for Monster
 {
     type Err = Error;
+
+    /// How to parse a Monster out of a string. This is the inverse of `fmt()`.
     fn from_str(s: &str) -> Result<Self, Self::Err>
     {
         let pattern = Regex::new(
@@ -161,23 +187,30 @@ impl FromStr for Monster
     }
 }
 
-#[derive(Clone, PartialEq, Eq)]
+/// Monster visualization spec. This defines how the monster is
+/// displayed in the generated breed plan.
+#[derive(Debug, Clone)]
 struct MonsterVis
 {
     monster: Monster,
     role: Option<Role>,
+    /// This is the in-game name of the monster, given by the player.
+    /// Different from `Monster::name`.
+    name: Option<String>,
 }
 
 impl MonsterVis
 {
-    fn fromMonster(m: Monster, role: Option<Role>) -> Self
+    fn fromMonster(m: Monster, role: Option<Role>, name: Option<String>) -> Self
     {
         Self {
             monster: m,
             role: role,
+            name: name,
         }
     }
 
+    /// Generate a label for this monster in the dot file.
     fn label(&self) -> String
     {
         let plus_str = if self.monster.plus_level_min > 0
@@ -188,7 +221,17 @@ impl MonsterVis
         {
             String::new()
         };
-        self.monster.name.clone() + &plus_str
+
+        let custom_name_str = if let Some(n) = &self.name
+        {
+            format!("<br/><font point-size=\"10\">“{}”</font>", n)
+        }
+        else
+        {
+            String::new()
+        };
+
+        self.monster.name.clone() + &plus_str + &custom_name_str
     }
 
     fn toDotSpec(&self) -> String
@@ -209,12 +252,16 @@ impl MonsterVis
             String::new()
         };
 
-        format!("\"{}\"[label=\"{}\", style=\"filled\", fillcolor=\"{}\"{}, \
+        format!("\"{}\"[label=<{}>, style=\"filled\", fillcolor=\"{}\"{}, \
                  URL=\"https://darksair.org/dwm2-breed/monster/{}\"];",
                 self.monster.to_string(), self.label(), color, border_str,
                 self.monster.name)
     }
 
+    /// Update this visualization spec from other visualization spec
+    /// of the same monster. Set role and in-game name from `new` if
+    /// self does not have them. Set the plus level requirement from
+    /// `new` if that of `new` is higher in that of self.
     fn update(&mut self, new: Self)
     {
         if self.role == None
@@ -225,8 +272,54 @@ impl MonsterVis
         {
             self.monster.plus_level_min = new.monster.plus_level_min;
         }
+        if self.name == None
+        {
+            self.name = new.name;
+        }
     }
 }
+
+impl FromStr for MonsterVis
+{
+    type Err = Error;
+    fn from_str(s: &str) -> Result<Self, Self::Err>
+    {
+        let pattern = Regex::new(r"(.+):[ \t]+(.+)").unwrap();
+        if let Some(groups) = pattern.captures(s)
+        {
+            // Make sure it’s a complete match.
+            let whole = groups.get(0).unwrap();
+            if whole.start() != 0 || whole.end() != s.len()
+            {
+                return Err(error!(FormatError,
+                                  "Invalid monster specification: {}",
+                                  s));
+            }
+
+            let monster: Monster = groups.get(1).unwrap().as_str().parse()?;
+            let name = groups.get(2).unwrap().as_str();
+            Ok(Self {
+                monster: monster,
+                role: None,
+                name: Some(String::from(name)),
+            })
+        }
+        else
+        {
+            Err(error!(FormatError, "Invalid monster specification: {}", s))
+        }
+    }
+}
+
+impl PartialEq for MonsterVis
+{
+    fn eq(&self, other: &Self) -> bool
+    {
+        self.monster == other.monster
+    }
+}
+
+impl Eq for MonsterVis {}
 
 impl Hash for MonsterVis
 {
@@ -276,21 +369,58 @@ impl FromStr for Breed
     }
 }
 
+#[derive(Debug, Clone, PartialEq, Eq)]
+enum BreedOrSpec
+{
+    Breed(Breed),
+    Spec(MonsterVis),
+}
+
+impl FromStr for BreedOrSpec
+{
+    type Err = Error;
+    fn from_str(s: &str) -> Result<Self, Self::Err>
+    {
+        if let Ok(breed) = s.parse::<Breed>()
+        {
+            Ok(Self::Breed(breed))
+        }
+        else
+        {
+            Ok(Self::Spec(s.parse()?))
+        }
+    }
+}
+
 pub struct BreedPlan
 {
     steps: Vec<Breed>,
+    specs: HashSet<MonsterVis>,
 }
 
 impl BreedPlan
 {
     pub fn new() -> Self
     {
-        Self { steps: Vec::new() }
+        Self { steps: Vec::new(), specs: HashSet::new() }
     }
 
     fn addStep(&mut self, breed: Breed)
     {
         self.steps.push(breed);
+    }
+
+    fn addSpec(&mut self, spec: MonsterVis) -> bool
+    {
+        if self.specs.contains(&spec)
+        {
+            false
+        }
+        else
+        {
+            self.specs.insert(spec);
+            true
+        }
     }
 
     pub fn fromStream(stream: &mut dyn BufRead) -> Result<Self, Error>
@@ -309,7 +439,19 @@ impl BreedPlan
                 continue;
             }
 
-            plan.addStep(line.parse()?);
+            match line.parse::<BreedOrSpec>()?
+            {
+                BreedOrSpec::Breed(b) => { plan.addStep(b); },
+                BreedOrSpec::Spec(vis) => {
+                    let monster_str = vis.monster.to_string();
+                    if !plan.addSpec(vis)
+                    {
+                        println!("WARNING: duplicated monster spec for {}, \
+                                  ignoring...",
+                                 monster_str);
+                    }
+                },
+            }
         }
         Ok(plan)
     }
@@ -317,18 +459,18 @@ impl BreedPlan
     pub fn toDot(&self) -> String
     {
         let mut lines: Vec<String> = Vec::new();
-        let mut monsters: HashSet<MonsterVis> = HashSet::new();
+        let mut monsters: HashSet<MonsterVis> = self.specs.clone();
 
         lines.push(String::from("digraph G {"));
         lines.push(String::from("node[shape=\"box\"];"));
         for breed in &self.steps
         {
             let base_vis = MonsterVis::fromMonster(
-                breed.base.clone(), Some(Role::Base));
+                breed.base.clone(), Some(Role::Base), None);
             let mate_vis = MonsterVis::fromMonster(
-                breed.mate.clone(), Some(Role::Mate));
+                breed.mate.clone(), Some(Role::Mate), None);
             let result_vis = MonsterVis::fromMonster(
-                breed.outcome.clone(), None);
+                breed.outcome.clone(), None, None);
 
             match monsters.take(&base_vis)
             {
