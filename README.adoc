@@ -80,3 +80,12 @@ Slime(M) + Slime(F) = Slime
 
 which means the male slime is named “Slash”, which is used to breed
 another slime. The name is shown in the generated graph.
+
+== About DWM2 & tools
+
+DWM2 is best game. Unfortunately young people don’t know about it. I
+have more tools for this game, but they are written a loooong
+time ago. I need to rewrite some of them. After that I’ll probably add
+them to this repo. Meanwhile take a look at my
+https://darksair.org/dwm2-breed/[breed database]. I also have the
+breed rules as structured data, which I’ll probably add here soon(TM).
