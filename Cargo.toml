@@ -1,2 +1,2 @@
 [workspace]
-members = ["planner"]
+members = ["planner", "data"]
