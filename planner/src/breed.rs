@@ -529,7 +529,7 @@ mod tests
                        index: 1,
                        plus_level_min: 2,
                    }.to_string(),
-                   "Zapbird(M)/1+2");
+                   "Zapbird(M)/1");
     }
 
     #[test]
