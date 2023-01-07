@@ -111,19 +111,10 @@ impl fmt::Display for Monster
             format!("({})", self.sex)
         };
 
-        let level_str = if self.plus_level_min > 0
-        {
-            format!("+{}", self.plus_level_min)
-        }
-        else
-        {
-            String::new()
-        };
-
         let index_str = if self.index > 0 { format!("/{}", self.index) }
         else {String::new()};
 
-        write!(f, "{}{}{}{}", self.name, sex_str, index_str, level_str)
+        write!(f, "{}{}{}", self.name, sex_str, index_str)
     }
 }
 
