@@ -3594,7 +3594,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <breed-requirement monster="Slime"/>
       </base>
       <mate>
-        <breed-requirement monster="Slime" min_plus="5"/>
+        <breed-requirement monster="Slime" min_plus="4"/>
       </mate>
     </breed>
     <breed target="KingSlime">
@@ -3859,7 +3859,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <breed-requirement monster="SpotSlime"/>
       </base>
       <mate>
-        <breed-requirement monster="SpotSlime" min_plus="5"/>
+        <breed-requirement monster="SpotSlime" min_plus="4"/>
       </mate>
     </breed>
     <breed target="SpotSlime">
@@ -4143,7 +4143,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     </breed>
     <breed target="GreatDrak">
       <base>
-        <breed-requirement monster="Dragon" min_plus="5"/>
+        <breed-requirement monster="Dragon" min_plus="4"/>
       </base>
       <mate>
         <breed-requirement monster="Dragon"/>
@@ -4151,7 +4151,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     </breed>
     <breed target="GreatDrak">
       <base>
-        <breed-requirement monster="DragonKid" min_plus="5"/>
+        <breed-requirement monster="DragonKid" min_plus="4"/>
       </base>
       <mate>
         <breed-requirement monster="DragonKid"/>
@@ -7925,7 +7925,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <breed-requirement monster="Octoreach"/>
       </base>
       <mate>
-        <breed-requirement monster="Octoreach" min_plus="5"/>
+        <breed-requirement monster="Octoreach" min_plus="4"/>
       </mate>
     </breed>
     <breed target="Octokid">
