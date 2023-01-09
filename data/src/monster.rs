@@ -1,10 +1,9 @@
-use std::io::BufRead;
-use std::str;
+//! Data structures and logic about the DMW2 monsters and families
+
 use std::cell::RefCell;
 use std::rc::Rc;
 
 use quick_xml::events::BytesStart;
-use quick_xml::Reader;
 
 use crate::xml::{self, getTagAttr};
 use crate::error::Error;
@@ -20,9 +19,7 @@ pub struct MapLocation
 
 impl MapLocation
 {
-    /// Parse the location tag.
-    ///
-    /// A location tag looks like this:
+    /// Parse the location tag. A location tag looks like this:
     ///
     /// ```xml
     /// <location>
@@ -30,29 +27,20 @@ impl MapLocation
     ///   <description>Near Door Shrine</description>
     /// </location>
     /// ```
-    ///
-    /// When the reader finds a location tag and calls
-    /// `MapLocation::fromXMLReader()`, it already consumes the tag.
-    /// So the parser in fromXMLReader() will only see the closing
-    /// tag. This is invalid XML. So here the `opening` argument will
-    /// be the opening tag, so the parser sees it.
-    fn fromXMLReader<R: BufRead>(opening: &BytesStart, reader: xml::Reader<R>)
-                                 -> Result<Self, Error>
+    fn fromXML(x: &[u8]) -> Result<Self, Error>
     {
         let mut map = String::new();
         let mut desc = String::new();
         let mut p = xml::Parser::new();
         p.addTextHandler("map", |_, text| {
-            map = str::from_utf8(text.clone().into_inner().as_ref()).map_err(
-                |_| rterr!("Failed to decode map"))?.to_owned();
+            map = text.to_owned();
             Ok(())
         });
         p.addTextHandler("description", |_, text| {
-            desc = str::from_utf8(text.clone().into_inner().as_ref()).map_err(
-                |_| rterr!("Failed to decode description"))?.to_owned();
+            desc = text.to_owned();
             Ok(())
         });
-        p.parse(Some(opening), reader)?;
+        p.parse(x)?;
         drop(p);
         Ok(Self {
             map,
@@ -105,17 +93,22 @@ impl Growth
 /// The info of a monster
 pub struct Monster
 {
+    /// Name of the monster
     pub name: String,
+    /// Whether the monster can be find in the story maps
     pub in_story: bool,
+    /// Spawn location of the monster. Only monsters with `in_story ==
+    /// true` has this.
     pub locations: Vec<MapLocation>,
+    /// Natural abilities of the monster
     pub abilities: Vec<String>,
+    /// Monster growth data
     pub growth: Growth,
 }
 
 impl Monster
 {
-    fn fromXMLReader<R: BufRead>(opening: &BytesStart, reader: xml::Reader<R>)
-                                 -> Result<Self, Error>
+    fn fromXML(x: &[u8]) -> Result<Self, Error>
     {
         let mut name = String::new();
         let mut in_story = false;
@@ -131,21 +124,19 @@ impl Monster
                 || rterr!("In_story value not found"))?;
             Ok(())
         });
-        p.addBeginHandler("location", |_, tag| {
-            locations.push(MapLocation::fromXMLReader(tag, reader.clone())?);
+        p.addTagHandler("location", |_, tag| {
+            locations.push(MapLocation::fromXML(tag)?);
             Ok(())
         });
         p.addTextHandler("ability", |_, text| {
-            abilities.push(str::from_utf8(text.clone().into_inner().as_ref())
-                           .map_err(|_| rterr!("Failed to read ability"))?
-                           .to_owned());
+            abilities.push(text.to_owned());
             Ok(())
         });
         p.addBeginHandler("growth", |_, tag| {
             growth = Growth::fromXMLTag(tag)?;
             Ok(())
         });
-        p.parse(Some(opening), reader.clone())?;
+        p.parse(x)?;
         drop(p);
 
         Ok(Self { name, in_story, locations, abilities, growth })
@@ -156,24 +147,25 @@ impl Monster
 #[derive(Default)]
 pub struct Family
 {
-    /// Name of the family in lower case.
+    /// Name of the family in *lower case*.
     pub name: String,
     /// List of name of monsters in this family.
     pub members: Vec<String>,
 }
 
-/// All monster data
+/// Data about a set of monsters and families.
 #[derive(Default)]
 pub struct Info
 {
+    /// A list of monsters
     pub monsters: Vec<Monster>,
+    /// A list of families
     pub families: Vec<Family>,
 }
 
 impl Info
 {
-    pub fn fromXMLReader<R: BufRead>(opening: &BytesStart, reader: xml::Reader<R>)
-                                 -> Result<Self, Error>
+    pub fn fromXML(x: &[u8]) -> Result<Self, Error>
     {
         let family = Rc::new(RefCell::new(Family::default()));
         let mut monsters = Vec::new();
@@ -190,14 +182,14 @@ impl Info
             *family.borrow_mut() = Family::default();
             Ok(())
         });
-        p.addBeginHandler("monster", |_, tag| {
-            let monster = Monster::fromXMLReader(tag, reader.clone())?;
+        p.addTagHandler("monster", |_, tag| {
+            let monster = Monster::fromXML(tag)?;
             family.borrow_mut().members.push(monster.name.clone());
             monsters.push(monster);
             Ok(())
         });
 
-        p.parse(Some(opening), reader.clone())?;
+        p.parse(x)?;
         drop(p);
         Ok(Self { monsters, families })
     }

@@ -1,47 +1,49 @@
+//! Data structures and logic about the DMW2 game data.
+//!
+//! This crate deals with the generic DWM2 game data, not a particular
+//! play through. Therefore when it refers to “monster name”, it
+//! refers to the name of the monster type (e.g. “Slime”), not the
+//! name you made up for your monsters.
+
 #![allow(non_snake_case)]
 
 #[macro_use]
-mod error;
-mod monster;
-mod breed;
-mod xml;
-
-use std::io::BufRead;
+pub mod error;
+pub mod monster;
+pub mod breed;
+pub mod xml;
 
 use crate::error::Error;
 
+/// All DWM2 game data. This is the entry point of the whole library.
 pub struct GameData
 {
+    /// Data about monsters
     pub monster_data: monster::Info,
+    /// All breed formulae
     pub breed_formulae: Vec<breed::Formula>,
 }
 
 impl GameData
 {
-    fn fromXMLReader<R: BufRead>(reader: xml::Reader<R>) -> Result<Self, Error>
+    /// Create a GameData from XML.
+    pub fn fromXML(x: &[u8]) -> Result<Self, Error>
     {
         let mut monster_data = monster::Info::default();
         let mut breed_formulae = Vec::new();
 
         let mut p = xml::Parser::new();
-        p.addBeginHandler("families", |_, tag| {
-            monster_data = monster::Info::fromXMLReader(tag, reader.clone())?;
+        p.addTagHandler("families", |_, tag| {
+            monster_data = monster::Info::fromXML(tag)?;
             Ok(())
         });
-        p.addBeginHandler("breed", |_, tag| {
-            breed_formulae.push(
-                breed::Formula::fromXMLReader(tag, reader.clone())?);
+        p.addTagHandler("breed", |_, tag| {
+            breed_formulae.push(breed::Formula::fromXML(tag)?);
             Ok(())
         });
-        p.parse(None, reader.clone())?;
+        p.parse(x)?;
         drop(p);
         Ok(Self { monster_data, breed_formulae })
-    }
-
-    pub fn fromXML<R: BufRead>(reader: R) -> Result<Self, Error>
-    {
-        Self::fromXMLReader(xml::newReader(
-            quick_xml::Reader::from_reader(reader)))
     }
 }
 
@@ -51,7 +53,6 @@ impl GameData
 mod tests {
     use super::*;
 
-    use std::io::Cursor;
     use anyhow::Result;
 
     #[test]
@@ -105,11 +106,11 @@ mod tests {
   </breeds>
 </monster-data>
 "#;
-        let data = GameData::fromXML(Cursor::new(xml.as_bytes()))?;
+        let data = GameData::fromXML(xml.as_bytes())?;
         assert_eq!(data.breed_formulae.len(), 1);
         assert_eq!(data.monster_data.monsters.len(), 2);
         assert_eq!(data.monster_data.families.len(), 1);
-        assert_eq!(data.monster_data.families[0].members.len(), 1);
+        assert_eq!(data.monster_data.families[0].members.len(), 2);
         Ok(())
     }
 }

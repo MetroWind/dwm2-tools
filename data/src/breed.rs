@@ -1,24 +1,32 @@
-use std::io::BufRead;
+//! Data structures and logic about the DMW2 breed formulae
+
 use std::str;
 
-use quick_xml::events::{Event, BytesEnd, BytesStart, BytesText};
-use quick_xml::{Reader, Writer};
+use quick_xml::events::BytesStart;
 
 use crate::error::Error;
-use crate::monster;
 use crate::xml;
 
+/// A parent in a breed formula.
 #[cfg_attr(test, derive(Debug, PartialEq))]
 pub enum Parent
 {
+    /// Any monster in this family could be the parent. Value
+    /// indicates the name of the family.
     Family(String),
+    /// The parent is this monster, whose name is the value.
     Monster(String),
 }
 
+/// A parent in a breed formula, with some extra requirements.
 #[cfg_attr(test, derive(Debug, PartialEq))]
 pub struct ParentRequirement
 {
+    /// The parent in the breed formula
     pub parent: Parent,
+    /// The minimal +level of this parent. Usually this is just 0. But
+    /// for some formulae (e.g. Slime + Slime = KingSlime) this is
+    /// non-zero.
     pub min_plus: u8,
 }
 
@@ -65,19 +73,21 @@ impl ParentRequirement
     }
 }
 
+/// A breed formula
 #[cfg_attr(test, derive(Debug, PartialEq))]
 pub struct Formula
 {
-    base: Vec<ParentRequirement>,
-    mate: Vec<ParentRequirement>,
-    offspring: String,
+    /// The base monster in the formula.
+    pub base: Vec<ParentRequirement>,
+    /// The mate monster in the formula.
+    pub mate: Vec<ParentRequirement>,
+    /// The name of the offspring monster.
+    pub offspring: String,
 }
 
 impl Formula
 {
-    pub fn fromXMLReader<R: BufRead>(opening: &BytesStart,
-                                     reader: xml::Reader<R>) ->
-        Result<Self, Error>
+    pub fn fromXML(x: &[u8]) -> Result<Self, Error>
     {
         let mut offspring = String::new();
         let mut base = Vec::new();
@@ -114,7 +124,7 @@ impl Formula
             }
             Ok(())
         });
-        parser.parse(Some(opening), reader)?;
+        parser.parse(x)?;
         drop(parser);
         let result = Self { base, mate, offspring };
         Ok(result)
@@ -129,24 +139,6 @@ mod tests {
 
     use anyhow::Result;
 
-    impl Formula
-    {
-        fn fromXMLReaderClean<R: BufRead>(reader: xml::Reader<R>) ->
-            Result<Self>
-        {
-            let mut buffer = Vec::new();
-            let ev = reader.borrow_mut().read_event_into(&mut buffer)?;
-            match ev
-            {
-                Event::Start(e) => {
-                    let f = Self::fromXMLReader(&e, reader)?;
-                    Ok(f)
-                },
-                _ => Err(anyhow::Error::from(rterr!("Fail"))),
-            }
-        }
-    }
-
     #[test]
     fn deserializeFormula() -> Result<()>
     {
@@ -160,8 +152,7 @@ mod tests {
         <breed-requirement monster="Gigantes"/>
       </mate>
     </breed>"#;
-        let p = Formula::fromXMLReaderClean(
-            xml::newReader(quick_xml::Reader::from_str(xml)))?;
+        let p = Formula::fromXML(xml.as_bytes())?;
         assert_eq!(
             p,
             Formula {
@@ -180,8 +171,7 @@ mod tests {
         <breed-requirement monster="Octoreach" min_plus="4"/>
       </mate>
     </breed>"#;
-        let p = Formula::fromXMLReaderClean(xml::newReader(
-            quick_xml::Reader::from_str(xml)))?;
+        let p = Formula::fromXML(xml.as_bytes())?;
         assert_eq!(
             p,
             Formula {
@@ -198,8 +188,7 @@ mod tests {
         <breed-requirement family="dragon"/>
       </mate>
     </breed>"#;
-        let p = Formula::fromXMLReaderClean(xml::newReader(
-            quick_xml::Reader::from_str(xml)))?;
+        let p = Formula::fromXML(xml.as_bytes())?;
         assert_eq!(
             p,
             Formula {
