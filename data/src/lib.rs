@@ -7,8 +7,7 @@
 
 #![allow(non_snake_case)]
 
-#[macro_use]
-pub mod error;
+#[macro_use] extern crate error;
 pub mod monster;
 pub mod breed;
 pub mod xml;

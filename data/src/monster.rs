@@ -5,8 +5,8 @@ use std::rc::Rc;
 
 use quick_xml::events::BytesStart;
 
+use error::Error;
 use crate::xml::{self, getTagAttr};
-use crate::error::Error;
 
 /// A location in a map
 pub struct MapLocation
@@ -68,21 +68,21 @@ impl Growth
     fn fromXMLTag(tag: &BytesStart) -> Result<Self, Error>
     {
         let agility: u8 =  xml::getTagAttr(tag, "agl")?.ok_or_else(
-            || rterr!("Agility value not found"))?;
+            || xmlerr!("Agility value not found"))?;
         let inteligence: u8 =  xml::getTagAttr(tag, "int")?.ok_or_else(
-            || rterr!("Inteligence value not found"))?;
+            || xmlerr!("Inteligence value not found"))?;
         let max_level: u8 =  xml::getTagAttr(tag, "maxlvl")?.ok_or_else(
-            || rterr!("Max level value not found"))?;
+            || xmlerr!("Max level value not found"))?;
         let attack: u8 =  xml::getTagAttr(tag, "atk")?.ok_or_else(
-            || rterr!("Attack value not found"))?;
+            || xmlerr!("Attack value not found"))?;
         let defense: u8 =  xml::getTagAttr(tag, "def")?.ok_or_else(
-            || rterr!("Defense value not found"))?;
+            || xmlerr!("Defense value not found"))?;
         let mp: u8 =  xml::getTagAttr(tag, "mp")?.ok_or_else(
-            || rterr!("MP value not found"))?;
+            || xmlerr!("MP value not found"))?;
         let exp: u8 =  xml::getTagAttr(tag, "exp")?.ok_or_else(
-            || rterr!("EXP value not found"))?;
+            || xmlerr!("EXP value not found"))?;
         let hp: u8 =  xml::getTagAttr(tag, "hp")?.ok_or_else(
-            || rterr!("HP value not found"))?;
+            || xmlerr!("HP value not found"))?;
         Ok(Self {
             agility, inteligence, max_level, attack, defense, mp, exp, hp,
         })
@@ -119,9 +119,9 @@ impl Monster
         let mut p = xml::Parser::new();
         p.addBeginHandler("monster", |_, tag| {
             name = xml::getTagAttr(tag, "name")?.ok_or_else(
-                || rterr!("Monster name value not found"))?;
+                || xmlerr!("Monster name value not found"))?;
             in_story = xml::getTagAttr(tag, "in_story")?.ok_or_else(
-                || rterr!("In_story value not found"))?;
+                || xmlerr!("In_story value not found"))?;
             Ok(())
         });
         p.addTagHandler("location", |_, tag| {
@@ -174,7 +174,7 @@ impl Info
         let mut p = xml::Parser::new();
         p.addBeginHandler("family", |_, tag| {
             family.borrow_mut().name = getTagAttr(tag, "name")?
-                .ok_or_else(|| rterr!("Family name not found"))?;
+                .ok_or_else(|| xmlerr!("Family name not found"))?;
             Ok(())
         });
         p.addEndHandler("family", |_, _| {

@@ -68,7 +68,7 @@ use std::str::FromStr;
 
 use quick_xml::events::{Event, BytesEnd, BytesStart};
 
-use crate::error::Error;
+use error::Error;
 
 type BeginHandler<'a> = Box<dyn FnMut(&[String], &BytesStart) ->
                             Result<(), Error> + 'a>;
@@ -172,7 +172,7 @@ impl<'a> Parser<'a>
                 {
                     let tag: &str = str::from_utf8(e.name().into_inner())
                         .map_err(
-                            |_| rterr!("Failed to decode UTF-8 from XML"))?;
+                            |_| xmlerr!("Failed to decode UTF-8 from XML"))?;
                     path.push(tag.to_owned());
                     if let Some(f) = self.begin_handlers.get_mut(tag)
                     {
@@ -182,7 +182,7 @@ impl<'a> Parser<'a>
                     if let Some(f) = self.tag_handlers.get_mut(tag)
                     {
                         reader.read_to_end(e.to_end().name()).map_err(
-                            |_| rterr!("Failed to find end tag of {}.", tag))?;
+                            |_| xmlerr!("Failed to find end tag of {}.", tag))?;
                         f(&path, &x[pos_before..reader.buffer_position()])?;
                         path.pop();
                     }
@@ -191,7 +191,7 @@ impl<'a> Parser<'a>
                 {
                     let tag: &str = str::from_utf8(e.name().into_inner())
                         .map_err(
-                            |_| rterr!("Failed to decode UTF-8 from XML"))?;
+                            |_| xmlerr!("Failed to decode UTF-8 from XML"))?;
                     path.push(tag.to_owned());
                     if let Some(f) = self.begin_handlers.get_mut(tag)
                     {
@@ -211,20 +211,20 @@ impl<'a> Parser<'a>
                 {
                     let tag: &str = str::from_utf8(e.name().into_inner())
                         .map_err(
-                            |_| rterr!("Failed to decode UTF-8 from XML"))?;
+                            |_| xmlerr!("Failed to decode UTF-8 from XML"))?;
                     if let Some(name) = path.last()
                     {
                         if *name != tag
                         {
                             return Err(
-                                rterr!("Invalid XML. Expecting {}, got {}.",
+                                xmlerr!("Invalid XML. Expecting {}, got {}.",
                                        name, tag));
                         }
                     }
                     else
                     {
                         return Err(
-                            rterr!("Invalid XML. XML should end, got {}.",
+                            xmlerr!("Invalid XML. XML should end, got {}.",
                                    tag));
                     }
 
@@ -246,7 +246,7 @@ impl<'a> Parser<'a>
                         if let Some(f) = self.text_handlers.get_mut(tag)
                         {
                             let t = str::from_utf8(inner.as_ref()).map_err(
-                                |_| rterr!("Failed to decode text element in \
+                                |_| xmlerr!("Failed to decode text element in \
                                             {}", tag))?;
                             f(&path, t)?;
                         }
@@ -260,7 +260,7 @@ impl<'a> Parser<'a>
                 Ok(_) => {},
                 Err(e) =>
                 {
-                    return Err(rterr!("Failed to parse XML: {}", e));
+                    return Err(xmlerr!("Failed to parse XML: {}", e));
                 },
             }
         }
@@ -274,12 +274,12 @@ pub fn getTagAttr<T: FromStr>(tag: &BytesStart, attr: &str) ->
     Result<Option<T>, Error>
 {
     if let Some(at) = tag.try_get_attribute(attr)
-        .map_err(|_| rterr!("Failed to get attribute '{}'.", attr))?
+        .map_err(|_| xmlerr!("Failed to get attribute '{}'.", attr))?
     {
         let value: T = str::from_utf8(at.value.as_ref()).map_err(
-            |_| rterr!("Failed to decode value of attribute '{}'.", attr))?
+            |_| xmlerr!("Failed to decode value of attribute '{}'.", attr))?
             .parse().map_err(
-                |_| rterr!("Invalid value of attirbute '{}'.", attr))?;
+                |_| xmlerr!("Invalid value of attirbute '{}'.", attr))?;
         Ok(Some(value))
     }
     else

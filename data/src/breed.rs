@@ -4,7 +4,7 @@ use std::str;
 
 use quick_xml::events::BytesStart;
 
-use crate::error::Error;
+use error::Error;
 use crate::xml;
 
 /// A parent in a breed formula.
@@ -35,11 +35,11 @@ impl ParentRequirement
     fn fromXMLTag(e: &BytesStart) -> Result<Self, Error>
     {
         let min_plus = if let Some(attr) = e.try_get_attribute("min_plus")
-            .map_err(|_| rterr!("Failed to get attribute 'min_plus'."))?
+            .map_err(|_| xmlerr!("Failed to get attribute 'min_plus'."))?
         {
             str::from_utf8(attr.value.as_ref()).map_err(
-                |_| rterr!("Failed to decode min +level in XML"))?.parse()
-                .map_err(|_| rterr!("Invalid min +level in XML"))?
+                |_| xmlerr!("Failed to decode min +level in XML"))?.parse()
+                .map_err(|_| xmlerr!("Invalid min +level in XML"))?
         }
         else
         {
@@ -47,20 +47,20 @@ impl ParentRequirement
         };
 
         if let Some(attr) = e.try_get_attribute("monster").map_err(
-            |_| rterr!("Failed to get attribute 'monster'."))?
+            |_| xmlerr!("Failed to get attribute 'monster'."))?
         {
             let monster = String::from_utf8(attr.value.into_owned()).map_err(
-                |_| rterr!("Failed to decode monster name in XML"))?;
+                |_| xmlerr!("Failed to decode monster name in XML"))?;
             Ok(Self {
                 parent: Parent::Monster(monster),
                 min_plus
             })
         }
         else if let Some(attr) = e.try_get_attribute("family").map_err(
-            |_| rterr!("Failed to get attribute 'family'."))?
+            |_| xmlerr!("Failed to get attribute 'family'."))?
         {
             let family = String::from_utf8(attr.value.into_owned()).map_err(
-                |_| rterr!("Failed to decode family name in XML"))?;
+                |_| xmlerr!("Failed to decode family name in XML"))?;
             Ok(Self {
                 parent: Parent::Family(family),
                 min_plus
@@ -68,7 +68,7 @@ impl ParentRequirement
         }
         else
         {
-            Err(rterr!("Invalid parent definition in XML"))
+            Err(xmlerr!("Invalid parent definition in XML"))
         }
     }
 }
@@ -96,15 +96,15 @@ impl Formula
 
         parser.addBeginHandler("breed", |_, e: &BytesStart| {
             if let Some(attr) = e.try_get_attribute("target").map_err(
-                |_| rterr!("Failed to get attribute 'target'."))?
+                |_| xmlerr!("Failed to get attribute 'target'."))?
             {
                 offspring = String::from_utf8(attr.value.into_owned()).map_err(
-                    |_| rterr!("Failed to decode breed target name in XML"))?;
+                    |_| xmlerr!("Failed to decode breed target name in XML"))?;
                 Ok(())
             }
             else
             {
-                Err(rterr!("Found breed formula without target"))
+                Err(xmlerr!("Found breed formula without target"))
             }
         });
 
@@ -115,12 +115,12 @@ impl Formula
                 {
                     "base" => base.push(ParentRequirement::fromXMLTag(e)?),
                     "mate" => mate.push(ParentRequirement::fromXMLTag(e)?),
-                    _ => return Err(rterr!("Invalid tag '{}'", tag)),
+                    _ => return Err(xmlerr!("Invalid tag '{}'", tag)),
                 }
             }
             else
             {
-                return Err(rterr!("Invalid breed requirement"));
+                return Err(xmlerr!("Invalid breed requirement"));
             }
             Ok(())
         });

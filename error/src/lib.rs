@@ -28,6 +28,16 @@ macro_rules! rterr
     };
 }
 
+// Construct an XMLError
+#[macro_export]
+macro_rules! xmlerr
+{
+    ($msg:literal $(, $x:expr)*) =>
+    {
+        error!(XMLError, $msg $(, $x)*)
+    };
+}
+
 #[derive(Debug, Clone)]
 pub enum Error
 {
@@ -37,7 +47,7 @@ pub enum Error
     /// such as an error from generating SQL statement due to invalid
     /// backlinks.
     RuntimeError(String),
-    FormatError(String),
+    XMLError(String),
 }
 
 impl fmt::Display for Error
@@ -47,7 +57,7 @@ impl fmt::Display for Error
         match self
         {
             Error::RuntimeError(msg) => write!(f, "Runtime error: {}", msg),
-            Error::FormatError(msg) => write!(f, "Format error: {}", msg),
+            Error::XMLError(msg) => write!(f, "XML error: {}", msg),
         }
     }
 }
