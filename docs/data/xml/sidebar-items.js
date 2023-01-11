@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["getTagAttr","Return the value of the attribute `attr` from the opening tag `tag`."]],"struct":[["Parser","A simple event callback-based XML parser."]]};
