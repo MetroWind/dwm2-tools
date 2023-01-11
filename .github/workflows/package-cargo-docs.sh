@@ -26,7 +26,7 @@ cat << EOF > page-root/docs/index.html
   <ul>
 EOF
 
-for d in $(find page-root/docs -depth 1 -type d | grep -v -E '(implementors|src)'); do
+for d in $(find page-root/docs -maxdepth 1 -type d | grep -v -E '(implementors|src)'); do
     DIR="$(basename "$d")"
     cat << EOF >> page-root/docs/index.html
 <li><a href="${DIR}">${DIR}</a></li>
