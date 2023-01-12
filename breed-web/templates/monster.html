@@ -100,14 +100,14 @@
           <h2>Breeds</h2>
           <table class="Breed">
             <thead>
-              <tr class="row">
-                <th class="col-md-6">Base</th>
-                <th class="col-md-6">Mate</th>
+              <tr>
+                <th>Base</th>
+                <th>Mate</th>
               </tr>
             </thead>
             {% for Br in breeds %}
-            <tr class="row">
-              <td class="col-md-6">
+            <tr>
+              <td>
                 <ul class="Possibilities">
                   {% for Base in Br.base %}
                   <li>
@@ -122,7 +122,7 @@
                   {% endfor %}
                 </ul>
               </td>
-              <td class="col-md-6">
+              <td>
                 <ul class="Possibilities">
                   {% for Mate in Br.mate %}
                   <li>
