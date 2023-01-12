@@ -61,7 +61,11 @@
           {% else %}
           <ul>
             {% for Loc in monster.locations %}
-            <li>{{ Loc | json_encode }}</li>
+            <li>{{ Loc.map }}
+              {% if Loc.desc is defined %}
+              ({{ Loc.desc }})
+              {% endif %}
+            </li>
             {% endfor %}
           </ul>
           {% endif %}
