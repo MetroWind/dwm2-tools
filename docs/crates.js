@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["breed_planner","data"];
+window.ALL_CRATES = ["breed_planner","breed_web","data","error"];

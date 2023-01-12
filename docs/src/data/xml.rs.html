@@ -410,7 +410,7 @@
 
 <span class="kw">use </span>quick_xml::events::{Event, BytesEnd, BytesStart};
 
-<span class="kw">use </span><span class="kw">crate</span>::error::Error;
+<span class="kw">use </span>error::Error;
 
 <span class="kw">type </span>BeginHandler&lt;<span class="lifetime">&#39;a</span>&gt; = Box&lt;<span class="kw">dyn </span>FnMut(<span class="kw-2">&amp;</span>[String], <span class="kw-2">&amp;</span>BytesStart) -&gt;
                             <span class="prelude-ty">Result</span>&lt;(), Error&gt; + <span class="lifetime">&#39;a</span>&gt;;
@@ -514,7 +514,7 @@
                 {
                     <span class="kw">let </span>tag: <span class="kw-2">&amp;</span>str = str::from_utf8(e.name().into_inner())
                         .map_err(
-                            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode UTF-8 from XML&quot;</span>))<span class="question-mark">?</span>;
+                            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode UTF-8 from XML&quot;</span>))<span class="question-mark">?</span>;
                     path.push(tag.to_owned());
                     <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = <span class="self">self</span>.begin_handlers.get_mut(tag)
                     {
@@ -524,7 +524,7 @@
                     <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = <span class="self">self</span>.tag_handlers.get_mut(tag)
                     {
                         reader.read_to_end(e.to_end().name()).map_err(
-                            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to find end tag of {}.&quot;</span>, tag))<span class="question-mark">?</span>;
+                            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to find end tag of {}.&quot;</span>, tag))<span class="question-mark">?</span>;
                         f(<span class="kw-2">&amp;</span>path, <span class="kw-2">&amp;</span>x[pos_before..reader.buffer_position()])<span class="question-mark">?</span>;
                         path.pop();
                     }
@@ -533,7 +533,7 @@
                 {
                     <span class="kw">let </span>tag: <span class="kw-2">&amp;</span>str = str::from_utf8(e.name().into_inner())
                         .map_err(
-                            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode UTF-8 from XML&quot;</span>))<span class="question-mark">?</span>;
+                            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode UTF-8 from XML&quot;</span>))<span class="question-mark">?</span>;
                     path.push(tag.to_owned());
                     <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = <span class="self">self</span>.begin_handlers.get_mut(tag)
                     {
@@ -553,20 +553,20 @@
                 {
                     <span class="kw">let </span>tag: <span class="kw-2">&amp;</span>str = str::from_utf8(e.name().into_inner())
                         .map_err(
-                            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode UTF-8 from XML&quot;</span>))<span class="question-mark">?</span>;
+                            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode UTF-8 from XML&quot;</span>))<span class="question-mark">?</span>;
                     <span class="kw">if let </span><span class="prelude-val">Some</span>(name) = path.last()
                     {
                         <span class="kw">if </span><span class="kw-2">*</span>name != tag
                         {
                             <span class="kw">return </span><span class="prelude-val">Err</span>(
-                                <span class="macro">rterr!</span>(<span class="string">&quot;Invalid XML. Expecting {}, got {}.&quot;</span>,
+                                <span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid XML. Expecting {}, got {}.&quot;</span>,
                                        name, tag));
                         }
                     }
                     <span class="kw">else
                     </span>{
                         <span class="kw">return </span><span class="prelude-val">Err</span>(
-                            <span class="macro">rterr!</span>(<span class="string">&quot;Invalid XML. XML should end, got {}.&quot;</span>,
+                            <span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid XML. XML should end, got {}.&quot;</span>,
                                    tag));
                     }
 
@@ -588,7 +588,7 @@
                         <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = <span class="self">self</span>.text_handlers.get_mut(tag)
                         {
                             <span class="kw">let </span>t = str::from_utf8(inner.as_ref()).map_err(
-                                |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode text element in \
+                                |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode text element in \
                                             {}&quot;</span>, tag))<span class="question-mark">?</span>;
                             f(<span class="kw-2">&amp;</span>path, t)<span class="question-mark">?</span>;
                         }
@@ -602,7 +602,7 @@
                 <span class="prelude-val">Ok</span>(<span class="kw">_</span>) =&gt; {},
                 <span class="prelude-val">Err</span>(e) =&gt;
                 {
-                    <span class="kw">return </span><span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Failed to parse XML: {}&quot;</span>, e));
+                    <span class="kw">return </span><span class="prelude-val">Err</span>(<span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to parse XML: {}&quot;</span>, e));
                 },
             }
         }
@@ -616,12 +616,12 @@
     <span class="prelude-ty">Result</span>&lt;<span class="prelude-ty">Option</span>&lt;T&gt;, Error&gt;
 {
     <span class="kw">if let </span><span class="prelude-val">Some</span>(at) = tag.try_get_attribute(attr)
-        .map_err(|<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to get attribute &#39;{}&#39;.&quot;</span>, attr))<span class="question-mark">?
+        .map_err(|<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to get attribute &#39;{}&#39;.&quot;</span>, attr))<span class="question-mark">?
     </span>{
         <span class="kw">let </span>value: T = str::from_utf8(at.value.as_ref()).map_err(
-            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode value of attribute &#39;{}&#39;.&quot;</span>, attr))<span class="question-mark">?
+            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode value of attribute &#39;{}&#39;.&quot;</span>, attr))<span class="question-mark">?
             </span>.parse().map_err(
-                |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Invalid value of attirbute &#39;{}&#39;.&quot;</span>, attr))<span class="question-mark">?</span>;
+                |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid value of attirbute &#39;{}&#39;.&quot;</span>, attr))<span class="question-mark">?</span>;
         <span class="prelude-val">Ok</span>(<span class="prelude-val">Some</span>(value))
     }
     <span class="kw">else

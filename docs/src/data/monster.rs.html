@@ -194,17 +194,24 @@
 <span id="194">194</span>
 <span id="195">195</span>
 <span id="196">196</span>
+<span id="197">197</span>
+<span id="198">198</span>
+<span id="199">199</span>
+<span id="200">200</span>
+<span id="201">201</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Data structures and logic about the DMW2 monsters and families
 
 </span><span class="kw">use </span>std::cell::RefCell;
 <span class="kw">use </span>std::rc::Rc;
 
 <span class="kw">use </span>quick_xml::events::BytesStart;
+<span class="kw">use </span>serde::Serialize;
 
+<span class="kw">use </span>error::Error;
 <span class="kw">use </span><span class="kw">crate</span>::xml::{<span class="self">self</span>, getTagAttr};
-<span class="kw">use </span><span class="kw">crate</span>::error::Error;
 
 <span class="doccomment">/// A location in a map
+</span><span class="attribute">#[derive(Clone, Serialize)]
 </span><span class="kw">pub struct </span>MapLocation
 {
     <span class="doccomment">/// Name of the map. Example: Oasis Key World.
@@ -246,11 +253,11 @@
 }
 
 <span class="doccomment">/// Monster growth data
-</span><span class="attribute">#[derive(Default)]
+</span><span class="attribute">#[derive(Default, Clone, Serialize)]
 </span><span class="kw">pub struct </span>Growth
 {
     <span class="kw">pub </span>agility: u8,
-    <span class="kw">pub </span>inteligence: u8,
+    <span class="kw">pub </span>intelligence: u8,
     <span class="kw">pub </span>max_level: u8,
     <span class="kw">pub </span>attack: u8,
     <span class="kw">pub </span>defense: u8,
@@ -264,29 +271,30 @@
     <span class="kw">fn </span>fromXMLTag(tag: <span class="kw-2">&amp;</span>BytesStart) -&gt; <span class="prelude-ty">Result</span>&lt;<span class="self">Self</span>, Error&gt;
     {
         <span class="kw">let </span>agility: u8 =  xml::getTagAttr(tag, <span class="string">&quot;agl&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;Agility value not found&quot;</span>))<span class="question-mark">?</span>;
-        <span class="kw">let </span>inteligence: u8 =  xml::getTagAttr(tag, <span class="string">&quot;int&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;Inteligence value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;Agility value not found&quot;</span>))<span class="question-mark">?</span>;
+        <span class="kw">let </span>intelligence: u8 =  xml::getTagAttr(tag, <span class="string">&quot;int&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;Inteligence value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="kw">let </span>max_level: u8 =  xml::getTagAttr(tag, <span class="string">&quot;maxlvl&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;Max level value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;Max level value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="kw">let </span>attack: u8 =  xml::getTagAttr(tag, <span class="string">&quot;atk&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;Attack value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;Attack value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="kw">let </span>defense: u8 =  xml::getTagAttr(tag, <span class="string">&quot;def&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;Defense value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;Defense value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="kw">let </span>mp: u8 =  xml::getTagAttr(tag, <span class="string">&quot;mp&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;MP value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;MP value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="kw">let </span>exp: u8 =  xml::getTagAttr(tag, <span class="string">&quot;exp&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;EXP value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;EXP value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="kw">let </span>hp: u8 =  xml::getTagAttr(tag, <span class="string">&quot;hp&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-            || <span class="macro">rterr!</span>(<span class="string">&quot;HP value not found&quot;</span>))<span class="question-mark">?</span>;
+            || <span class="macro">xmlerr!</span>(<span class="string">&quot;HP value not found&quot;</span>))<span class="question-mark">?</span>;
         <span class="prelude-val">Ok</span>(<span class="self">Self </span>{
-            agility, inteligence, max_level, attack, defense, mp, exp, hp,
+            agility, intelligence, max_level, attack, defense, mp, exp, hp,
         })
     }
 }
 
 
 <span class="doccomment">/// The info of a monster
+</span><span class="attribute">#[derive(Clone, Serialize)]
 </span><span class="kw">pub struct </span>Monster
 {
     <span class="doccomment">/// Name of the monster
@@ -300,11 +308,13 @@
     </span><span class="kw">pub </span>abilities: Vec&lt;String&gt;,
     <span class="doccomment">/// Monster growth data
     </span><span class="kw">pub </span>growth: Growth,
+    <span class="doccomment">/// Family the monster belongs to
+    </span><span class="kw">pub </span>family: String,
 }
 
 <span class="kw">impl </span>Monster
 {
-    <span class="kw">fn </span>fromXML(x: <span class="kw-2">&amp;</span>[u8]) -&gt; <span class="prelude-ty">Result</span>&lt;<span class="self">Self</span>, Error&gt;
+    <span class="kw">fn </span>fromXML(x: <span class="kw-2">&amp;</span>[u8], family: String) -&gt; <span class="prelude-ty">Result</span>&lt;<span class="self">Self</span>, Error&gt;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>name = String::new();
         <span class="kw">let </span><span class="kw-2">mut </span>in_story = <span class="bool-val">false</span>;
@@ -315,9 +325,9 @@
         <span class="kw">let </span><span class="kw-2">mut </span>p = xml::Parser::new();
         p.addBeginHandler(<span class="string">&quot;monster&quot;</span>, |<span class="kw">_</span>, tag| {
             name = xml::getTagAttr(tag, <span class="string">&quot;name&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-                || <span class="macro">rterr!</span>(<span class="string">&quot;Monster name value not found&quot;</span>))<span class="question-mark">?</span>;
+                || <span class="macro">xmlerr!</span>(<span class="string">&quot;Monster name value not found&quot;</span>))<span class="question-mark">?</span>;
             in_story = xml::getTagAttr(tag, <span class="string">&quot;in_story&quot;</span>)<span class="question-mark">?</span>.ok_or_else(
-                || <span class="macro">rterr!</span>(<span class="string">&quot;In_story value not found&quot;</span>))<span class="question-mark">?</span>;
+                || <span class="macro">xmlerr!</span>(<span class="string">&quot;In_story value not found&quot;</span>))<span class="question-mark">?</span>;
             <span class="prelude-val">Ok</span>(())
         });
         p.addTagHandler(<span class="string">&quot;location&quot;</span>, |<span class="kw">_</span>, tag| {
@@ -335,12 +345,12 @@
         p.parse(x)<span class="question-mark">?</span>;
         drop(p);
 
-        <span class="prelude-val">Ok</span>(<span class="self">Self </span>{ name, in_story, locations, abilities, growth })
+        <span class="prelude-val">Ok</span>(<span class="self">Self </span>{ name, in_story, locations, abilities, growth, family})
     }
 }
 
 <span class="doccomment">/// A family of monsters
-</span><span class="attribute">#[derive(Default)]
+</span><span class="attribute">#[derive(Default, Clone, Serialize)]
 </span><span class="kw">pub struct </span>Family
 {
     <span class="doccomment">/// Name of the family in *lower case*.
@@ -350,7 +360,7 @@
 }
 
 <span class="doccomment">/// Data about a set of monsters and families.
-</span><span class="attribute">#[derive(Default)]
+</span><span class="attribute">#[derive(Default, Clone, Serialize)]
 </span><span class="kw">pub struct </span>Info
 {
     <span class="doccomment">/// A list of monsters
@@ -370,7 +380,7 @@
         <span class="kw">let </span><span class="kw-2">mut </span>p = xml::Parser::new();
         p.addBeginHandler(<span class="string">&quot;family&quot;</span>, |<span class="kw">_</span>, tag| {
             family.borrow_mut().name = getTagAttr(tag, <span class="string">&quot;name&quot;</span>)<span class="question-mark">?
-                </span>.ok_or_else(|| <span class="macro">rterr!</span>(<span class="string">&quot;Family name not found&quot;</span>))<span class="question-mark">?</span>;
+                </span>.ok_or_else(|| <span class="macro">xmlerr!</span>(<span class="string">&quot;Family name not found&quot;</span>))<span class="question-mark">?</span>;
             <span class="prelude-val">Ok</span>(())
         });
         p.addEndHandler(<span class="string">&quot;family&quot;</span>, |<span class="kw">_</span>, <span class="kw">_</span>| {
@@ -379,7 +389,7 @@
             <span class="prelude-val">Ok</span>(())
         });
         p.addTagHandler(<span class="string">&quot;monster&quot;</span>, |<span class="kw">_</span>, tag| {
-            <span class="kw">let </span>monster = Monster::fromXML(tag)<span class="question-mark">?</span>;
+            <span class="kw">let </span>monster = Monster::fromXML(tag, family.borrow().name.clone())<span class="question-mark">?</span>;
             family.borrow_mut().members.push(monster.name.clone());
             monsters.push(monster);
             <span class="prelude-val">Ok</span>(())

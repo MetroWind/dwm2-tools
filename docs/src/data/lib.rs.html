@@ -114,6 +114,45 @@
 <span id="114">114</span>
 <span id="115">115</span>
 <span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
+<span id="148">148</span>
+<span id="149">149</span>
+<span id="150">150</span>
+<span id="151">151</span>
+<span id="152">152</span>
+<span id="153">153</span>
+<span id="154">154</span>
+<span id="155">155</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Data structures and logic about the DMW2 game data.
 //!
 //! This crate deals with the generic DWM2 game data, not a particular
@@ -123,8 +162,7 @@
 
 </span><span class="attribute">#![allow(non_snake_case)]
 
-#[macro_use]
-</span><span class="kw">pub mod </span>error;
+#[macro_use] </span><span class="kw">extern crate </span>error;
 <span class="kw">pub mod </span>monster;
 <span class="kw">pub mod </span>breed;
 <span class="kw">pub mod </span>xml;
@@ -132,6 +170,7 @@
 <span class="kw">use </span><span class="kw">crate</span>::error::Error;
 
 <span class="doccomment">/// All DWM2 game data. This is the entry point of the whole library.
+</span><span class="attribute">#[derive(Default, Clone)]
 </span><span class="kw">pub struct </span>GameData
 {
     <span class="doccomment">/// Data about monsters
@@ -160,6 +199,45 @@
         p.parse(x)<span class="question-mark">?</span>;
         drop(p);
         <span class="prelude-val">Ok</span>(<span class="self">Self </span>{ monster_data, breed_formulae })
+    }
+
+    <span class="doccomment">/// Find familiy by name.
+    </span><span class="kw">pub fn </span>family(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span>str) -&gt; <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span>monster::Family&gt;
+    {
+        <span class="self">self</span>.monster_data.families.iter()
+            .find(|f| f.name == name)
+    }
+
+    <span class="doccomment">/// Find monster by name.
+    </span><span class="kw">pub fn </span>monster(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span>str) -&gt; <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span>monster::Monster&gt;
+    {
+        <span class="self">self</span>.monster_data.monsters.iter()
+            .find(|m| m.name == name)
+    }
+
+    <span class="doccomment">/// Find all monsters in a family.
+    </span><span class="kw">pub fn </span>monstersInFamily&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, family: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>monster::Family) -&gt;
+        <span class="kw">impl </span>Iterator&lt;Item = <span class="kw-2">&amp;</span>monster::Monster&gt; + <span class="lifetime">&#39;a
+    </span>{
+        <span class="self">self</span>.monster_data.monsters.iter().filter(
+            |m| family.members.contains(<span class="kw-2">&amp;</span>m.name))
+    }
+
+    <span class="doccomment">/// Find all the formulae a monster or a family is used in.
+    </span><span class="kw">pub fn </span>usedInFormulae&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, parent: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>breed::Parent) -&gt;
+        <span class="kw">impl </span>Iterator&lt;Item = <span class="kw-2">&amp;</span>breed::Formula&gt; + <span class="lifetime">&#39;a
+    </span>{
+        <span class="self">self</span>.breed_formulae.iter().filter(
+            <span class="kw">move </span>|form| form.base.iter().find(|p| <span class="kw-2">&amp;</span>p.parent == parent).is_some()
+                || form.mate.iter().find(|p| <span class="kw-2">&amp;</span>p.parent == parent).is_some())
+    }
+
+    <span class="doccomment">/// Find all the formulae that produces a specific monster.
+    </span><span class="kw">pub fn </span>breedFromFormulae&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, offspring: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>str) -&gt;
+        <span class="kw">impl </span>Iterator&lt;Item = <span class="kw-2">&amp;</span>breed::Formula&gt; + <span class="lifetime">&#39;a
+    </span>{
+        <span class="self">self</span>.breed_formulae.iter()
+            .filter(<span class="kw">move </span>|form| <span class="kw-2">&amp;</span>form.offspring == offspring)
     }
 }
 

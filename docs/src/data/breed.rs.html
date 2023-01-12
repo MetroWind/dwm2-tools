@@ -200,17 +200,23 @@
 <span id="200">200</span>
 <span id="201">201</span>
 <span id="202">202</span>
+<span id="203">203</span>
+<span id="204">204</span>
+<span id="205">205</span>
+<span id="206">206</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Data structures and logic about the DMW2 breed formulae
 
 </span><span class="kw">use </span>std::str;
 
 <span class="kw">use </span>quick_xml::events::BytesStart;
+<span class="kw">use </span>serde::Serialize;
 
-<span class="kw">use </span><span class="kw">crate</span>::error::Error;
+<span class="kw">use </span>error::Error;
 <span class="kw">use </span><span class="kw">crate</span>::xml;
 
 <span class="doccomment">/// A parent in a breed formula.
-</span><span class="attribute">#[cfg_attr(test, derive(Debug, PartialEq))]
+</span><span class="attribute">#[derive(Clone, Serialize, PartialEq)]
+#[cfg_attr(test, derive(Debug))]
 </span><span class="kw">pub enum </span>Parent
 {
     <span class="doccomment">/// Any monster in this family could be the parent. Value
@@ -221,7 +227,8 @@
 }
 
 <span class="doccomment">/// A parent in a breed formula, with some extra requirements.
-</span><span class="attribute">#[cfg_attr(test, derive(Debug, PartialEq))]
+</span><span class="attribute">#[derive(Clone, Serialize)]
+#[cfg_attr(test, derive(Debug, PartialEq))]
 </span><span class="kw">pub struct </span>ParentRequirement
 {
     <span class="doccomment">/// The parent in the breed formula
@@ -237,11 +244,11 @@
     <span class="kw">fn </span>fromXMLTag(e: <span class="kw-2">&amp;</span>BytesStart) -&gt; <span class="prelude-ty">Result</span>&lt;<span class="self">Self</span>, Error&gt;
     {
         <span class="kw">let </span>min_plus = <span class="kw">if let </span><span class="prelude-val">Some</span>(attr) = e.try_get_attribute(<span class="string">&quot;min_plus&quot;</span>)
-            .map_err(|<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to get attribute &#39;min_plus&#39;.&quot;</span>))<span class="question-mark">?
+            .map_err(|<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to get attribute &#39;min_plus&#39;.&quot;</span>))<span class="question-mark">?
         </span>{
             str::from_utf8(attr.value.as_ref()).map_err(
-                |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode min +level in XML&quot;</span>))<span class="question-mark">?</span>.parse()
-                .map_err(|<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Invalid min +level in XML&quot;</span>))<span class="question-mark">?
+                |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode min +level in XML&quot;</span>))<span class="question-mark">?</span>.parse()
+                .map_err(|<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid min +level in XML&quot;</span>))<span class="question-mark">?
         </span>}
         <span class="kw">else
         </span>{
@@ -249,20 +256,20 @@
         </span>};
 
         <span class="kw">if let </span><span class="prelude-val">Some</span>(attr) = e.try_get_attribute(<span class="string">&quot;monster&quot;</span>).map_err(
-            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to get attribute &#39;monster&#39;.&quot;</span>))<span class="question-mark">?
+            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to get attribute &#39;monster&#39;.&quot;</span>))<span class="question-mark">?
         </span>{
             <span class="kw">let </span>monster = String::from_utf8(attr.value.into_owned()).map_err(
-                |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode monster name in XML&quot;</span>))<span class="question-mark">?</span>;
+                |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode monster name in XML&quot;</span>))<span class="question-mark">?</span>;
             <span class="prelude-val">Ok</span>(<span class="self">Self </span>{
                 parent: Parent::Monster(monster),
                 min_plus
             })
         }
         <span class="kw">else if let </span><span class="prelude-val">Some</span>(attr) = e.try_get_attribute(<span class="string">&quot;family&quot;</span>).map_err(
-            |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to get attribute &#39;family&#39;.&quot;</span>))<span class="question-mark">?
+            |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to get attribute &#39;family&#39;.&quot;</span>))<span class="question-mark">?
         </span>{
             <span class="kw">let </span>family = String::from_utf8(attr.value.into_owned()).map_err(
-                |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode family name in XML&quot;</span>))<span class="question-mark">?</span>;
+                |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode family name in XML&quot;</span>))<span class="question-mark">?</span>;
             <span class="prelude-val">Ok</span>(<span class="self">Self </span>{
                 parent: Parent::Family(family),
                 min_plus
@@ -270,13 +277,14 @@
         }
         <span class="kw">else
         </span>{
-            <span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Invalid parent definition in XML&quot;</span>))
+            <span class="prelude-val">Err</span>(<span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid parent definition in XML&quot;</span>))
         }
     }
 }
 
 <span class="doccomment">/// A breed formula
-</span><span class="attribute">#[cfg_attr(test, derive(Debug, PartialEq))]
+</span><span class="attribute">#[derive(Clone, Serialize)]
+#[cfg_attr(test, derive(Debug, PartialEq))]
 </span><span class="kw">pub struct </span>Formula
 {
     <span class="doccomment">/// The base monster in the formula.
@@ -298,15 +306,15 @@
 
         parser.addBeginHandler(<span class="string">&quot;breed&quot;</span>, |<span class="kw">_</span>, e: <span class="kw-2">&amp;</span>BytesStart| {
             <span class="kw">if let </span><span class="prelude-val">Some</span>(attr) = e.try_get_attribute(<span class="string">&quot;target&quot;</span>).map_err(
-                |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to get attribute &#39;target&#39;.&quot;</span>))<span class="question-mark">?
+                |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to get attribute &#39;target&#39;.&quot;</span>))<span class="question-mark">?
             </span>{
                 offspring = String::from_utf8(attr.value.into_owned()).map_err(
-                    |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to decode breed target name in XML&quot;</span>))<span class="question-mark">?</span>;
+                    |<span class="kw">_</span>| <span class="macro">xmlerr!</span>(<span class="string">&quot;Failed to decode breed target name in XML&quot;</span>))<span class="question-mark">?</span>;
                 <span class="prelude-val">Ok</span>(())
             }
             <span class="kw">else
             </span>{
-                <span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Found breed formula without target&quot;</span>))
+                <span class="prelude-val">Err</span>(<span class="macro">xmlerr!</span>(<span class="string">&quot;Found breed formula without target&quot;</span>))
             }
         });
 
@@ -317,12 +325,12 @@
                 {
                     <span class="string">&quot;base&quot; </span>=&gt; base.push(ParentRequirement::fromXMLTag(e)<span class="question-mark">?</span>),
                     <span class="string">&quot;mate&quot; </span>=&gt; mate.push(ParentRequirement::fromXMLTag(e)<span class="question-mark">?</span>),
-                    <span class="kw">_ </span>=&gt; <span class="kw">return </span><span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Invalid tag &#39;{}&#39;&quot;</span>, tag)),
+                    <span class="kw">_ </span>=&gt; <span class="kw">return </span><span class="prelude-val">Err</span>(<span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid tag &#39;{}&#39;&quot;</span>, tag)),
                 }
             }
             <span class="kw">else
             </span>{
-                <span class="kw">return </span><span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Invalid breed requirement&quot;</span>));
+                <span class="kw">return </span><span class="prelude-val">Err</span>(<span class="macro">xmlerr!</span>(<span class="string">&quot;Invalid breed requirement&quot;</span>));
             }
             <span class="prelude-val">Ok</span>(())
         });
