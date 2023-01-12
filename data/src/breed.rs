@@ -3,12 +3,14 @@
 use std::str;
 
 use quick_xml::events::BytesStart;
+use serde::Serialize;
 
 use error::Error;
 use crate::xml;
 
 /// A parent in a breed formula.
-#[cfg_attr(test, derive(Debug, PartialEq))]
+#[derive(Clone, Serialize, PartialEq)]
+#[cfg_attr(test, derive(Debug))]
 pub enum Parent
 {
     /// Any monster in this family could be the parent. Value
@@ -19,6 +21,7 @@ pub enum Parent
 }
 
 /// A parent in a breed formula, with some extra requirements.
+#[derive(Clone, Serialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))]
 pub struct ParentRequirement
 {
@@ -74,6 +77,7 @@ impl ParentRequirement
 }
 
 /// A breed formula
+#[derive(Clone, Serialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))]
 pub struct Formula
 {

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    {% include 'includes.html' %}
+    <title>Family</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="row"><div class="col-md-12">
+        <a href="{{ url_for(name='index', arg='') }}">◀ Index</a>
+      </div></nav>
+      <div class="row">
+        <h1 class="col-md-12">The {{ family.name|upper }} Family</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <h2>Monsters</h2>
+            <ul id="FamilyMembers" class="row">
+              {% for mo in family.members %}
+              <li class="col-md-4">
+                <a href="{{ url_for(name='monster', arg=mo) }}">{{ mo }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+
+            <h2>Growth</h2>
+            <table class="Growth">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Maxlvl</th>
+                  <th>Exp</th>
+                  <th>Hp</th>
+                  <th>Mp</th>
+                  <th>Atk</th>
+                  <th>Def</th>
+                  <th>Agl</th>
+                  <th>Int</th>
+                </tr>
+              </thead>
+              {% for mo in monsters %}
+              <tr>
+                <td><a href="{{ url_for(name='monster', arg=mo.name) }}">{{ mo.name }}</a></td>
+                <td>{{ mo.growth.max_level }}</td>
+                <td>{{ mo.growth.exp }}</td>
+                <td>{{ mo.growth.hp }}</td>
+                <td>{{ mo.growth.mp }}</td>
+                <td>{{ mo.growth.attack }}</td>
+                <td>{{ mo.growth.defense }}</td>
+                <td>{{ mo.growth.agility }}</td>
+                <td>{{ mo.growth.intelligence }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Used in</h2>
+          <table class="Breed">
+            <thead>
+              <tr>
+                <th>Base</th>
+                <th>Mate</th>
+                <th>Offspring</th>
+              </tr>
+            </thead>
+            {% for Br in uses %}
+            <tr>
+              <td>
+                <ul class="Possibilities">
+                  {% for Base in Br.base %}
+                  <li>
+                    {% if Base.parent.Family is defined %}
+                    {% set name = Base.parent.Family %}
+                    <a href="{{ url_for(name='family', arg=name) }}">{{ name|upper }}</a>
+                    {% else %}
+                    {% set name = Base.parent.Monster %}
+                    <a href="{{ url_for(name='monster', arg=name) }}">{{ name }}</a>
+                    {% endif %}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td>
+                <ul class="Possibilities">
+                  {% for Mate in Br.mate %}
+                  <li>
+                    {% if Mate.parent.Family is defined %}
+                    {% set name = Mate.parent.Family %}
+                    <a href="{{ url_for(name='family', arg=name) }}">{{ name|upper }}</a>
+                    {% else %}
+                    {% set name = Mate.parent.Monster %}
+                    <a href="{{ url_for(name='monster', arg=name) }}">{{ name }}</a>
+                    {% endif %}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td>
+                <a href="{{ url_for(name='monster', arg=Br.offspring) }}">{{ Br.offspring }}</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

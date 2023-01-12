@@ -1,0 +1,15 @@
+[package]
+name = "breed-web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+data = { path = "../data" }
+error = { path = "../error" }
+log = ">=0.4"
+env_logger = ">=0.10"
+warp = ">=0.3"
+tokio = { version = ">=1", features = ["rt-multi-thread"] }
+tera = { version = ">=1", default-features = false }
+serde = { version = ">=1", features = ["derive"] }
+urlencoding = ">=2"

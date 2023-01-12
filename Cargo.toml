@@ -1,2 +1,2 @@
 [workspace]
-members = ["error", "planner", "data"]
+members = ["error", "planner", "data", "breed-web"]

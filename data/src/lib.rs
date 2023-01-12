@@ -15,6 +15,7 @@ pub mod xml;
 use crate::error::Error;
 
 /// All DWM2 game data. This is the entry point of the whole library.
+#[derive(Default, Clone)]
 pub struct GameData
 {
     /// Data about monsters
@@ -43,6 +44,45 @@ impl GameData
         p.parse(x)?;
         drop(p);
         Ok(Self { monster_data, breed_formulae })
+    }
+
+    /// Find familiy by name.
+    pub fn family(&self, name: &str) -> Option<&monster::Family>
+    {
+        self.monster_data.families.iter()
+            .find(|f| f.name == name)
+    }
+
+    /// Find monster by name.
+    pub fn monster(&self, name: &str) -> Option<&monster::Monster>
+    {
+        self.monster_data.monsters.iter()
+            .find(|m| m.name == name)
+    }
+
+    /// Find all monsters in a family.
+    pub fn monstersInFamily<'a>(&'a self, family: &'a monster::Family) ->
+        impl Iterator<Item = &monster::Monster> + 'a
+    {
+        self.monster_data.monsters.iter().filter(
+            |m| family.members.contains(&m.name))
+    }
+
+    /// Find all the formulae a monster or a family is used in.
+    pub fn usedInFormulae<'a>(&'a self, parent: &'a breed::Parent) ->
+        impl Iterator<Item = &breed::Formula> + 'a
+    {
+        self.breed_formulae.iter().filter(
+            move |form| form.base.iter().find(|p| &p.parent == parent).is_some()
+                || form.mate.iter().find(|p| &p.parent == parent).is_some())
+    }
+
+    /// Find all the formulae that produces a specific monster.
+    pub fn breedFromFormulae<'a>(&'a self, offspring: &'a str) ->
+        impl Iterator<Item = &breed::Formula> + 'a
+    {
+        self.breed_formulae.iter()
+            .filter(move |form| &form.offspring == offspring)
     }
 }
 

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {% include 'includes.html' %}
+    <title>DWM2 Breed!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1 class="col-md-12">Breed Database</h1>
+        <p class="col-md-12" id="Intro">
+          Welcome to the breed database for Dragon Warrior: Monsters
+          2.  Click any link to start.
+        </p>
+      </div>
+      <div>
+        <h2 class="col-md-12">Families</h2>
+        <ul id="FamilyList" class="row">
+          {% for fa in families %}
+          <li class="col-md-2"><a href="{{ url_for(name='family', arg=fa.name) }}">{{ fa.name|upper }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% for Family in families %}
+      <div>
+        <h2 class="col-md-12">The
+          <a href="{{ url_for(name='family', arg=Family.name) }}">
+            {{ Family.name|upper }}
+          </a>
+          Family
+        </h2>
+        <ul id="FamilyMembers" class="row">
+          {% for m in Family.members %}
+          <li class="col-md-2">
+            <a href="{{ url_for(name='monster', arg=m) }}">{{ m }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+
+    </div>
+  </body>
+</html>

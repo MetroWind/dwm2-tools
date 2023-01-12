@@ -4,11 +4,13 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 use quick_xml::events::BytesStart;
+use serde::Serialize;
 
 use error::Error;
 use crate::xml::{self, getTagAttr};
 
 /// A location in a map
+#[derive(Clone, Serialize)]
 pub struct MapLocation
 {
     /// Name of the map. Example: Oasis Key World.
@@ -50,11 +52,11 @@ impl MapLocation
 }
 
 /// Monster growth data
-#[derive(Default)]
+#[derive(Default, Clone, Serialize)]
 pub struct Growth
 {
     pub agility: u8,
-    pub inteligence: u8,
+    pub intelligence: u8,
     pub max_level: u8,
     pub attack: u8,
     pub defense: u8,
@@ -69,7 +71,7 @@ impl Growth
     {
         let agility: u8 =  xml::getTagAttr(tag, "agl")?.ok_or_else(
             || xmlerr!("Agility value not found"))?;
-        let inteligence: u8 =  xml::getTagAttr(tag, "int")?.ok_or_else(
+        let intelligence: u8 =  xml::getTagAttr(tag, "int")?.ok_or_else(
             || xmlerr!("Inteligence value not found"))?;
         let max_level: u8 =  xml::getTagAttr(tag, "maxlvl")?.ok_or_else(
             || xmlerr!("Max level value not found"))?;
@@ -84,13 +86,14 @@ impl Growth
         let hp: u8 =  xml::getTagAttr(tag, "hp")?.ok_or_else(
             || xmlerr!("HP value not found"))?;
         Ok(Self {
-            agility, inteligence, max_level, attack, defense, mp, exp, hp,
+            agility, intelligence, max_level, attack, defense, mp, exp, hp,
         })
     }
 }
 
 
 /// The info of a monster
+#[derive(Clone, Serialize)]
 pub struct Monster
 {
     /// Name of the monster
@@ -104,11 +107,13 @@ pub struct Monster
     pub abilities: Vec<String>,
     /// Monster growth data
     pub growth: Growth,
+    /// Family the monster belongs to
+    pub family: String,
 }
 
 impl Monster
 {
-    fn fromXML(x: &[u8]) -> Result<Self, Error>
+    fn fromXML(x: &[u8], family: String) -> Result<Self, Error>
     {
         let mut name = String::new();
         let mut in_story = false;
@@ -139,12 +144,12 @@ impl Monster
         p.parse(x)?;
         drop(p);
 
-        Ok(Self { name, in_story, locations, abilities, growth })
+        Ok(Self { name, in_story, locations, abilities, growth, family})
     }
 }
 
 /// A family of monsters
-#[derive(Default)]
+#[derive(Default, Clone, Serialize)]
 pub struct Family
 {
     /// Name of the family in *lower case*.
@@ -154,7 +159,7 @@ pub struct Family
 }
 
 /// Data about a set of monsters and families.
-#[derive(Default)]
+#[derive(Default, Clone, Serialize)]
 pub struct Info
 {
     /// A list of monsters
@@ -183,7 +188,7 @@ impl Info
             Ok(())
         });
         p.addTagHandler("monster", |_, tag| {
-            let monster = Monster::fromXML(tag)?;
+            let monster = Monster::fromXML(tag, family.borrow().name.clone())?;
             family.borrow_mut().members.push(monster.name.clone());
             monsters.push(monster);
             Ok(())
