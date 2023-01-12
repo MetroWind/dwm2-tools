@@ -2632,7 +2632,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
             <ability>BiAttack</ability>
             <ability>RainSlash</ability>
           </abilities>
-          <growth/>
+          <growth agl="24" int="17" maxlvl="40" atk="21" mp="5" exp="13" hp="12" def="22"/>
         </monster>
         <monster name="DarkMate" in_story="false">
           <abilities>
@@ -3336,7 +3336,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
             <ability>Hellblast</ability>
             <ability>TatsuCall</ability>
           </abilities>
-          <growth/>
+          <growth agl="23" int="23" maxlvl="60" atk="26" mp="30" exp="27" hp="21" def="21"/>
         </monster>
         <monster name="Darck" in_story="false">
           <abilities>
@@ -3400,7 +3400,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
             <ability>BeDragon</ability>
             <ability>Meditate</ability>
           </abilities>
-          <growth/>
+          <growth agl="23" int="23" maxlvl="50" atk="21" mp="30" exp="24" hp="20" def="20"/>
         </monster>
         <monster name="Baramos" in_story="false">
           <abilities>
@@ -3416,7 +3416,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
             <ability>Bang</ability>
             <ability>Bolt</ability>
           </abilities>
-          <growth/>
+          <growth agl="23" int="23" maxlvl="70" atk="26" mp="30" exp="30" hp="21" def="21"/>
         </monster>
         <monster name="DarkDrium" in_story="false">
           <abilities>
@@ -3456,7 +3456,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
             <ability>EvilSlash</ability>
             <ability>Focus</ability>
           </abilities>
-          <growth/>
+          <growth agl="22" int="31" maxlvl="65" atk="26" mp="25" exp="30" hp="24" def="23"/>
         </monster>
       </monsters>
     </family>
