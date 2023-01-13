@@ -1,0 +1,15 @@
+= DWM2 Tools
+Various tools for Dragon Warrior: Monster 2.
+
+== Tools
+
+link:planner[Planner]:: Write down a bunch of breed formulae, and
+generate a visualization of the formulae.
+
+link:breed-web[Breed Web]:: Source code of
+https://darksair.org/dwm2-breed/.
+
+link:monster-data.xml[`monster-data.xml`]:: Structured data of all monster stats and breed formulae.
+
+link:data[Data]:: API to access the structured data.
+https://metrowind.github.io/dwm2-tools/[[API doc\]]
