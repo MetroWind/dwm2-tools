@@ -18,22 +18,88 @@
 <span id="18">18</span>
 <span id="19">19</span>
 <span id="20">20</span>
+<span id="21">21</span>
+<span id="22">22</span>
+<span id="23">23</span>
+<span id="24">24</span>
+<span id="25">25</span>
+<span id="26">26</span>
+<span id="27">27</span>
+<span id="28">28</span>
+<span id="29">29</span>
+<span id="30">30</span>
+<span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
+<span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
+<span id="53">53</span>
 </pre><pre class="rust"><code><span class="attribute">#![allow(non_snake_case)]
 
 #[macro_use] </span><span class="kw">extern crate </span>error;
 <span class="kw">mod </span>app;
 <span class="kw">mod </span>config;
 
+<span class="kw">use </span>std::path::Path;
+
+<span class="kw">use </span>log::warn;
+
 <span class="kw">use </span>error::Error;
 <span class="kw">use </span>config::Configuration;
 
 <span class="kw">fn </span>main() -&gt; <span class="prelude-ty">Result</span>&lt;(), Error&gt;
 {
+    <span class="kw">let </span>opts = clap::Command::new(<span class="string">&quot;Breed web&quot;</span>)
+        .about(<span class="string">&quot;Dragon Warrior: Monsters 2 breed database web server&quot;</span>)
+        .arg(clap::Arg::new(<span class="string">&quot;serve-path&quot;</span>)
+             .long(<span class="string">&quot;serve-path&quot;</span>)
+             .short(<span class="string">&#39;p&#39;</span>)
+             .value_name(<span class="string">&quot;PATH&quot;</span>)
+             .help(<span class="string">&quot;Serve under PATH.&quot;</span>))
+        .arg(clap::Arg::new(<span class="string">&quot;config&quot;</span>)
+             .long(<span class="string">&quot;config&quot;</span>)
+             .short(<span class="string">&#39;c&#39;</span>)
+             .value_name(<span class="string">&quot;FILE&quot;</span>)
+             .default_value(<span class="string">&quot;/etc/breed-web.toml&quot;</span>)
+             .help(<span class="string">&quot;Path of config file.&quot;</span>))
+        .get_matches();
+
     env_logger::Builder::default().format_timestamp(<span class="prelude-val">None</span>)
         .filter_level(log::LevelFilter::Info)
         .init();
 
-    <span class="kw">let </span>config = Configuration::default();
+    <span class="kw">let </span>config_path = opts.get_one::&lt;String&gt;(<span class="string">&quot;config&quot;</span>).unwrap();
+    <span class="kw">let </span><span class="kw-2">mut </span>config = <span class="kw">if </span>Path::new(<span class="kw-2">&amp;</span>config_path).exists()
+    {
+        Configuration::fromFile(<span class="kw-2">&amp;</span>config_path)<span class="question-mark">?
+    </span>}
+    <span class="kw">else
+    </span>{
+        <span class="macro">warn!</span>(<span class="string">&quot;Config file not found. Using default config...&quot;</span>);
+        Configuration::default()
+    };
+
+    <span class="kw">if let </span><span class="prelude-val">Some</span>(p) = opts.get_one::&lt;String&gt;(<span class="string">&quot;serve-path&quot;</span>)
+    {
+        config.serve_under_path = p.clone();
+    }
     <span class="kw">let </span>a = app::App::new(config)<span class="question-mark">?</span>;
     tokio::runtime::Runtime::new().unwrap().block_on(a.serve())<span class="question-mark">?</span>;
     <span class="prelude-val">Ok</span>(())
