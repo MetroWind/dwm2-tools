@@ -155,13 +155,26 @@ fn getTeraFuncArgs(args: &HashMap<String, tera::Value>, arg_name: &str) ->
     Ok(value)
 }
 
-fn makeURLFor() -> impl tera::Function
+fn makeURLFor(serve_path: String) -> impl tera::Function
 {
-    |args: &HashMap<String, tera::Value>| ->
+    move |args: &HashMap<String, tera::Value>| ->
         tera::Result<tera::Value> {
+            let path_prefix: String = if serve_path == "" || serve_path == "/"
+            {
+                String::new()
+            }
+            else if serve_path.starts_with("/")
+            {
+                serve_path.to_owned()
+            }
+            else
+            {
+                String::from("/") + &serve_path
+            };
+
             let name = getTeraFuncArgs(args, "name")?;
             let arg = getTeraFuncArgs(args, "arg")?;
-            Ok(tera::to_value(urlFor(&name, &arg)).unwrap())
+            Ok(tera::to_value(path_prefix + &urlFor(&name, &arg)).unwrap())
     }
 }
 
@@ -207,9 +220,8 @@ impl App
                 || rterr!("Invalid template path"))?;
         self.templates = Tera::new(template_dir).map_err(
             |e| rterr!("Failed to compile templates: {}", e))?;
-        self.templates.register_function("url_for", makeURLFor());
-        // self.templates.register_filter("urlencode", filterEncodeURI);
-
+        self.templates.register_function(
+            "url_for", makeURLFor(self.config.serve_under_path.clone()));
         Ok(())
     }
 
@@ -221,27 +233,48 @@ impl App
 
         let data = self.data.clone();
         let temp = self.templates.clone();
-        let index = warp::get().and(warp::path::end()).map(move || {
+        let index = warp::path::end().map(move || {
             handleIndex(&data, &temp).toResponse()
         });
 
         let data = self.data.clone();
         let temp = self.templates.clone();
-        let family = warp::get().and(warp::path("family"))
-            .and(warp::path::param()).map(move |param: String| {
+        let family = warp::path("family").and(warp::path::param()).map(
+            move |param: String| {
                 handleFamily(param, &data, &temp).toResponse()
             });
 
         let data = self.data.clone();
         let temp = self.templates.clone();
-        let monster = warp::get().and(warp::path("monster"))
-            .and(warp::path::param()).map(move |param: String| {
+        let monster = warp::path("monster").and(warp::path::param()).map(
+            move |param: String| {
                 handleMonster(param, &data, &temp).toResponse()
             });
         info!("Listening at {}:{}...", self.config.listen_address,
               self.config.listen_port);
 
-        warp::serve(statics.or(index).or(family).or(monster)).run(
+        let route = if self.config.serve_under_path == String::from("/") ||
+            self.config.serve_under_path.is_empty()
+        {
+            statics.or(index).or(family).or(monster).boxed()
+        }
+        else
+        {
+            let mut segs = self.config.serve_under_path.split('/');
+            if self.config.serve_under_path.starts_with("/")
+            {
+                segs.next();
+            }
+            let first: String = segs.next().unwrap().to_owned();
+            let mut r = warp::path(first).boxed();
+            for seg in segs
+            {
+                r = r.and(warp::path(seg.to_owned())).boxed();
+            }
+            r.and(statics.or(index).or(family).or(monster)).boxed()
+        };
+
+        warp::serve(warp::get().and(route)).run(
             std::net::SocketAddr::new(
                 self.config.listen_address.parse().map_err(
                     |_| rterr!("Invalid listen address: {}",
