@@ -12,4 +12,4 @@ https://darksair.org/dwm2-breed/.
 link:monster-data.xml[`monster-data.xml`]:: Structured data of all monster stats and breed formulae.
 
 link:data[Data]:: API to access the structured data.
-https://metrowind.github.io/dwm2-tools/[[API doc\]]
+https://metrowind.github.io/dwm2-tools/docs/data[[API doc\]]
