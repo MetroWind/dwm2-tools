@@ -1,0 +1,11 @@
+[Unit]
+Description=Breed web service
+After=network.target
+
+[Service]
+User=breedweb
+Group=breedweb
+ExecStart=/usr/bin/breed-web
+
+[Install]
+WantedBy=multi-user.target

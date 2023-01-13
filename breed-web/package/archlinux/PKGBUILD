@@ -1,0 +1,40 @@
+pkgname=breed-web
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Breed database web application for Dragon Warrior: Monsters 2'
+arch=(x86_64 i686 armv6h armv7h)
+url='https://github.com/MetroWind/dwm2-tools'
+license=(WTFPL)
+makedepends=(rustup git)
+depends=()
+source=("git+${url}.git" "sysusers-breed-web.conf" "breed-web.service" "breed-web.toml")
+sha256sums=('SKIP'
+            'bb07c4982a8c42975d38ef4ddd897ad6a47a470ca85fa1d5e7595272b84b320a'
+            'a2da66edfa932d2660b9d1dfdcf80ddcbe5f0929108a75e1e79e74384ad29bdf'
+            '9e5e5afce94fc134b641aecd1c7f7ff27abfeedd9a2f42c3c29be6bfe9ee7887')
+
+pkgver() {
+  cd "$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+    rustup install --profile minimal stable
+}
+
+build() {
+    cd "${srcdir}/dwm2-tools/${pkgname}"
+    export CARGO_TARGET_DIR=target
+    cargo build --release
+}
+
+package() {
+    install -Dm0755 -t "$pkgdir/usr/bin/" "${srcdir}/dwm2-tools/${pkgname}/target/release/${pkgname}"
+    mkdir -pv "$pkgdir/var/lib/${pkgname}"
+    cp -r "${srcdir}/dwm2-tools/${pkgname}/templates" "$pkgdir/var/lib/${pkgname}/"
+    cp -r "${srcdir}/dwm2-tools/${pkgname}/static" "$pkgdir/var/lib/${pkgname}/"
+    cp "${srcdir}/dwm2-tools/monster-data.xml" "$pkgdir/var/lib/${pkgname}/"
+    install -Dm644 "sysusers-breed-web.conf" "${pkgdir}/usr/lib/sysusers.d/breed-web.conf"
+    install -Dm644 "breed-web.service" "${pkgdir}/usr/lib/systemd/system/breed-web.service"
+    install -Dm644 "breed-web.toml" "${pkgdir}/etc/breed-web.toml"
+}
