@@ -14,7 +14,7 @@ sha256sums=('SKIP'
             '9e5e5afce94fc134b641aecd1c7f7ff27abfeedd9a2f42c3c29be6bfe9ee7887')
 
 pkgver() {
-  cd "$pkgname"
+  cd "${srcdir}/dwm2-tools"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
