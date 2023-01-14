@@ -2014,15 +2014,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Elf Key World</map>
-            </location>
-            <location>
-              <map></map>
-            </location>
-            <location>
-              <map>3 Screens</map>
-            </location>
-            <location>
-              <map>Right From Elvin Village</map>
+              <description>3 Screens Right From Elvin Village</description>
             </location>
           </spawn-locations>
           <abilities>
