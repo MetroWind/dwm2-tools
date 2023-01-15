@@ -7,11 +7,17 @@
 
 #![allow(non_snake_case)]
 
+use std::collections::HashMap;
+
 #[macro_use] extern crate error;
 pub mod monster;
 pub mod breed;
 pub mod xml;
+pub mod skill;
 
+use monster::{Monster, Family};
+use breed::Formula;
+use skill::Skill;
 use crate::error::Error;
 
 /// All DWM2 game data. This is the entry point of the whole library.
@@ -21,7 +27,9 @@ pub struct GameData
     /// Data about monsters
     pub monster_data: monster::Info,
     /// All breed formulae
-    pub breed_formulae: Vec<breed::Formula>,
+    pub breed_formulae: Vec<Formula>,
+    /// All skills
+    skills: HashMap<String, Skill>,
 }
 
 impl GameData
@@ -31,6 +39,7 @@ impl GameData
     {
         let mut monster_data = monster::Info::default();
         let mut breed_formulae = Vec::new();
+        let mut skills = HashMap::new();
 
         let mut p = xml::Parser::new();
         p.addTagHandler("families", |_, tag| {
@@ -38,31 +47,50 @@ impl GameData
             Ok(())
         });
         p.addTagHandler("breed", |_, tag| {
-            breed_formulae.push(breed::Formula::fromXML(tag)?);
+            breed_formulae.push(Formula::fromXML(tag)?);
+            Ok(())
+        });
+        p.addTagHandler("skill-data", |_, tag| {
+            let s = Skill::fromXML(tag)?;
+            skills.insert(s.name.clone(), s);
             Ok(())
         });
         p.parse(x)?;
         drop(p);
-        Ok(Self { monster_data, breed_formulae })
+        Ok(Self { monster_data, breed_formulae, skills })
     }
 
     /// Find familiy by name.
-    pub fn family(&self, name: &str) -> Option<&monster::Family>
+    pub fn family(&self, name: &str) -> Option<&Family>
     {
         self.monster_data.families.iter()
             .find(|f| f.name == name)
     }
 
     /// Find monster by name.
-    pub fn monster(&self, name: &str) -> Option<&monster::Monster>
+    pub fn monster(&self, name: &str) -> Option<&Monster>
     {
         self.monster_data.monsters.iter()
             .find(|m| m.name == name)
     }
 
+    /// Find skill by name.
+    pub fn skill(&self, name: &str) -> Option<&Skill>
+    {
+        self.skills.get(name)
+    }
+
+    /// Find all monsters having a skill natrually.
+    pub fn monstersBySkill<'a>(&'a self, skill_name: &'a str) ->
+        impl Iterator<Item = &Monster> + 'a
+    {
+        self.monster_data.monsters.iter().filter(
+            move |m| m.abilities.iter().any(|a| a == skill_name))
+    }
+
     /// Find all monsters in a family.
-    pub fn monstersInFamily<'a>(&'a self, family: &'a monster::Family) ->
-        impl Iterator<Item = &monster::Monster> + 'a
+    pub fn monstersInFamily<'a>(&'a self, family: &'a Family) ->
+        impl Iterator<Item = &Monster> + 'a
     {
         self.monster_data.monsters.iter().filter(
             |m| family.members.contains(&m.name))
@@ -70,7 +98,7 @@ impl GameData
 
     /// Find all the formulae a monster or a family is used in.
     pub fn usedInFormulae<'a>(&'a self, parent: &'a breed::Parent) ->
-        impl Iterator<Item = &breed::Formula> + 'a
+        impl Iterator<Item = &Formula> + 'a
     {
         self.breed_formulae.iter().filter(
             move |form| form.base.iter().find(|p| &p.parent == parent).is_some()
@@ -79,7 +107,7 @@ impl GameData
 
     /// Find all the formulae that produces a specific monster.
     pub fn breedFromFormulae<'a>(&'a self, offspring: &'a str) ->
-        impl Iterator<Item = &breed::Formula> + 'a
+        impl Iterator<Item = &Formula> + 'a
     {
         self.breed_formulae.iter()
             .filter(move |form| &form.offspring == offspring)
@@ -143,6 +171,19 @@ mod tests {
       </mate>
     </breed>
   </breeds>
+  <skills-data>
+    <skill-data name="VacuSlash">
+      <skill-requirement lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="76"/>
+      <combine-from>
+        <skill>WindBeast</skill>
+        <skill>ChargeUp</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Vacuum">
+      <skill-requirement lvl="19" hp="112" mp="0" atk="114" def="0" agl="132" int="0"/>
+      <precursor>WindBeast</precursor>
+    </skill-data>
+  </skills-data>
 </monster-data>
 "#;
         let data = GameData::fromXML(xml.as_bytes())?;
@@ -150,6 +191,12 @@ mod tests {
         assert_eq!(data.monster_data.monsters.len(), 2);
         assert_eq!(data.monster_data.families.len(), 1);
         assert_eq!(data.monster_data.families[0].members.len(), 2);
+        assert_eq!(data.skills.len(), 2);
+        assert_eq!(data.skills["VacuSlash"].combine_from,
+                   vec![String::from("WindBeast"), String::from("ChargeUp")]);
+        assert_eq!(data.skills["VacuSlash"].upgrade_from, None);
+        assert_eq!(data.skills["Vacuum"].upgrade_from,
+                   Some(String::from("WindBeast")));
         Ok(())
     }
 }
