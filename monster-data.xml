@@ -8290,4 +8290,689 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
       </mate>
     </breed>
   </breeds>
+  <skills-data>
+    <skill-data name="Ahhh">
+      <skill-requirement lvl="10" hp="0" mp="0" atk="60" def="0" agl="60" int="0"/>
+    </skill-data>
+    <skill-data name="Antidote">
+      <skill-requirement lvl="5" hp="0" mp="21" atk="0" def="0" agl="0" int="47"/>
+    </skill-data>
+    <skill-data name="AquaCut">
+      <skill-requirement lvl="12" hp="68" mp="0" atk="72" def="0" agl="62" int="0"/>
+    </skill-data>
+    <skill-data name="AquaWall">
+      <skill-requirement lvl="20" hp="100" mp="94" atk="0" def="84" agl="0" int="202"/>
+      <combine-from>
+        <skill>Bounce</skill>
+        <skill>Tidalwave</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Bang">
+      <skill-requirement lvl="4" hp="0" mp="13" atk="0" def="0" agl="0" int="47"/>
+    </skill-data>
+    <skill-data name="Barrier">
+      <skill-requirement lvl="18" hp="0" mp="76" atk="0" def="0" agl="0" int="126"/>
+    </skill-data>
+    <skill-data name="BazooCall">
+      <skill-requirement lvl="35" hp="0" mp="160" atk="0" def="0" agl="0" int="550"/>
+      <precursor>SamsiCall</precursor>
+    </skill-data>
+    <skill-data name="BeastCut">
+      <skill-requirement lvl="12" hp="62" mp="0" atk="68" def="0" agl="62" int="0"/>
+    </skill-data>
+    <skill-data name="Beat">
+      <skill-requirement lvl="16" hp="0" mp="58" atk="0" def="0" agl="0" int="137"/>
+    </skill-data>
+    <skill-data name="BeDragon">
+      <skill-requirement lvl="23" hp="0" mp="72" atk="0" def="0" agl="0" int="162"/>
+    </skill-data>
+    <skill-data name="Berserker">
+      <skill-requirement lvl="14" hp="98" mp="0" atk="84" def="84" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="BiAttack">
+      <skill-requirement lvl="19" hp="98" mp="0" atk="88" def="0" agl="112" int="0"/>
+    </skill-data>
+    <skill-data name="BigBang">
+      <skill-requirement lvl="36" hp="196" mp="196" atk="0" def="0" agl="0" int="612"/>
+      <combine-from>
+        <skill>Explodet</skill>
+        <skill>WhiteFire</skill>
+        <skill>WhiteAir</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="BigTrip">
+      <skill-requirement lvl="12" hp="66" mp="0" atk="63" def="0" agl="77" int="0"/>
+      <precursor>LegSweep</precursor>
+    </skill-data>
+    <skill-data name="BirdBlow">
+      <skill-requirement lvl="12" hp="62" mp="0" atk="68" def="0" agl="72" int="0"/>
+    </skill-data>
+    <skill-data name="BladeD">
+      <skill-requirement lvl="14" hp="98" mp="0" atk="84" def="84" agl="84" int="0"/>
+      <combine-from>
+        <skill>TwinSlash</skill>
+        <skill>StrongD</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Blaze">
+      <skill-requirement lvl="1" hp="0" mp="7" atk="0" def="0" agl="0" int="36"/>
+    </skill-data>
+    <skill-data name="BlazeAir">
+      <skill-requirement lvl="10" hp="70" mp="0" atk="0" def="0" agl="0" int="0"/>
+      <precursor>FireAir</precursor>
+    </skill-data>
+    <skill-data name="Blazemore">
+      <skill-requirement lvl="13" hp="0" mp="46" atk="0" def="0" agl="0" int="116"/>
+      <precursor>Blaze</precursor>
+    </skill-data>
+    <skill-data name="Blazemost">
+      <skill-requirement lvl="28" hp="0" mp="112" atk="0" def="0" agl="0" int="263"/>
+      <precursor>Blazemore</precursor>
+    </skill-data>
+    <skill-data name="Blizzard">
+      <skill-requirement lvl="25" hp="0" mp="88" atk="0" def="0" agl="0" int="198"/>
+      <precursor>SnowStorm</precursor>
+    </skill-data>
+    <skill-data name="Bolt">
+      <skill-requirement lvl="6" hp="0" mp="20" atk="0" def="0" agl="0" int="63"/>
+    </skill-data>
+    <skill-data name="BoltSlash">
+      <skill-requirement lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="76"/>
+      <combine-from>
+        <skill>Lightning</skill>
+        <skill>ChargeUp</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Boom">
+      <skill-requirement lvl="14" hp="0" mp="50" atk="0" def="0" agl="0" int="123"/>
+      <precursor>Bang</precursor>
+    </skill-data>
+    <skill-data name="Bounce">
+      <skill-requirement lvl="20" hp="0" mp="84" atk="0" def="0" agl="0" int="141"/>
+      <precursor>MagicBack</precursor>
+    </skill-data>
+    <skill-data name="BugBlow">
+      <skill-requirement lvl="12" hp="68" mp="0" atk="72" def="0" agl="62" int="0"/>
+    </skill-data>
+    <skill-data name="CallHelp">
+      <skill-requirement lvl="17" hp="84" mp="42" atk="0" def="0" agl="68" int="98"/>
+    </skill-data>
+    <skill-data name="Chance">
+      <skill-requirement lvl="40" hp="0" mp="224" atk="0" def="0" agl="0" int="420"/>
+    </skill-data>
+    <skill-data name="ChargeUp">
+      <skill-requirement lvl="14" hp="98" mp="0" atk="0" def="84" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="CleanCut">
+      <skill-requirement lvl="12" hp="68" mp="0" atk="72" def="0" agl="62" int="0"/>
+    </skill-data>
+    <skill-data name="Cover">
+      <skill-requirement lvl="5" hp="35" mp="0" atk="0" def="30" agl="30" int="0"/>
+    </skill-data>
+    <skill-data name="Curse">
+      <skill-requirement lvl="15" hp="0" mp="65" atk="0" def="0" agl="82" int="148"/>
+    </skill-data>
+    <skill-data name="CurseOff">
+      <skill-requirement lvl="7" hp="0" mp="27" atk="0" def="0" agl="0" int="44"/>
+    </skill-data>
+    <skill-data name="DanceShut">
+      <skill-requirement lvl="16" hp="100" mp="0" atk="0" def="0" agl="120" int="0"/>
+    </skill-data>
+    <skill-data name="DeChaos">
+      <skill-requirement lvl="6" hp="0" mp="24" atk="0" def="0" agl="0" int="47"/>
+    </skill-data>
+    <skill-data name="Defeat">
+      <skill-requirement lvl="24" hp="0" mp="80" atk="0" def="0" agl="0" int="177"/>
+      <precursor>Beat</precursor>
+    </skill-data>
+    <skill-data name="Defense">
+      <skill-requirement lvl="8" hp="0" mp="36" atk="0" def="0" agl="0" int="58"/>
+      <precursor>Sap</precursor>
+    </skill-data>
+    <skill-data name="DeMagic">
+      <skill-requirement lvl="20" hp="0" mp="100" atk="0" def="0" agl="0" int="252"/>
+      <combine-from>
+        <skill>Surge</skill>
+        <skill>UltraDown</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="DevilCut">
+      <skill-requirement lvl="12" hp="64" mp="0" atk="58" def="0" agl="62" int="87"/>
+    </skill-data>
+    <skill-data name="DiagoCall">
+      <skill-requirement lvl="25" hp="0" mp="100" atk="0" def="0" agl="0" int="250"/>
+      <precursor>TatsuCall</precursor>
+    </skill-data>
+    <skill-data name="Dodge">
+      <skill-requirement lvl="18" hp="126" mp="0" atk="108" def="108" agl="108" int="0"/>
+    </skill-data>
+    <skill-data name="DrakSlash">
+      <skill-requirement lvl="12" hp="62" mp="0" atk="72" def="0" agl="62" int="0"/>
+    </skill-data>
+    <skill-data name="EagleEye">
+      <skill-requirement lvl="10" hp="0" mp="40" atk="0" def="0" agl="0" int="62"/>
+    </skill-data>
+    <skill-data name="EerieLite">
+      <skill-requirement lvl="14" hp="0" mp="65" atk="0" def="0" agl="84" int="152"/>
+      <combine-from>
+        <skill>Curse</skill>
+        <skill>Radiant</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Errand">
+      <skill-requirement lvl="10" hp="0" mp="40" atk="0" def="0" agl="0" int="62"/>
+    </skill-data>
+    <skill-data name="EvilSlash">
+      <skill-requirement lvl="15" hp="106" mp="0" atk="90" def="0" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="Explodet">
+      <skill-requirement lvl="29" hp="0" mp="120" atk="0" def="0" agl="0" int="285"/>
+      <precursor>Boom</precursor>
+    </skill-data>
+    <skill-data name="Farewell">
+      <skill-requirement lvl="32" hp="0" mp="188" atk="0" def="0" agl="0" int="317"/>
+      <combine-from>
+        <skill>Sacrifice</skill>
+        <skill>Revive</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="FireAir">
+      <skill-requirement lvl="3" hp="21" mp="0" atk="0" def="0" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="Firebal">
+      <skill-requirement lvl="3" hp="0" mp="11" atk="0" def="0" agl="0" int="42"/>
+    </skill-data>
+    <skill-data name="Firebane">
+      <skill-requirement lvl="10" hp="0" mp="34" atk="0" def="0" agl="0" int="94"/>
+      <precursor>Firebal</precursor>
+    </skill-data>
+    <skill-data name="Firebolt">
+      <skill-requirement lvl="26" hp="0" mp="96" atk="0" def="0" agl="0" int="220"/>
+      <precursor>Firebane</precursor>
+    </skill-data>
+    <skill-data name="FireSlash">
+      <skill-requirement lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="98"/>
+      <combine-from>
+        <skill>Blazemore</skill>
+        <skill>ChargeUp</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Focus">
+      <skill-requirement lvl="18" hp="126" mp="0" atk="0" def="108" agl="108" int="195"/>
+      <combine-from>
+        <skill>ChargeUp</skill>
+        <skill>SuckAir</skill>
+        <skill>Meditate</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="FrigidAir">
+      <skill-requirement lvl="3" hp="21" mp="0" atk="0" def="0" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="Geyser">
+      <skill-requirement lvl="22" hp="140" mp="120" atk="120" def="0" agl="120" int="288"/>
+      <combine-from>
+        <skill>RockThrow</skill>
+        <skill>HighJump</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="GigaSlash">
+      <skill-requirement lvl="33" hp="231" mp="164" atk="198" def="0" agl="198" int="608"/>
+      <combine-from>
+        <skill>FireSlash</skill>
+        <skill>VacuSlash</skill>
+        <skill>BoltSlash</skill>
+        <skill>IceSlash</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Guardian">
+      <skill-requirement lvl="12" hp="84" mp="0" atk="0" def="72" agl="72" int="0"/>
+    </skill-data>
+    <skill-data name="Heal">
+      <skill-requirement lvl="1" hp="0" mp="7" atk="0" def="0" agl="0" int="11"/>
+    </skill-data>
+    <skill-data name="HealAll">
+      <skill-requirement lvl="16" hp="0" mp="82" atk="0" def="0" agl="0" int="144"/>
+      <precursor>HealMore</precursor>
+    </skill-data>
+    <skill-data name="HealMore">
+      <skill-requirement lvl="10" hp="0" mp="52" atk="0" def="0" agl="0" int="87"/>
+      <precursor>Heal</precursor>
+    </skill-data>
+    <skill-data name="HealUs">
+      <skill-requirement lvl="20" hp="0" mp="140" atk="0" def="0" agl="0" int="216"/>
+    </skill-data>
+    <skill-data name="HealUsAll">
+      <skill-requirement lvl="28" hp="0" mp="196" atk="0" def="0" agl="0" int="288"/>
+      <precursor>HealUs</precursor>
+    </skill-data>
+    <skill-data name="Hellblast">
+      <skill-requirement lvl="34" hp="184" mp="184" atk="0" def="0" agl="0" int="538"/>
+      <combine-from>
+        <skill>Thordain</skill>
+        <skill>Lightning</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="HighJump">
+      <skill-requirement lvl="20" hp="75" mp="0" atk="70" def="0" agl="48" int="80"/>
+    </skill-data>
+    <skill-data name="Hustle">
+      <skill-requirement lvl="18" hp="114" mp="0" atk="0" def="0" agl="130" int="173"/>
+      <combine-from>
+        <skill>HealAll</skill>
+        <skill>SideStep</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="IceAir">
+      <skill-requirement lvl="10" hp="70" mp="0" atk="0" def="0" agl="0" int="0"/>
+      <precursor>FrigidAir</precursor>
+    </skill-data>
+    <skill-data name="IceBolt">
+      <skill-requirement lvl="5" hp="0" mp="16" atk="0" def="0" agl="0" int="54"/>
+    </skill-data>
+    <skill-data name="IceSlash">
+      <skill-requirement lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="76"/>
+      <combine-from>
+        <skill>SnowStorm</skill>
+        <skill>ChargeUp</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="IceStorm">
+      <skill-requirement lvl="20" hp="140" mp="0" atk="0" def="0" agl="0" int="0"/>
+      <precursor>IceAir</precursor>
+    </skill-data>
+    <skill-data name="Imitate">
+      <skill-requirement lvl="21" hp="147" mp="147" atk="126" def="126" agl="126" int="227"/>
+      <combine-from>
+        <skill>Transform</skill>
+        <skill>Focus</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Increase">
+      <skill-requirement lvl="6" hp="0" mp="27" atk="0" def="0" agl="0" int="44"/>
+      <precursor>Upper</precursor>
+    </skill-data>
+    <skill-data name="Infermore">
+      <skill-requirement lvl="10" hp="0" mp="38" atk="0" def="0" agl="0" int="101"/>
+      <precursor>Infernos</precursor>
+    </skill-data>
+    <skill-data name="Infermost">
+      <skill-requirement lvl="21" hp="0" mp="104" atk="0" def="0" agl="0" int="242"/>
+      <precursor>Infermore</precursor>
+    </skill-data>
+    <skill-data name="Infernos">
+      <skill-requirement lvl="2" hp="0" mp="10" atk="0" def="0" agl="0" int="38"/>
+    </skill-data>
+    <skill-data name="Informer">
+      <skill-requirement lvl="10" hp="0" mp="40" atk="0" def="0" agl="0" int="62"/>
+    </skill-data>
+    <skill-data name="Ironize">
+      <skill-requirement lvl="15" hp="0" mp="62" atk="0" def="0" agl="0" int="87"/>
+    </skill-data>
+    <skill-data name="K.O.Dance">
+      <skill-requirement lvl="20" hp="140" mp="72" atk="0" def="0" agl="120" int="216"/>
+      <combine-from>
+        <skill>Curse</skill>
+        <skill>LureDance</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Kamikaze">
+      <skill-requirement lvl="18" hp="126" mp="0" atk="108" def="108" agl="0" int="0"/>
+      <combine-from>
+        <skill>ChargeUp</skill>
+        <skill>Ramming</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="LegSweep">
+      <skill-requirement lvl="6" hp="32" mp="0" atk="31" def="0" agl="48" int="0"/>
+    </skill-data>
+    <skill-data name="LifeDance">
+      <skill-requirement lvl="30" hp="210" mp="0" atk="0" def="0" agl="180" int="446"/>
+      <combine-from>
+        <skill>Sacrifice</skill>
+        <skill>Hustle</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="LifeSong">
+      <skill-requirement lvl="27" hp="198" mp="94" atk="0" def="0" agl="145" int="292"/>
+      <combine-from>
+        <skill>Revive</skill>
+        <skill>WarCry</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Lightning">
+      <skill-requirement lvl="10" hp="65" mp="0" atk="90" def="0" agl="52" int="0"/>
+    </skill-data>
+    <skill-data name="LoveRain">
+      <skill-requirement lvl="24" hp="116" mp="96" atk="0" def="0" agl="78" int="263"/>
+      <combine-from>
+        <skill>Meditate</skill>
+        <skill>LifeSong</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="LureDance">
+      <skill-requirement lvl="14" hp="84" mp="0" atk="0" def="0" agl="98" int="0"/>
+    </skill-data>
+    <skill-data name="LushLicks">
+      <skill-requirement lvl="7" hp="55" mp="0" atk="0" def="0" agl="67" int="0"/>
+    </skill-data>
+    <skill-data name="MagicBack">
+      <skill-requirement lvl="16" hp="0" mp="68" atk="0" def="0" agl="0" int="112"/>
+    </skill-data>
+    <skill-data name="MagicWall">
+      <skill-requirement lvl="19" hp="0" mp="80" atk="0" def="0" agl="0" int="134"/>
+    </skill-data>
+    <skill-data name="MapMagic">
+      <skill-requirement lvl="10" hp="0" mp="40" atk="0" def="0" agl="0" int="62"/>
+    </skill-data>
+    <skill-data name="Massacre">
+      <skill-requirement lvl="12" hp="84" mp="0" atk="72" def="0" agl="72" int="0"/>
+    </skill-data>
+    <skill-data name="Meditate">
+      <skill-requirement lvl="26" hp="182" mp="0" atk="0" def="156" agl="0" int="281"/>
+      <combine-from>
+        <skill>StrongD</skill>
+        <skill>Guardian</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="MegaMagic">
+      <skill-requirement lvl="38" hp="0" mp="210" atk="0" def="0" agl="0" int="794"/>
+      <combine-from>
+        <skill>Blazemost</skill>
+        <skill>Firebolt</skill>
+        <skill>Explodet</skill>
+        <skill>Infermost</skill>
+        <skill>Blizzard</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="MetalCut">
+      <skill-requirement lvl="12" hp="68" mp="0" atk="72" def="0" agl="62" int="0"/>
+    </skill-data>
+    <skill-data name="MouthShut">
+      <skill-requirement lvl="17" hp="120" mp="0" atk="100" def="0" agl="140" int="0"/>
+    </skill-data>
+    <skill-data name="MPass">
+      <skill-requirement lvl="1" hp="0" mp="55" atk="0" def="0" agl="0" int="11"/>
+    </skill-data>
+    <skill-data name="MPassmore">
+      <skill-requirement lvl="10" hp="0" mp="120" atk="0" def="0" agl="0" int="87"/>
+      <precursor>MPass</precursor>
+    </skill-data>
+    <skill-data name="MPassmost">
+      <skill-requirement lvl="16" hp="0" mp="82" atk="0" def="0" agl="0" int="144"/>
+      <precursor>MPassmore</precursor>
+    </skill-data>
+    <skill-data name="MultiCut">
+      <skill-requirement lvl="28" hp="154" mp="140" atk="168" def="0" agl="168" int="572"/>
+      <combine-from>
+        <skill>Vacuum</skill>
+        <skill>ZombieCut</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="NapAttack">
+      <skill-requirement lvl="7" hp="49" mp="0" atk="42" def="0" agl="0" int="76"/>
+    </skill-data>
+    <skill-data name="NumbOff">
+      <skill-requirement lvl="8" hp="0" mp="30" atk="0" def="0" agl="0" int="47"/>
+    </skill-data>
+    <skill-data name="OddDance">
+      <skill-requirement lvl="10" hp="54" mp="27" atk="0" def="0" agl="63" int="89"/>
+    </skill-data>
+    <skill-data name="Outside">
+      <skill-requirement lvl="10" hp="0" mp="40" atk="0" def="0" agl="0" int="62"/>
+    </skill-data>
+    <skill-data name="PalsyAir">
+      <skill-requirement lvl="16" hp="112" mp="0" atk="0" def="0" agl="0" int="173"/>
+      <combine-from>
+        <skill>SleepAir</skill>
+        <skill>PoisonAir</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="PanicAll">
+      <skill-requirement lvl="12" hp="0" mp="56" atk="0" def="0" agl="0" int="89"/>
+    </skill-data>
+    <skill-data name="PaniDance">
+      <skill-requirement lvl="13" hp="74" mp="0" atk="0" def="0" agl="78" int="141"/>
+    </skill-data>
+    <skill-data name="Paralyze">
+      <skill-requirement lvl="9" hp="63" mp="0" atk="54" def="0" agl="0" int="98"/>
+      <combine-from>
+        <skill>PoisonHit</skill>
+        <skill>NapAttack</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Pheromone">
+      <skill-requirement lvl="4" hp="0" mp="28" atk="0" def="0" agl="0" int="44"/>
+    </skill-data>
+    <skill-data name="PoisonAir">
+      <skill-requirement lvl="14" hp="98" mp="0" atk="0" def="0" agl="0" int="152"/>
+      <precursor>PoisonGas</precursor>
+    </skill-data>
+    <skill-data name="PoisonGas">
+      <skill-requirement lvl="9" hp="63" mp="0" atk="0" def="0" agl="0" int="98"/>
+    </skill-data>
+    <skill-data name="PoisonHit">
+      <skill-requirement lvl="5" hp="35" mp="0" atk="50" def="0" agl="0" int="90"/>
+    </skill-data>
+    <skill-data name="PsycheUp">
+      <skill-requirement lvl="12" hp="74" mp="0" atk="82" def="68" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="QuadHits">
+      <skill-requirement lvl="24" hp="124" mp="0" atk="112" def="0" agl="136" int="0"/>
+      <precursor>BiAttack</precursor>
+    </skill-data>
+    <skill-data name="Radiant">
+      <skill-requirement lvl="12" hp="0" mp="42" atk="0" def="0" agl="72" int="130"/>
+    </skill-data>
+    <skill-data name="RainSlash">
+      <skill-requirement lvl="15" hp="92" mp="0" atk="90" def="0" agl="96" int="0"/>
+      <combine-from>
+        <skill>SquallHit</skill>
+        <skill>BiAttack</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Ramming">
+      <skill-requirement lvl="12" hp="70" mp="0" atk="0" def="0" agl="70" int="0"/>
+    </skill-data>
+    <skill-data name="Revive">
+      <skill-requirement lvl="27" hp="0" mp="174" atk="0" def="0" agl="0" int="274"/>
+      <precursor>Vivify</precursor>
+    </skill-data>
+    <skill-data name="RobDance">
+      <skill-requirement lvl="12" hp="68" mp="39" atk="0" def="0" agl="85" int="110"/>
+    </skill-data>
+    <skill-data name="RobMagic">
+      <skill-requirement lvl="7" hp="0" mp="32" atk="0" def="0" agl="0" int="51"/>
+    </skill-data>
+    <skill-data name="RockThrow">
+      <skill-requirement lvl="16" hp="124" mp="0" atk="102" def="0" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="Sacrifice">
+      <skill-requirement lvl="28" hp="0" mp="40" atk="0" def="140" agl="0" int="78"/>
+    </skill-data>
+    <skill-data name="SamsiCall">
+      <skill-requirement lvl="30" hp="0" mp="130" atk="0" def="0" agl="0" int="400"/>
+      <precursor>DiagoCall</precursor>
+    </skill-data>
+    <skill-data name="SandStorm">
+      <skill-requirement lvl="10" hp="70" mp="0" atk="0" def="0" agl="70" int="0"/>
+    </skill-data>
+    <skill-data name="Sap">
+      <skill-requirement lvl="4" hp="0" mp="18" atk="0" def="0" agl="0" int="27"/>
+    </skill-data>
+    <skill-data name="Scorching">
+      <skill-requirement lvl="20" hp="140" mp="0" atk="0" def="0" agl="0" int="0"/>
+      <precursor>BlazeAir</precursor>
+    </skill-data>
+    <skill-data name="SealPray">
+      <skill-requirement lvl="35" hp="87" mp="160" atk="0" def="0" agl="0" int="794"/>
+      <combine-from>
+        <skill>StopSpell</skill>
+        <skill>DanceShut</skill>
+        <skill>MouthShut</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Shears">
+      <skill-requirement lvl="12" hp="68" mp="0" atk="62" def="0" agl="72" int="0"/>
+    </skill-data>
+    <skill-data name="SickLick">
+      <skill-requirement lvl="13" hp="81" mp="0" atk="0" def="0" agl="94" int="0"/>
+      <precursor>Lushlicks</precursor>
+    </skill-data>
+    <skill-data name="SideStep">
+      <skill-requirement lvl="9" hp="63" mp="0" atk="0" def="0" agl="54" int="0"/>
+    </skill-data>
+    <skill-data name="Sleep">
+      <skill-requirement lvl="4" hp="0" mp="24" atk="0" def="0" agl="0" int="29"/>
+    </skill-data>
+    <skill-data name="SleepAir">
+      <skill-requirement lvl="10" hp="70" mp="0" atk="0" def="0" agl="0" int="108"/>
+    </skill-data>
+    <skill-data name="SleepAll">
+      <skill-requirement lvl="11" hp="0" mp="52" atk="0" def="0" agl="0" int="83"/>
+      <precursor>Sleep</precursor>
+    </skill-data>
+    <skill-data name="SlimeBlow">
+      <skill-requirement lvl="12" hp="62" mp="0" atk="68" def="0" agl="72" int="0"/>
+    </skill-data>
+    <skill-data name="Slow">
+      <skill-requirement lvl="3" hp="0" mp="16" atk="0" def="0" agl="0" int="26"/>
+    </skill-data>
+    <skill-data name="SlowAll">
+      <skill-requirement lvl="7" hp="0" mp="32" atk="0" def="0" agl="0" int="51"/>
+      <precursor>Slow</precursor>
+    </skill-data>
+    <skill-data name="SnowStorm">
+      <skill-requirement lvl="12" hp="0" mp="42" atk="0" def="0" agl="0" int="108"/>
+      <precursor>IceBolt</precursor>
+    </skill-data>
+    <skill-data name="Speed">
+      <skill-requirement lvl="1" hp="0" mp="10" atk="0" def="0" agl="0" int="15"/>
+    </skill-data>
+    <skill-data name="SpeedUp">
+      <skill-requirement lvl="5" hp="0" mp="24" atk="0" def="0" agl="0" int="36"/>
+      <precursor>Speed</precursor>
+    </skill-data>
+    <skill-data name="SquallHit">
+      <skill-requirement lvl="12" hp="72" mp="0" atk="68" def="0" agl="82" int="0"/>
+      <combine-from>
+        <skill>SpeedUp</skill>
+        <skill>ChargeUp</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="StepGuard">
+      <skill-requirement lvl="10" hp="0" mp="40" atk="0" def="0" agl="0" int="62"/>
+    </skill-data>
+    <skill-data name="StopSpell">
+      <skill-requirement lvl="9" hp="0" mp="44" atk="0" def="0" agl="0" int="69"/>
+    </skill-data>
+    <skill-data name="StormWind">
+      <skill-requirement lvl="19" hp="140" mp="0" atk="0" def="126" agl="140" int="0"/>
+    </skill-data>
+    <skill-data name="StrongD">
+      <skill-requirement lvl="14" hp="98" mp="0" atk="0" def="84" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="SuckAir">
+      <skill-requirement lvl="17" hp="119" mp="0" atk="0" def="102" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="SuckAll">
+      <skill-requirement lvl="13" hp="91" mp="0" atk="0" def="78" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="Surge">
+      <skill-requirement lvl="23" hp="0" mp="130" atk="0" def="0" agl="0" int="306"/>
+      <combine-from>
+        <skill>Antidote</skill>
+        <skill>DeChaos</skill>
+        <skill>NumbOff</skill>
+        <skill>CurseOff</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Surround">
+      <skill-requirement lvl="10" hp="0" mp="47" atk="0" def="0" agl="0" int="74"/>
+    </skill-data>
+    <skill-data name="TailWind">
+      <skill-requirement lvl="11" hp="75" mp="0" atk="0" def="84" agl="70" int="0"/>
+    </skill-data>
+    <skill-data name="TakeMagic">
+      <skill-requirement lvl="13" hp="0" mp="58" atk="0" def="0" agl="0" int="94"/>
+    </skill-data>
+    <skill-data name="TatsuCall">
+      <skill-requirement lvl="20" hp="0" mp="70" atk="0" def="0" agl="0" int="100"/>
+    </skill-data>
+    <skill-data name="ThickFog">
+      <skill-requirement lvl="22" hp="0" mp="120" atk="0" def="0" agl="0" int="288"/>
+    </skill-data>
+    <skill-data name="Thordain">
+      <skill-requirement lvl="30" hp="0" mp="128" atk="0" def="0" agl="0" int="306"/>
+      <precursor>Zap</precursor>
+    </skill-data>
+    <skill-data name="Tidalwave">
+      <skill-requirement lvl="19" hp="112" mp="0" atk="114" def="0" agl="132" int="0"/>
+      <precursor>Watershot</precursor>
+    </skill-data>
+    <skill-data name="Transform">
+      <skill-requirement lvl="21" hp="0" mp="92" atk="0" def="0" agl="0" int="159"/>
+    </skill-data>
+    <skill-data name="TwinHits">
+      <skill-requirement lvl="17" hp="0" mp="72" atk="0" def="0" agl="0" int="119"/>
+    </skill-data>
+    <skill-data name="TwinSlash">
+      <skill-requirement lvl="8" hp="80" mp="0" atk="80" def="0" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="UltraDown">
+      <skill-requirement lvl="21" hp="0" mp="110" atk="0" def="0" agl="0" int="270"/>
+      <combine-from>
+        <skill>Defense</skill>
+        <skill>SlowAll</skill>
+        <skill>Surround</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Upper">
+      <skill-requirement lvl="2" hp="0" mp="14" atk="0" def="0" agl="0" int="22"/>
+    </skill-data>
+    <skill-data name="VacuSlash">
+      <skill-requirement lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="76"/>
+      <combine-from>
+        <skill>WindBeast</skill>
+        <skill>ChargeUp</skill>
+      </combine-from>
+    </skill-data>
+    <skill-data name="Vacuum">
+      <skill-requirement lvl="19" hp="112" mp="0" atk="114" def="0" agl="132" int="0"/>
+      <precursor>WindBeast</precursor>
+    </skill-data>
+    <skill-data name="Vivify">
+      <skill-requirement lvl="14" hp="0" mp="63" atk="0" def="0" agl="0" int="98"/>
+    </skill-data>
+    <skill-data name="WarCry">
+      <skill-requirement lvl="14" hp="120" mp="0" atk="0" def="0" agl="0" int="0"/>
+    </skill-data>
+    <skill-data name="Watershot">
+      <skill-requirement lvl="13" hp="74" mp="0" atk="60" def="0" agl="84" int="0"/>
+    </skill-data>
+    <skill-data name="Whistle">
+      <skill-requirement lvl="4" hp="0" mp="28" atk="0" def="0" agl="0" int="44"/>
+    </skill-data>
+    <skill-data name="WhiteAir">
+      <skill-requirement lvl="20" hp="210" mp="0" atk="0" def="0" agl="0" int="0"/>
+      <precursor>IceStorm</precursor>
+    </skill-data>
+    <skill-data name="WhiteFire">
+      <skill-requirement lvl="20" hp="210" mp="0" atk="0" def="0" agl="0" int="0"/>
+      <precursor>Scorching</precursor>
+    </skill-data>
+    <skill-data name="WindBeast">
+      <skill-requirement lvl="13" hp="74" mp="0" atk="60" def="0" agl="84" int="0"/>
+    </skill-data>
+    <skill-data name="YellHelp">
+      <skill-requirement lvl="23" hp="128" mp="64" atk="0" def="0" agl="82" int="134"/>
+      <precursor>CallHelp</precursor>
+    </skill-data>
+    <skill-data name="Zap">
+      <skill-requirement lvl="15" hp="0" mp="54" atk="0" def="0" agl="0" int="130"/>
+      <precursor>Bolt</precursor>
+    </skill-data>
+    <skill-data name="ZombieCut">
+      <skill-requirement lvl="12" hp="64" mp="0" atk="58" def="0" agl="62" int="87"/>
+    </skill-data>
+  </skills-data>
 </monster-data>
