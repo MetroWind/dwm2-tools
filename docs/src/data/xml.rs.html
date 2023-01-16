@@ -337,9 +337,6 @@
 <span id="337">337</span>
 <span id="338">338</span>
 <span id="339">339</span>
-<span id="340">340</span>
-<span id="341">341</span>
-<span id="342">342</span>
 </pre><pre class="rust"><code><span class="doccomment">//! A simple XML parser based on quick-xml.
 //!
 //! This is basically an interface on top of quick-xml. It provides an
@@ -357,34 +354,33 @@
 //! ## Example
 //!
 //! ```
+//! # use std::str;
+//! # use data::xml::Parser;
 //! struct A { a: String }
 //!
-//! # #[test]
-//! fn parsing() -&gt; Result&lt;(), Error&gt;
-//! {
-//!     let mut aaa: A = A { a: String::new() };
-//!     let mut iin = 0;
-//!     let mut out = 0;
-//!     let mut d = String::new();
+//! let mut aaa: A = A { a: String::new() };
+//! let mut iin = 0;
+//! let mut out = 0;
+//! let mut d = String::new();
 //!
-//!     let mut p = Parser::new();
-//!     p.addBeginHandler(&quot;a&quot;, |_, _| {
-//!         iin += 1;
-//!         Ok(())
-//!     });
-//!     p.addEndHandler(&quot;a&quot;, |_, _| {
-//!         out += 1;
-//!         Ok(())
-//!     });
-//!     p.addTextHandler(&quot;a&quot;, |_, t| {
-//!         aaa.a = t.to_owned();
-//!         Ok(())
-//!     });
-//!     p.addTagHandler(&quot;d&quot;, |_, t| {
-//!         d = str::from_utf8(t).unwrap().to_owned();
-//!         Ok(())
-//!     });
-//!     p.parse(r#&quot;
+//! let mut p = Parser::new();
+//! p.addBeginHandler(&quot;a&quot;, |_, _| {
+//!     iin += 1;
+//!     Ok(())
+//! });
+//! p.addEndHandler(&quot;a&quot;, |_, _| {
+//!     out += 1;
+//!     Ok(())
+//! });
+//! p.addTextHandler(&quot;a&quot;, |_, t| {
+//!     aaa.a = t.to_owned();
+//!     Ok(())
+//! });
+//! p.addTagHandler(&quot;d&quot;, |_, t| {
+//!     d = str::from_utf8(t).unwrap().to_owned();
+//!     Ok(())
+//! });
+//! p.parse(r#&quot;
 //! &lt;c&gt;
 //!     &lt;a&gt;aaa&lt;/a&gt;
 //!     &lt;b/&gt;
@@ -392,16 +388,14 @@
 //!         &lt;e/&gt;
 //!     &lt;/d&gt;
 //! &lt;/c&gt;
-//! &quot;#.as_bytes())?;
-//!     drop(p);
-//!     assert_eq!(iin, 1);
-//!     assert_eq!(out, 1);
-//!     assert_eq!(aaa.a, &quot;aaa&quot;.to_owned());
-//!     assert_eq!(d, r#&quot;&lt;d&gt;
-//!     &lt;e/&gt;
-//! &lt;/d&gt;&quot;#);
-//!     Ok(())
-//! }
+//! &quot;#.as_bytes()).unwrap();
+//! drop(p);
+//! assert_eq!(iin, 1);
+//! assert_eq!(out, 1);
+//! assert_eq!(aaa.a, &quot;aaa&quot;.to_owned());
+//! assert_eq!(d, r#&quot;&lt;d&gt;
+//!         &lt;e/&gt;
+//!     &lt;/d&gt;&quot;#);
 //! ```
 
 </span><span class="kw">use </span>std::str;

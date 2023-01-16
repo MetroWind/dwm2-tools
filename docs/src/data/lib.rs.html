@@ -210,6 +210,89 @@
 <span id="210">210</span>
 <span id="211">211</span>
 <span id="212">212</span>
+<span id="213">213</span>
+<span id="214">214</span>
+<span id="215">215</span>
+<span id="216">216</span>
+<span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
+<span id="224">224</span>
+<span id="225">225</span>
+<span id="226">226</span>
+<span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Data structures and logic about the DMW2 game data.
 //!
 //! This crate deals with the generic DWM2 game data, not a particular
@@ -241,7 +324,7 @@
     <span class="doccomment">/// All breed formulae
     </span><span class="kw">pub </span>breed_formulae: Vec&lt;Formula&gt;,
     <span class="doccomment">/// All skills
-    </span>skills: HashMap&lt;String, Skill&gt;,
+    </span><span class="kw">pub </span>skills: HashMap&lt;String, Skill&gt;,
 }
 
 <span class="kw">impl </span>GameData
@@ -269,6 +352,20 @@
         });
         p.parse(x)<span class="question-mark">?</span>;
         drop(p);
+
+        <span class="comment">// Populate Skill::upgrade_to
+        </span><span class="kw">let </span>keys: Vec&lt;String&gt; = skills.keys().map(|k| k.to_owned()).collect();
+        <span class="kw">for </span>s <span class="kw">in </span>keys
+        {
+            <span class="kw">if let </span><span class="prelude-val">Some</span>(precursor) = skills[<span class="kw-2">&amp;</span>s].upgrade_from.clone()
+            {
+                skills.get_mut(<span class="kw-2">&amp;</span>precursor).ok_or_else(
+                    || <span class="macro">rterr!</span>(<span class="string">&quot;{} is upgraded from {}, which is not found.&quot;</span>,
+                              s, precursor))<span class="question-mark">?
+                    </span>.upgrade_to = <span class="prelude-val">Some</span>(s.to_owned());
+            }
+        }
+
         <span class="prelude-val">Ok</span>(<span class="self">Self </span>{ monster_data, breed_formulae, skills })
     }
 
@@ -323,6 +420,75 @@
     </span>{
         <span class="self">self</span>.breed_formulae.iter()
             .filter(<span class="kw">move </span>|form| <span class="kw-2">&amp;</span>form.offspring == offspring)
+    }
+
+    <span class="doccomment">/// Find all the upgrades of `skill`. This includes skills that
+    /// are not the ultimate upgrades.
+    </span><span class="kw">fn </span>skillUpgrades&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, skill: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill) -&gt; Vec&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill&gt;
+    {
+        <span class="kw">let </span><span class="kw-2">mut </span>result: Vec&lt;<span class="kw-2">&amp;</span>Skill&gt; = <span class="macro">vec!</span>[skill];
+        <span class="kw">if let </span><span class="prelude-val">Some</span>(name) = <span class="kw-2">&amp;</span>skill.upgrade_to
+        {
+            <span class="kw">let </span>upgrade = <span class="self">self</span>.skill(name).unwrap();
+            result.append(<span class="kw-2">&amp;mut </span><span class="self">self</span>.skillUpgrades(upgrade));
+        }
+        result
+    }
+
+    <span class="kw">fn </span>skillFirstPrecursor&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, skill: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill) -&gt; <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill
+    {
+        <span class="kw">if let </span><span class="prelude-val">Some</span>(name) = <span class="kw-2">&amp;</span>skill.upgrade_from
+        {
+            <span class="kw">let </span>precursor = <span class="self">self</span>.skill(name).unwrap();
+            <span class="self">self</span>.skillFirstPrecursor(precursor)
+        }
+        <span class="kw">else
+        </span>{
+            skill
+        }
+    }
+
+    <span class="doccomment">/// Return the skill update path the skill is in. The result is
+    /// arranged from weak to strong. Exmaple:
+    ///
+    /// ```
+    /// # use data::*;
+    /// let content = include_bytes!(&quot;../../monster-data.xml&quot;);
+    /// let data = GameData::fromXML(content).unwrap();
+    /// let upgrade_path = data.skillUpgradePath(
+    ///     data.skill(&quot;Infermore&quot;).unwrap());
+    /// assert_eq!(upgrade_path.iter().map(|s| &amp;s.name).collect::&lt;Vec&lt;&amp;String&gt;&gt;(),
+    ///            vec![&quot;Infernos&quot;, &quot;Infermore&quot;, &quot;Infermost&quot;]);
+    /// ```
+    </span><span class="kw">pub fn </span>skillUpgradePath&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, skill: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill) -&gt; Vec&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill&gt;
+    {
+        <span class="kw">if </span>skill.upgrade_from.is_some() || skill.upgrade_to.is_some()
+        {
+            <span class="self">self</span>.skillUpgrades(<span class="self">self</span>.skillFirstPrecursor(skill))
+        }
+        <span class="kw">else
+        </span>{
+            Vec::new()
+        }
+    }
+
+    <span class="doccomment">/// Return all the skills that `skill` and its upgrades combines
+    /// into.
+    </span><span class="kw">pub fn </span>skillCombinesInto&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, skill: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Skill) -&gt;
+        <span class="kw">impl </span>Iterator&lt;Item = <span class="kw-2">&amp;</span>Skill&gt; + <span class="lifetime">&#39;a
+    </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>upgrades = <span class="self">self</span>.skillUpgrades(skill);
+        upgrades.push(skill);
+        <span class="self">self</span>.skills.values().filter(<span class="kw">move </span>|s| {
+            <span class="kw">for </span>upgrade <span class="kw">in </span><span class="kw-2">&amp;</span>upgrades
+            {
+                <span class="kw">if </span>s.combine_from.contains(<span class="kw-2">&amp;</span>upgrade.name)
+                {
+                    <span class="kw">return </span><span class="bool-val">true</span>;
+                }
+            }
+            <span class="bool-val">false
+        </span>})
     }
 }
 
@@ -393,7 +559,7 @@
     &lt;/skill-data&gt;
     &lt;skill-data name=&quot;Vacuum&quot;&gt;
       &lt;skill-requirements lvl=&quot;19&quot; hp=&quot;112&quot; mp=&quot;0&quot; atk=&quot;114&quot; def=&quot;0&quot; agl=&quot;132&quot; int=&quot;0&quot;/&gt;
-      &lt;precursor&gt;WindBeast&lt;/precursor&gt;
+      &lt;precursor&gt;VacuSlash&lt;/precursor&gt;
     &lt;/skill-data&gt;
   &lt;/skills-data&gt;
 &lt;/monster-data&gt;
@@ -410,7 +576,7 @@
         <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;VacuSlash&quot;</span>).unwrap().requirements.hp, <span class="number">77</span>);
         <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;VacuSlash&quot;</span>).unwrap().upgrade_from, <span class="prelude-val">None</span>);
         <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;Vacuum&quot;</span>).unwrap().upgrade_from,
-                   <span class="prelude-val">Some</span>(String::from(<span class="string">&quot;WindBeast&quot;</span>)));
+                   <span class="prelude-val">Some</span>(String::from(<span class="string">&quot;VacuSlash&quot;</span>)));
         <span class="prelude-val">Ok</span>(())
     }
 
