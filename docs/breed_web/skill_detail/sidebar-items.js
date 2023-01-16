@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["SkillCombination",""],["SkillDetail",""],["SkillReference",""]],"type":[["SkillUpgradePath",""]]};

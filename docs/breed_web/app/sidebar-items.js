@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["getTeraFuncArgs",""],["handleFamily",""],["handleIndex",""],["handleMonster",""],["makeURLFor",""],["urlEncode",""],["urlFor",""]],"struct":[["App",""]],"trait":[["ToResponse",""]]};
+window.SIDEBAR_ITEMS = {"fn":[["getTeraFuncArgs",""],["handleFamily",""],["handleIndex",""],["handleMonster",""],["handleSkill",""],["makeURLFor",""],["urlEncode",""],["urlFor",""]],"struct":[["App",""]],"trait":[["ToResponse",""]]};

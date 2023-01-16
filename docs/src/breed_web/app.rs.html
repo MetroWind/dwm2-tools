@@ -283,6 +283,35 @@
 <span id="283">283</span>
 <span id="284">284</span>
 <span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
 </pre><pre class="rust"><code><span class="kw">use </span>std::io::Read;
 <span class="kw">use </span>std::path::{PathBuf, Path};
 <span class="kw">use </span>std::collections::HashMap;
@@ -293,13 +322,13 @@
 <span class="kw">use </span>tera::Tera;
 <span class="kw">use </span>warp::{Filter, Reply};
 <span class="kw">use </span>warp::http::status::StatusCode;
-<span class="kw">use </span>warp::redirect::see_other;
 <span class="kw">use </span>warp::reply::Response;
 
 <span class="kw">use </span>error::Error;
 <span class="kw">use </span>data::GameData;
 <span class="kw">use </span>data::monster::Monster;
 <span class="kw">use </span>data::breed::{Parent, Formula};
+<span class="kw">use </span><span class="kw">crate</span>::skill_detail::SkillDetail;
 <span class="kw">use </span><span class="kw">crate</span>::config::Configuration;
 
 <span class="kw">trait </span>ToResponse
@@ -345,6 +374,8 @@
 {
     <span class="kw">let </span><span class="kw-2">mut </span>context = tera::Context::new();
     context.insert(<span class="string">&quot;families&quot;</span>, <span class="kw-2">&amp;</span>data.monster_data.families);
+    context.insert(<span class="string">&quot;skills&quot;</span>, <span class="kw-2">&amp;</span>data.skills.keys().map(|k| k.as_ref())
+                   .collect::&lt;Vec&lt;<span class="kw-2">&amp;</span>str&gt;&gt;());
 
     templates.render(<span class="string">&quot;index.html&quot;</span>, <span class="kw-2">&amp;</span>context).map_err(
         |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template index.html: {}&quot;</span>, e))
@@ -369,7 +400,7 @@
         context.insert(<span class="string">&quot;uses&quot;</span>, <span class="kw-2">&amp;</span>forms);
 
         templates.render(<span class="string">&quot;family.html&quot;</span>, <span class="kw-2">&amp;</span>context).map_err(
-            |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template index.html: {}&quot;</span>, e))
+            |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template family.html: {}&quot;</span>, e))
     }
     <span class="kw">else
     </span>{
@@ -401,13 +432,31 @@
         context.insert(<span class="string">&quot;uses&quot;</span>, <span class="kw-2">&amp;</span>uses);
 
         templates.render(<span class="string">&quot;monster.html&quot;</span>, <span class="kw-2">&amp;</span>context).map_err(
-            |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template index.html: {}&quot;</span>, e))
+            |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template monster.html: {}&quot;</span>, e))
     }
     <span class="kw">else
     </span>{
         <span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Monster not found: {}&quot;</span>, monster_name))
     }
 
+}
+
+<span class="kw">fn </span>handleSkill(skill_name: String, data: <span class="kw-2">&amp;</span>data::GameData, templates: <span class="kw-2">&amp;</span>Tera,)
+               -&gt; <span class="prelude-ty">Result</span>&lt;String, Error&gt;
+{
+    <span class="kw">let </span>skill_name = urlencoding::decode(<span class="kw-2">&amp;</span>skill_name).map_err(
+        |<span class="kw">_</span>| <span class="macro">rterr!</span>(<span class="string">&quot;Invalid monster: {}&quot;</span>, skill_name))<span class="question-mark">?</span>.to_string();
+    <span class="kw">if let </span><span class="prelude-val">Some</span>(skill) = data.skill(<span class="kw-2">&amp;</span>skill_name)
+    {
+        <span class="kw">let </span><span class="kw-2">mut </span>context = tera::Context::new();
+        context.insert(<span class="string">&quot;skill&quot;</span>, <span class="kw-2">&amp;</span>SkillDetail::fromSkill(skill, data).unwrap());
+        templates.render(<span class="string">&quot;skill.html&quot;</span>, <span class="kw-2">&amp;</span>context).map_err(
+            |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template skill.html: {}&quot;</span>, e))
+    }
+    <span class="kw">else
+    </span>{
+        <span class="prelude-val">Err</span>(<span class="macro">rterr!</span>(<span class="string">&quot;Skill not found: {}&quot;</span>, skill_name))
+    }
 }
 
 <span class="kw">fn </span>urlEncode(s: <span class="kw-2">&amp;</span>str) -&gt; String
@@ -422,6 +471,7 @@
         <span class="string">&quot;index&quot; </span>=&gt; String::from(<span class="string">&quot;/&quot;</span>),
         <span class="string">&quot;family&quot; </span>=&gt; String::from(<span class="string">&quot;/family/&quot;</span>) + <span class="kw-2">&amp;</span>urlEncode(arg),
         <span class="string">&quot;monster&quot; </span>=&gt; String::from(<span class="string">&quot;/monster/&quot;</span>) + <span class="kw-2">&amp;</span>urlEncode(arg),
+        <span class="string">&quot;skill&quot; </span>=&gt; String::from(<span class="string">&quot;/skill/&quot;</span>) + <span class="kw-2">&amp;</span>urlEncode(arg),
         <span class="string">&quot;static&quot; </span>=&gt; String::from(<span class="string">&quot;/static/&quot;</span>) + <span class="kw-2">&amp;</span>urlEncode(arg),
         <span class="kw">_ </span>=&gt; String::from(<span class="string">&quot;/&quot;</span>),
     }
@@ -535,13 +585,18 @@
             <span class="kw">move </span>|param: String| {
                 handleMonster(param, <span class="kw-2">&amp;</span>data, <span class="kw-2">&amp;</span>temp).toResponse()
             });
-        <span class="macro">info!</span>(<span class="string">&quot;Listening at {}:{}...&quot;</span>, <span class="self">self</span>.config.listen_address,
-              <span class="self">self</span>.config.listen_port);
+
+        <span class="kw">let </span>data = <span class="self">self</span>.data.clone();
+        <span class="kw">let </span>temp = <span class="self">self</span>.templates.clone();
+        <span class="kw">let </span>skill = warp::path(<span class="string">&quot;skill&quot;</span>).and(warp::path::param()).map(
+            <span class="kw">move </span>|param: String| {
+                handleSkill(param, <span class="kw-2">&amp;</span>data, <span class="kw-2">&amp;</span>temp).toResponse()
+            });
 
         <span class="kw">let </span>route = <span class="kw">if </span><span class="self">self</span>.config.serve_under_path == String::from(<span class="string">&quot;/&quot;</span>) ||
             <span class="self">self</span>.config.serve_under_path.is_empty()
         {
-            statics.or(index).or(family).or(monster).boxed()
+            statics.or(index).or(family).or(monster).or(skill).boxed()
         }
         <span class="kw">else
         </span>{
@@ -556,8 +611,11 @@
             {
                 r = r.and(warp::path(seg.to_owned())).boxed();
             }
-            r.and(statics.or(index).or(family).or(monster)).boxed()
+            r.and(statics.or(index).or(family).or(monster).or(skill)).boxed()
         };
+
+        <span class="macro">info!</span>(<span class="string">&quot;Listening at {}:{}...&quot;</span>, <span class="self">self</span>.config.listen_address,
+              <span class="self">self</span>.config.listen_port);
 
         warp::serve(warp::get().and(route)).run(
             std::net::SocketAddr::new(
