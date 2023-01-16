@@ -15,34 +15,33 @@
 //! ## Example
 //!
 //! ```
+//! # use std::str;
+//! # use data::xml::Parser;
 //! struct A { a: String }
 //!
-//! # #[test]
-//! fn parsing() -> Result<(), Error>
-//! {
-//!     let mut aaa: A = A { a: String::new() };
-//!     let mut iin = 0;
-//!     let mut out = 0;
-//!     let mut d = String::new();
+//! let mut aaa: A = A { a: String::new() };
+//! let mut iin = 0;
+//! let mut out = 0;
+//! let mut d = String::new();
 //!
-//!     let mut p = Parser::new();
-//!     p.addBeginHandler("a", |_, _| {
-//!         iin += 1;
-//!         Ok(())
-//!     });
-//!     p.addEndHandler("a", |_, _| {
-//!         out += 1;
-//!         Ok(())
-//!     });
-//!     p.addTextHandler("a", |_, t| {
-//!         aaa.a = t.to_owned();
-//!         Ok(())
-//!     });
-//!     p.addTagHandler("d", |_, t| {
-//!         d = str::from_utf8(t).unwrap().to_owned();
-//!         Ok(())
-//!     });
-//!     p.parse(r#"
+//! let mut p = Parser::new();
+//! p.addBeginHandler("a", |_, _| {
+//!     iin += 1;
+//!     Ok(())
+//! });
+//! p.addEndHandler("a", |_, _| {
+//!     out += 1;
+//!     Ok(())
+//! });
+//! p.addTextHandler("a", |_, t| {
+//!     aaa.a = t.to_owned();
+//!     Ok(())
+//! });
+//! p.addTagHandler("d", |_, t| {
+//!     d = str::from_utf8(t).unwrap().to_owned();
+//!     Ok(())
+//! });
+//! p.parse(r#"
 //! <c>
 //!     <a>aaa</a>
 //!     <b/>
@@ -50,16 +49,14 @@
 //!         <e/>
 //!     </d>
 //! </c>
-//! "#.as_bytes())?;
-//!     drop(p);
-//!     assert_eq!(iin, 1);
-//!     assert_eq!(out, 1);
-//!     assert_eq!(aaa.a, "aaa".to_owned());
-//!     assert_eq!(d, r#"<d>
-//!     <e/>
-//! </d>"#);
-//!     Ok(())
-//! }
+//! "#.as_bytes()).unwrap();
+//! drop(p);
+//! assert_eq!(iin, 1);
+//! assert_eq!(out, 1);
+//! assert_eq!(aaa.a, "aaa".to_owned());
+//! assert_eq!(d, r#"<d>
+//!         <e/>
+//!     </d>"#);
 //! ```
 
 use std::str;
