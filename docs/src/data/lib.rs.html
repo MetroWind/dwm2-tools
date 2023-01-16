@@ -293,7 +293,7 @@
     }
 
     <span class="doccomment">/// Find all monsters having a skill natrually.
-    </span><span class="kw">pub fn </span>monstersBySkill&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, skill_name: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>str) -&gt;
+    </span><span class="kw">pub fn </span>monstersWithSkill&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, skill_name: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>str) -&gt;
         <span class="kw">impl </span>Iterator&lt;Item = <span class="kw-2">&amp;</span>Monster&gt; + <span class="lifetime">&#39;a
     </span>{
         <span class="self">self</span>.monster_data.monsters.iter().filter(
