@@ -81,7 +81,7 @@ impl GameData
     }
 
     /// Find all monsters having a skill natrually.
-    pub fn monstersBySkill<'a>(&'a self, skill_name: &'a str) ->
+    pub fn monstersWithSkill<'a>(&'a self, skill_name: &'a str) ->
         impl Iterator<Item = &Monster> + 'a
     {
         self.monster_data.monsters.iter().filter(
