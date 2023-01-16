@@ -78,7 +78,7 @@ impl Skill
             }
             Ok(())
         });
-        p.addBeginHandler("skill-requirement", |_, tag| {
+        p.addBeginHandler("skill-requirements", |_, tag| {
             skill.requirements = Requirements::fromXMLTag(tag)?;
             Ok(())
         });

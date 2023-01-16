@@ -173,14 +173,14 @@ mod tests {
   </breeds>
   <skills-data>
     <skill-data name="VacuSlash">
-      <skill-requirement lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="76"/>
+      <skill-requirements lvl="11" hp="77" mp="34" atk="66" def="0" agl="0" int="76"/>
       <combine-from>
         <skill>WindBeast</skill>
         <skill>ChargeUp</skill>
       </combine-from>
     </skill-data>
     <skill-data name="Vacuum">
-      <skill-requirement lvl="19" hp="112" mp="0" atk="114" def="0" agl="132" int="0"/>
+      <skill-requirements lvl="19" hp="112" mp="0" atk="114" def="0" agl="132" int="0"/>
       <precursor>WindBeast</precursor>
     </skill-data>
   </skills-data>
@@ -193,10 +193,11 @@ mod tests {
         assert_eq!(data.monster_data.families[0].members.len(), 2);
         assert_eq!(data.monster_data.monsters[0].skills.len(), 3);
         assert_eq!(data.skills.len(), 2);
-        assert_eq!(data.skills["VacuSlash"].combine_from,
+        assert_eq!(data.skill("VacuSlash").unwrap().combine_from,
                    vec![String::from("WindBeast"), String::from("ChargeUp")]);
-        assert_eq!(data.skills["VacuSlash"].upgrade_from, None);
-        assert_eq!(data.skills["Vacuum"].upgrade_from,
+        assert_eq!(data.skill("VacuSlash").unwrap().requirements.hp, 77);
+        assert_eq!(data.skill("VacuSlash").unwrap().upgrade_from, None);
+        assert_eq!(data.skill("Vacuum").unwrap().upgrade_from,
                    Some(String::from("WindBeast")));
         Ok(())
     }
