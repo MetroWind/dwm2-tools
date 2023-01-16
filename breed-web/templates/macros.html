@@ -1,0 +1,26 @@
+{% macro skillWithMonsters(skill) %}
+<div class="SkillWithMonsters">
+  <div class="Skill">
+    {% if skill.is_current %}
+    <span {% if skill.is_relevant %}class="RelevantSkill"{% endif %}>
+      {{ skill.name }}
+    </span>
+    {% else %}
+    <a href="{{ url_for(name='skill', arg=skill.name) }}"
+       {% if skill.is_relevant %}
+       class="RelevantSkill"
+       {% endif %}
+       >{{ skill.name }}</a>
+    {% endif %}
+  </div>
+  {% if skill.monsters | length > 0 and not skill.is_current %}
+  <ul class="SkillMonsterList">
+    {% for m in skill.monsters %}
+    <li>
+      <a href="{{ url_for(name='monster', arg=m) }}">{{ m }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endmacro skillWithMonsters %}

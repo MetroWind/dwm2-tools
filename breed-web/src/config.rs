@@ -1,5 +1,3 @@
-use std::path::Path;
-
 use serde::Deserialize;
 
 use error::Error;

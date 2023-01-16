@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     {% include 'includes.html' %}
-    <title>Monster</title>
+    <title>Monster: {{ monster.name }}</title>
   </head>
   <body>
     <div class="container">
@@ -52,7 +52,7 @@
           <h3>Skills</h3>
           <ul>
             {% for Ab in monster.skills %}
-            <li>{{ Ab }}</li>
+            <li><a href="{{ url_for(name='skill', arg=Ab) }}">{{ Ab }}</a></li>
             {% endfor %}
           </ul>
           <h3>Location</h3>

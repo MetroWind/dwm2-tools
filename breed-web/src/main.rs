@@ -1,6 +1,7 @@
 #![allow(non_snake_case)]
 
 #[macro_use] extern crate error;
+mod skill_detail;
 mod app;
 mod config;
 

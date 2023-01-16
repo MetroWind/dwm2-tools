@@ -173,7 +173,7 @@ impl GameData
         }
         else
         {
-            Vec::new()
+            vec![skill,]
         }
     }
 

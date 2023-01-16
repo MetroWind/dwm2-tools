@@ -75,14 +75,22 @@ a:hover
     text-decoration: none;
 }
 
-ul.Possibilities, ul#FamilyMembers, ul#FamilyList
+hr
+{
+    margin: 100px auto 100px auto;
+    border: none;
+    border-top: #aaa 4px solid ;
+    width: 32px;
+}
+
+ul.Possibilities, ul.BigList
 {
     list-style: none;
     padding-left: 0px;
     margin: 0px;
 }
 
-ul#FamilyList > li, ul#FamilyMembers > li
+ul.BigList > li
 {
     display: inline-block;
     text-align: center;
@@ -180,4 +188,72 @@ table.Breed td
 table.Growth, table.Breed
 {
     width: 100%;
+}
+
+/* ========== Non-bootstrap setup ================================> */
+
+ul.BigListFlex
+{
+}
+
+#Content
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 600px)
+{
+    #Content
+    {
+        gap: 3em;
+    }
+}
+
+@media (min-width: 800px)
+{
+    #Content
+    {
+        gap: 6em;
+    }
+}
+
+.SkillDetailRow, .SkillCombination
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SkillMonsterList
+{
+    display: block;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+    font-size: 60%;
+    font-weight: bold;
+}
+
+.SkillWithMonsters, .Operator
+{
+    text-align: center;
+}
+
+.Operator
+{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.RelevantSkill
+{
+    border: #aaa 2px solid;
+    padding: 2px;
+}
+
+.SkillCombination
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
 }

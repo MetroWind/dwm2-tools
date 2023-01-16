@@ -27,7 +27,7 @@
       </div>
       <div>
         <h2 class="col-md-12">Families</h2>
-        <ul id="FamilyList" class="row">
+        <ul id="FamilyList" class="row BigList">
           {% for fa in families %}
           <li class="col-md-2"><a href="{{ url_for(name='family', arg=fa.name) }}">{{ fa.name|upper }}</a></li>
           {% endfor %}
@@ -42,7 +42,7 @@
           </a>
           Family
         </h2>
-        <ul id="FamilyMembers" class="row">
+        <ul id="FamilyMembers" class="row BigList">
           {% for m in Family.members %}
           <li class="col-md-2">
             <a href="{{ url_for(name='monster', arg=m) }}">{{ m }}</a>
@@ -52,6 +52,17 @@
       </div>
       {% endfor %}
 
+      <hr/>
+      <div>
+        <h2 class="col-md-12">Skills</h2>
+        <ul id="SkillList" class="row BigList">
+          {% for skill in skills %}
+          <li class="col-md-2">
+            <a href="{{ url_for(name='skill', arg=skill) }}">{{ skill }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </body>
 </html>

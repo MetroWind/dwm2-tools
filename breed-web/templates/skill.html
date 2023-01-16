@@ -1,0 +1,118 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    {% include 'includes.html' %}
+    <title>Skill: {{ skill.name }}</title>
+  </head>
+  <body>
+    <div class="Container">
+      <nav>
+        <a href="{{ url_for(name='index', arg='') }}">◀ Index</a>
+      </nav>
+      <h1>{{ skill.name }}</h1>
+      <div id="Content">
+        <aside id="BasicInfo">
+          <section>
+            <h2>Requirements</h2>
+            <table class="Growth">
+              <thead>
+                <tr>
+                  <th>Lvl</th>
+                  <th>Hp</th>
+                  <th>Mp</th>
+                  <th>Atk</th>
+                  <th>Def</th>
+                  <th>Agl</th>
+                  <th>Int</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>{{ skill.requirements.level }}</td>
+                <td>{{ skill.requirements.hp }}</td>
+                <td>{{ skill.requirements.mp }}</td>
+                <td>{{ skill.requirements.attack }}</td>
+                <td>{{ skill.requirements.defense }}</td>
+                <td>{{ skill.requirements.agility }}</td>
+                <td>{{ skill.requirements.intelligence }}</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>Monsters</h2>
+            <ul class="BigListFlex">
+              {% for m in skill.monsters %}
+              <li>
+                <a href="{{ url_for(name='monster', arg=m) }}">{{ m }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </section>
+        </aside>
+
+        {% if skill.upgrade_path | length > 0 %}
+        <section>
+          <h2>Upgrade Path</h2>
+          <div class="SkillDetailRow">
+            {% for s in skill.upgrade_path %}
+            {{ macros::skillWithMonsters(skill=s) }}
+            {% if not loop.last %}
+            <div class="Operator">⟶</div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        {% if skill.combines_from %}
+        <section>
+          <h2>Combines From</h2>
+          <div class="SkillCombination">
+            <div class="Skill">{{ skill.name }}</div>
+            <div class="Operator">=</div>
+            {% for upgrade_path in skill.combines_from.constituents %}
+            <div class="SkillDetailColumn">
+              {% for s in upgrade_path %}
+              {{ macros::skillWithMonsters(skill=s) }}
+              {% if not loop.last %}
+              <div class="Operator">↓</div>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% if not loop.last %}
+            <div class="Operator">+</div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        {% if skill.combines_to | length > 0 %}
+        <section>
+          <h2>Combines to</h2>
+          {% for comb in skill.combines_to %}
+          <div class="SkillCombination">
+            {{ macros::skillWithMonsters(skill=comb.target) }}
+            <div class="Operator">=</div>
+            {% for upgrade_path in comb.constituents %}
+            <div class="SkillDetailColumn">
+              {% for s in upgrade_path %}
+              {{ macros::skillWithMonsters(skill=s) }}
+              {% if not loop.last %}
+              <div class="Operator">↓</div>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% if not loop.last %}
+            <div class="Operator">+</div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </section>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
