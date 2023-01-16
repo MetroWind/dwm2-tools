@@ -168,7 +168,7 @@
             }
             <span class="prelude-val">Ok</span>(())
         });
-        p.addBeginHandler(<span class="string">&quot;skill-requirement&quot;</span>, |<span class="kw">_</span>, tag| {
+        p.addBeginHandler(<span class="string">&quot;skill-requirements&quot;</span>, |<span class="kw">_</span>, tag| {
             skill.requirements = Requirements::fromXMLTag(tag)<span class="question-mark">?</span>;
             <span class="prelude-val">Ok</span>(())
         });

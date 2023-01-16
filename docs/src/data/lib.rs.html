@@ -209,6 +209,7 @@
 <span id="209">209</span>
 <span id="210">210</span>
 <span id="211">211</span>
+<span id="212">212</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Data structures and logic about the DMW2 game data.
 //!
 //! This crate deals with the generic DWM2 game data, not a particular
@@ -384,14 +385,14 @@
   &lt;/breeds&gt;
   &lt;skills-data&gt;
     &lt;skill-data name=&quot;VacuSlash&quot;&gt;
-      &lt;skill-requirement lvl=&quot;11&quot; hp=&quot;77&quot; mp=&quot;34&quot; atk=&quot;66&quot; def=&quot;0&quot; agl=&quot;0&quot; int=&quot;76&quot;/&gt;
+      &lt;skill-requirements lvl=&quot;11&quot; hp=&quot;77&quot; mp=&quot;34&quot; atk=&quot;66&quot; def=&quot;0&quot; agl=&quot;0&quot; int=&quot;76&quot;/&gt;
       &lt;combine-from&gt;
         &lt;skill&gt;WindBeast&lt;/skill&gt;
         &lt;skill&gt;ChargeUp&lt;/skill&gt;
       &lt;/combine-from&gt;
     &lt;/skill-data&gt;
     &lt;skill-data name=&quot;Vacuum&quot;&gt;
-      &lt;skill-requirement lvl=&quot;19&quot; hp=&quot;112&quot; mp=&quot;0&quot; atk=&quot;114&quot; def=&quot;0&quot; agl=&quot;132&quot; int=&quot;0&quot;/&gt;
+      &lt;skill-requirements lvl=&quot;19&quot; hp=&quot;112&quot; mp=&quot;0&quot; atk=&quot;114&quot; def=&quot;0&quot; agl=&quot;132&quot; int=&quot;0&quot;/&gt;
       &lt;precursor&gt;WindBeast&lt;/precursor&gt;
     &lt;/skill-data&gt;
   &lt;/skills-data&gt;
@@ -404,10 +405,11 @@
         <span class="macro">assert_eq!</span>(data.monster_data.families[<span class="number">0</span>].members.len(), <span class="number">2</span>);
         <span class="macro">assert_eq!</span>(data.monster_data.monsters[<span class="number">0</span>].skills.len(), <span class="number">3</span>);
         <span class="macro">assert_eq!</span>(data.skills.len(), <span class="number">2</span>);
-        <span class="macro">assert_eq!</span>(data.skills[<span class="string">&quot;VacuSlash&quot;</span>].combine_from,
+        <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;VacuSlash&quot;</span>).unwrap().combine_from,
                    <span class="macro">vec!</span>[String::from(<span class="string">&quot;WindBeast&quot;</span>), String::from(<span class="string">&quot;ChargeUp&quot;</span>)]);
-        <span class="macro">assert_eq!</span>(data.skills[<span class="string">&quot;VacuSlash&quot;</span>].upgrade_from, <span class="prelude-val">None</span>);
-        <span class="macro">assert_eq!</span>(data.skills[<span class="string">&quot;Vacuum&quot;</span>].upgrade_from,
+        <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;VacuSlash&quot;</span>).unwrap().requirements.hp, <span class="number">77</span>);
+        <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;VacuSlash&quot;</span>).unwrap().upgrade_from, <span class="prelude-val">None</span>);
+        <span class="macro">assert_eq!</span>(data.skill(<span class="string">&quot;Vacuum&quot;</span>).unwrap().upgrade_from,
                    <span class="prelude-val">Some</span>(String::from(<span class="string">&quot;WindBeast&quot;</span>)));
         <span class="prelude-val">Ok</span>(())
     }
