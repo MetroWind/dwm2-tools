@@ -8808,7 +8808,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     </skill-data>
     <skill-data name="SickLick">
       <skill-requirements lvl="13" hp="81" mp="0" atk="0" def="0" agl="94" int="0"/>
-      <precursor>Lushlicks</precursor>
+      <precursor>LushLicks</precursor>
     </skill-data>
     <skill-data name="SideStep">
       <skill-requirements lvl="9" hp="63" mp="0" atk="0" def="0" agl="54" int="0"/>
