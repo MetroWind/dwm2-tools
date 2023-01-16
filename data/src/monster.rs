@@ -103,8 +103,8 @@ pub struct Monster
     /// Spawn location of the monster. Only monsters with `in_story ==
     /// true` has this.
     pub locations: Vec<MapLocation>,
-    /// Natural abilities of the monster
-    pub abilities: Vec<String>,
+    /// Natural skills of the monster
+    pub skills: Vec<String>,
     /// Monster growth data
     pub growth: Growth,
     /// Family the monster belongs to
@@ -118,7 +118,7 @@ impl Monster
         let mut name = String::new();
         let mut in_story = false;
         let mut locations = Vec::new();
-        let mut abilities = Vec::new();
+        let mut skills = Vec::new();
         let mut growth = Growth::default();
 
         let mut p = xml::Parser::new();
@@ -133,8 +133,8 @@ impl Monster
             locations.push(MapLocation::fromXML(tag)?);
             Ok(())
         });
-        p.addTextHandler("ability", |_, text| {
-            abilities.push(text.to_owned());
+        p.addTextHandler("skill", |_, text| {
+            skills.push(text.to_owned());
             Ok(())
         });
         p.addBeginHandler("growth", |_, tag| {
@@ -144,7 +144,7 @@ impl Monster
         p.parse(x)?;
         drop(p);
 
-        Ok(Self { name, in_story, locations, abilities, growth, family})
+        Ok(Self { name, in_story, locations, skills, growth, family})
     }
 }
 

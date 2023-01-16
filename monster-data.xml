@@ -15,11 +15,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Near Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>LushLicks</ability>
-            <ability>Imitate</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>LushLicks</skill>
+            <skill>Imitate</skill>
+          </skills>
           <growth agl="17" int="8" maxlvl="35" atk="17" mp="1" exp="10" hp="17" def="4"/>
         </monster>
         <monster name="BoxSlime" in_story="true">
@@ -29,43 +29,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Helm Cave Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Upper</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Upper</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="14" int="13" maxlvl="50" atk="14" mp="10" exp="11" hp="11" def="19"/>
         </monster>
         <monster name="MetalKing" in_story="false">
-          <abilities>
-            <ability>Bolt</ability>
-            <ability>Ironize</ability>
-            <ability>Hellblast</ability>
-          </abilities>
+          <skills>
+            <skill>Bolt</skill>
+            <skill>Ironize</skill>
+            <skill>Hellblast</skill>
+          </skills>
           <growth agl="31" int="18" maxlvl="55" atk="15" mp="31" exp="29" hp="0" def="31"/>
         </monster>
         <monster name="SlimeBorg" in_story="false">
-          <abilities>
-            <ability>Lightning</ability>
-            <ability>RainSlash</ability>
-            <ability>BladeD</ability>
-          </abilities>
+          <skills>
+            <skill>Lightning</skill>
+            <skill>RainSlash</skill>
+            <skill>BladeD</skill>
+          </skills>
           <growth agl="14" int="13" maxlvl="50" atk="20" mp="11" exp="11" hp="18" def="15"/>
         </monster>
         <monster name="TropicGel" in_story="false">
-          <abilities>
-            <ability>MPass</ability>
-            <ability>SleepAir</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>MPass</skill>
+            <skill>SleepAir</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="14" int="15" maxlvl="40" atk="19" mp="20" exp="14" hp="15" def="9"/>
         </monster>
         <monster name="WonderEgg" in_story="false">
-          <abilities>
-            <ability>Sacrifice</ability>
-            <ability>Ironize</ability>
-            <ability>Chance</ability>
-          </abilities>
+          <skills>
+            <skill>Sacrifice</skill>
+            <skill>Ironize</skill>
+            <skill>Chance</skill>
+          </skills>
           <growth agl="11" int="20" maxlvl="40" atk="11" mp="13" exp="4" hp="8" def="19"/>
         </monster>
         <monster name="SlimeNite" in_story="true">
@@ -75,11 +75,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Weston Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>Upper</ability>
-            <ability>BeastCut</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>Upper</skill>
+            <skill>BeastCut</skill>
+          </skills>
           <growth agl="20" int="14" maxlvl="40" atk="15" mp="1" exp="15" hp="14" def="14"/>
         </monster>
         <monster name="WingSlime" in_story="true">
@@ -89,11 +89,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Near Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>WindBeast</ability>
-            <ability>SquallHit</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>WindBeast</skill>
+            <skill>SquallHit</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="24" int="8" maxlvl="35" atk="11" mp="2" exp="10" hp="13" def="11"/>
         </monster>
         <monster name="PearlGel" in_story="true">
@@ -103,11 +103,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Hoodsquid Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Upper</ability>
-            <ability>ChargeUp</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>ChargeUp</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="14" int="9" maxlvl="40" atk="8" mp="16" exp="10" hp="10" def="22"/>
         </monster>
         <monster name="Slabbit" in_story="true">
@@ -117,27 +117,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>SideStep</ability>
-            <ability>LegSweep</ability>
-            <ability>Whistle</ability>
-          </abilities>
+          <skills>
+            <skill>SideStep</skill>
+            <skill>LegSweep</skill>
+            <skill>Whistle</skill>
+          </skills>
           <growth agl="21" int="15" maxlvl="35" atk="14" mp="7" exp="10" hp="15" def="8"/>
         </monster>
         <monster name="MimeSlime" in_story="false">
-          <abilities>
-            <ability>PanicAll</ability>
-            <ability>Ahhh</ability>
-            <ability>LoveRain</ability>
-          </abilities>
+          <skills>
+            <skill>PanicAll</skill>
+            <skill>Ahhh</skill>
+            <skill>LoveRain</skill>
+          </skills>
           <growth agl="20" int="17" maxlvl="40" atk="8" mp="12" exp="17" hp="10" def="19"/>
         </monster>
         <monster name="TreeSlime" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>Paralyze</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>Paralyze</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="17" int="17" maxlvl="50" atk="8" mp="11" exp="11" hp="13" def="14"/>
         </monster>
         <monster name="Slime" in_story="true">
@@ -147,11 +147,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>MegaMagic</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>MegaMagic</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="11" int="13" maxlvl="40" atk="14" mp="11" exp="16" hp="22" def="17"/>
         </monster>
         <monster name="Metaly" in_story="true">
@@ -161,27 +161,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Left Of Pei Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>IceBolt</ability>
-            <ability>Beat</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>IceBolt</skill>
+            <skill>Beat</skill>
+          </skills>
           <growth agl="31" int="13" maxlvl="20" atk="11" mp="30" exp="25" hp="0" def="30"/>
         </monster>
         <monster name="KingSlime" in_story="false">
-          <abilities>
-            <ability>MPass</ability>
-            <ability>Barrier</ability>
-            <ability>Vivify</ability>
-          </abilities>
+          <skills>
+            <skill>MPass</skill>
+            <skill>Barrier</skill>
+            <skill>Vivify</skill>
+          </skills>
           <growth agl="20" int="15" maxlvl="45" atk="15" mp="14" exp="12" hp="18" def="14"/>
         </monster>
         <monster name="HaloSlime" in_story="false">
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>SealPray</ability>
-            <ability>LifeSong</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>SealPray</skill>
+            <skill>LifeSong</skill>
+          </skills>
           <growth agl="12" int="22" maxlvl="35" atk="11" mp="20" exp="16" hp="9" def="13"/>
         </monster>
         <monster name="Snaily" in_story="true">
@@ -191,11 +191,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Moonrock Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>IceBolt</ability>
-            <ability>NumbOff</ability>
-            <ability>CallHelp</ability>
-          </abilities>
+          <skills>
+            <skill>IceBolt</skill>
+            <skill>NumbOff</skill>
+            <skill>CallHelp</skill>
+          </skills>
           <growth agl="20" int="8" maxlvl="35" atk="17" mp="10" exp="8" hp="11" def="20"/>
         </monster>
         <monster name="FangSlime" in_story="true">
@@ -205,11 +205,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Fhunt Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>ChargeUp</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>ChargeUp</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="20" int="13" maxlvl="35" atk="18" mp="1" exp="10" hp="25" def="13"/>
         </monster>
         <monster name="Healer" in_story="true">
@@ -219,35 +219,35 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Hoodsquid Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>HealUs</ability>
-            <ability>Upper</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>HealUs</skill>
+            <skill>Upper</skill>
+          </skills>
           <growth agl="20" int="18" maxlvl="50" atk="11" mp="15" exp="11" hp="11" def="11"/>
         </monster>
         <monster name="Metabble" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Bang</ability>
-            <ability>Sacrifice</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Bang</skill>
+            <skill>Sacrifice</skill>
+          </skills>
           <growth agl="31" int="15" maxlvl="35" atk="14" mp="30" exp="27" hp="0" def="31"/>
         </monster>
         <monster name="GoldSlime" in_story="false">
-          <abilities>
-            <ability>Chance</ability>
-            <ability>BigBang</ability>
-            <ability>Surge</ability>
-          </abilities>
+          <skills>
+            <skill>Chance</skill>
+            <skill>BigBang</skill>
+            <skill>Surge</skill>
+          </skills>
           <growth agl="31" int="18" maxlvl="70" atk="19" mp="31" exp="31" hp="0" def="31"/>
         </monster>
         <monster name="DrakSlime" in_story="false">
-          <abilities>
-            <ability>BeDragon</ability>
-            <ability>FireAir</ability>
-            <ability>SuckAir</ability>
-          </abilities>
+          <skills>
+            <skill>BeDragon</skill>
+            <skill>FireAir</skill>
+            <skill>SuckAir</skill>
+          </skills>
           <growth agl="20" int="16" maxlvl="45" atk="13" mp="10" exp="13" hp="16" def="8"/>
         </monster>
         <monster name="Babble" in_story="true">
@@ -257,11 +257,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Sword Castle Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Surround</ability>
-            <ability>PoisonHit</ability>
-            <ability>EerieLite</ability>
-          </abilities>
+          <skills>
+            <skill>Surround</skill>
+            <skill>PoisonHit</skill>
+            <skill>EerieLite</skill>
+          </skills>
           <growth agl="14" int="13" maxlvl="45" atk="17" mp="7" exp="12" hp="17" def="8"/>
         </monster>
         <monster name="RockSlime" in_story="true">
@@ -271,27 +271,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Hitano Castle (Not Village)</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>HighJump</ability>
-            <ability>Ramming</ability>
-            <ability>StrongD</ability>
-          </abilities>
+          <skills>
+            <skill>HighJump</skill>
+            <skill>Ramming</skill>
+            <skill>StrongD</skill>
+          </skills>
           <growth agl="16" int="14" maxlvl="45" atk="14" mp="10" exp="11" hp="13" def="23"/>
         </monster>
         <monster name="SpotKing" in_story="false">
-          <abilities>
-            <ability>CleanCut</ability>
-            <ability>NapAttack</ability>
-            <ability>MouthShut</ability>
-          </abilities>
+          <skills>
+            <skill>CleanCut</skill>
+            <skill>NapAttack</skill>
+            <skill>MouthShut</skill>
+          </skills>
           <growth agl="20" int="15" maxlvl="45" atk="18" mp="11" exp="9" hp="18" def="11"/>
         </monster>
         <monster name="GranSlime" in_story="false">
-          <abilities>
-            <ability>Farewell</ability>
-            <ability>Focus</ability>
-            <ability>Informer</ability>
-          </abilities>
+          <skills>
+            <skill>Farewell</skill>
+            <skill>Focus</skill>
+            <skill>Informer</skill>
+          </skills>
           <growth agl="6" int="31" maxlvl="80" atk="27" mp="29" exp="30" hp="25" def="31"/>
         </monster>
       </monsters>
@@ -299,11 +299,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     <family name="dragon">
       <monsters>
         <monster name="Coatol" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>BoltSlash</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>BoltSlash</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="18" int="14" maxlvl="60" atk="20" mp="14" exp="23" hp="25" def="22"/>
         </monster>
         <monster name="Chamelgon" in_story="true">
@@ -313,19 +313,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Helm Cave Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>PanicAll</ability>
-            <ability>Paralyze</ability>
-            <ability>PalsyAir</ability>
-          </abilities>
+          <skills>
+            <skill>PanicAll</skill>
+            <skill>Paralyze</skill>
+            <skill>PalsyAir</skill>
+          </skills>
           <growth agl="8" int="13" maxlvl="40" atk="11" mp="18" exp="19" hp="17" def="6"/>
         </monster>
         <monster name="Orligon" in_story="false">
-          <abilities>
-            <ability>TwinHits</ability>
-            <ability>Berserker</ability>
-            <ability>StrongD</ability>
-          </abilities>
+          <skills>
+            <skill>TwinHits</skill>
+            <skill>Berserker</skill>
+            <skill>StrongD</skill>
+          </skills>
           <growth agl="21" int="24" maxlvl="75" atk="28" mp="24" exp="29" hp="25" def="25"/>
         </monster>
         <monster name="Spikerous" in_story="true">
@@ -335,11 +335,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Merchants' Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>RockThrow</ability>
-            <ability>Berserker</ability>
-            <ability>Kamikaze</ability>
-          </abilities>
+          <skills>
+            <skill>RockThrow</skill>
+            <skill>Berserker</skill>
+            <skill>Kamikaze</skill>
+          </skills>
           <growth agl="1" int="2" maxlvl="35" atk="19" mp="8" exp="19" hp="20" def="24"/>
         </monster>
         <monster name="DragonKid" in_story="true">
@@ -349,19 +349,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Basement Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>SleepAir</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>SleepAir</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="5" int="5" maxlvl="30" atk="17" mp="3" exp="7" hp="10" def="2"/>
         </monster>
         <monster name="BattleRex" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>MetalCut</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>MetalCut</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="17" int="16" maxlvl="60" atk="26" mp="16" exp="22" hp="23" def="20"/>
         </monster>
         <monster name="Poisongon" in_story="true">
@@ -371,11 +371,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Up From The Port Ritz Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>PoisonHit</ability>
-            <ability>PoisonGas</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>PoisonHit</skill>
+            <skill>PoisonGas</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="7" int="1" maxlvl="45" atk="15" mp="16" exp="19" hp="21" def="13"/>
         </monster>
         <monster name="Pteranod" in_story="true">
@@ -385,19 +385,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Land Area 1 Screen Right Of Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>WindBeast</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>WindBeast</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="20" int="4" maxlvl="35" atk="18" mp="11" exp="16" hp="14" def="2"/>
         </monster>
         <monster name="Rayburn" in_story="false">
-          <abilities>
-            <ability>VacuSlash</ability>
-            <ability>DevilCut</ability>
-            <ability>PoisonHit</ability>
-          </abilities>
+          <skills>
+            <skill>VacuSlash</skill>
+            <skill>DevilCut</skill>
+            <skill>PoisonHit</skill>
+          </skills>
           <growth agl="15" int="5" maxlvl="35" atk="17" mp="2" exp="17" hp="14" def="16"/>
         </monster>
         <monster name="Drygon" in_story="true">
@@ -407,19 +407,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sap</ability>
-            <ability>Ramming</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>Ramming</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="7" int="5" maxlvl="35" atk="19" mp="2" exp="16" hp="11" def="13"/>
         </monster>
         <monster name="LizardFly" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Sap</ability>
-            <ability>FireAir</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Sap</skill>
+            <skill>FireAir</skill>
+          </skills>
           <growth agl="13" int="5" maxlvl="30" atk="17" mp="11" exp="16" hp="11" def="17"/>
         </monster>
         <monster name="GreatDrak" in_story="true">
@@ -429,11 +429,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FrigidAir</ability>
-            <ability>IceSlash</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>FrigidAir</skill>
+            <skill>IceSlash</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="16" int="11" maxlvl="60" atk="23" mp="5" exp="23" hp="21" def="14"/>
         </monster>
         <monster name="SkyDragon" in_story="true">
@@ -443,19 +443,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Heaven Armor Tower Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>MultiCut</ability>
-            <ability>SuckAir</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>MultiCut</skill>
+            <skill>SuckAir</skill>
+          </skills>
           <growth agl="18" int="8" maxlvl="40" atk="20" mp="11" exp="18" hp="15" def="14"/>
         </monster>
         <monster name="Gasgon" in_story="false">
-          <abilities>
-            <ability>Sacrifice</ability>
-            <ability>Farewell</ability>
-            <ability>Berserker</ability>
-          </abilities>
+          <skills>
+            <skill>Sacrifice</skill>
+            <skill>Farewell</skill>
+            <skill>Berserker</skill>
+          </skills>
           <growth agl="7" int="18" maxlvl="50" atk="13" mp="15" exp="18" hp="17" def="11"/>
         </monster>
         <monster name="Dragon" in_story="true">
@@ -465,11 +465,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Helm Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>FireSlash</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>FireSlash</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="7" int="4" maxlvl="40" atk="20" mp="1" exp="20" hp="17" def="16"/>
         </monster>
         <monster name="Andreal" in_story="true">
@@ -479,11 +479,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Hitano Castle (Not Village)</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>Surround</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>Surround</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="19" int="12" maxlvl="50" atk="19" mp="15" exp="22" hp="21" def="17"/>
         </monster>
         <monster name="Crestpent" in_story="true">
@@ -493,27 +493,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>2 Screens Right Of Asiya Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>StopSpell</ability>
-            <ability>BeDragon</ability>
-            <ability>PoisonHit</ability>
-          </abilities>
+          <skills>
+            <skill>StopSpell</skill>
+            <skill>BeDragon</skill>
+            <skill>PoisonHit</skill>
+          </skills>
           <growth agl="19" int="8" maxlvl="35" atk="15" mp="4" exp="18" hp="14" def="5"/>
         </monster>
         <monster name="Serpentia" in_story="false">
-          <abilities>
-            <ability>SlimeBlow</ability>
-            <ability>DevilCut</ability>
-            <ability>RainSlash</ability>
-          </abilities>
+          <skills>
+            <skill>SlimeBlow</skill>
+            <skill>DevilCut</skill>
+            <skill>RainSlash</skill>
+          </skills>
           <growth agl="18" int="8" maxlvl="55" atk="24" mp="7" exp="24" hp="23" def="21"/>
         </monster>
         <monster name="FairyDrak" in_story="false">
-          <abilities>
-            <ability>Surround</ability>
-            <ability>SleepAir</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>Surround</skill>
+            <skill>SleepAir</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="14" int="4" maxlvl="30" atk="17" mp="13" exp="15" hp="9" def="16"/>
         </monster>
         <monster name="MiniDrak" in_story="true">
@@ -523,11 +523,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Port Ritz Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>Ramming</ability>
-            <ability>SandStorm</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>Ramming</skill>
+            <skill>SandStorm</skill>
+          </skills>
           <growth agl="18" int="10" maxlvl="35" atk="17" mp="8" exp="16" hp="14" def="14"/>
         </monster>
         <monster name="KingCobra" in_story="true">
@@ -537,43 +537,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Right Of Mirage Lake</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>PoisonHit</ability>
-            <ability>Curse</ability>
-            <ability>K.O.Dance</ability>
-          </abilities>
+          <skills>
+            <skill>PoisonHit</skill>
+            <skill>Curse</skill>
+            <skill>K.O.Dance</skill>
+          </skills>
           <growth agl="19" int="11" maxlvl="40" atk="16" mp="8" exp="20" hp="18" def="13"/>
         </monster>
         <monster name="WingSnake" in_story="false">
-          <abilities>
-            <ability>SquallHit</ability>
-            <ability>HighJump</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>SquallHit</skill>
+            <skill>HighJump</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="14" int="11" maxlvl="45" atk="20" mp="8" exp="20" hp="15" def="17"/>
         </monster>
         <monster name="SnakeBat" in_story="false">
-          <abilities>
-            <ability>RockThrow</ability>
-            <ability>LushLicks</ability>
-            <ability>Errand</ability>
-          </abilities>
+          <skills>
+            <skill>RockThrow</skill>
+            <skill>LushLicks</skill>
+            <skill>Errand</skill>
+          </skills>
           <growth agl="9" int="8" maxlvl="35" atk="21" mp="9" exp="7" hp="10" def="15"/>
         </monster>
         <monster name="Divinegon" in_story="false">
-          <abilities>
-            <ability>BigBang</ability>
-            <ability>FrigidAir</ability>
-            <ability>Meditate</ability>
-          </abilities>
+          <skills>
+            <skill>BigBang</skill>
+            <skill>FrigidAir</skill>
+            <skill>Meditate</skill>
+          </skills>
           <growth agl="20" int="23" maxlvl="70" atk="28" mp="25" exp="28" hp="26" def="24"/>
         </monster>
         <monster name="Orochi" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>FireSlash</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>FireSlash</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="11" int="8" maxlvl="60" atk="24" mp="13" exp="22" hp="24" def="21"/>
         </monster>
         <monster name="LizardMan" in_story="true">
@@ -583,19 +583,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>AquaCut</ability>
-            <ability>GigaSlash</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>AquaCut</skill>
+            <skill>GigaSlash</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="5" int="16" maxlvl="45" atk="19" mp="10" exp="20" hp="17" def="13"/>
         </monster>
         <monster name="GigaDraco" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>RockThrow</ability>
-            <ability>Massacre</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>RockThrow</skill>
+            <skill>Massacre</skill>
+          </skills>
           <growth agl="6" int="11" maxlvl="70" atk="29" mp="24" exp="24" hp="30" def="12"/>
         </monster>
         <monster name="MadDragon" in_story="true">
@@ -605,11 +605,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Armor Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>EvilSlash</ability>
-            <ability>Massacre</ability>
-            <ability>LureDance</ability>
-          </abilities>
+          <skills>
+            <skill>EvilSlash</skill>
+            <skill>Massacre</skill>
+            <skill>LureDance</skill>
+          </skills>
           <growth agl="8" int="0" maxlvl="35" atk="21" mp="0" exp="19" hp="19" def="5"/>
         </monster>
         <monster name="Tortragon" in_story="true">
@@ -619,11 +619,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 2</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Ironize</ability>
-            <ability>MagicBack</ability>
-            <ability>Lightning</ability>
-          </abilities>
+          <skills>
+            <skill>Ironize</skill>
+            <skill>MagicBack</skill>
+            <skill>Lightning</skill>
+          </skills>
           <growth agl="7" int="13" maxlvl="35" atk="18" mp="11" exp="17" hp="15" def="6"/>
         </monster>
         <monster name="Vampirus" in_story="true">
@@ -633,11 +633,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Armor Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>CallHelp</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>CallHelp</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="19" int="8" maxlvl="35" atk="10" mp="7" exp="8" hp="14" def="8"/>
         </monster>
         <monster name="Swordgon" in_story="true">
@@ -647,11 +647,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Helm Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CleanCut</ability>
-            <ability>RainSlash</ability>
-            <ability>BladeD</ability>
-          </abilities>
+          <skills>
+            <skill>CleanCut</skill>
+            <skill>RainSlash</skill>
+            <skill>BladeD</skill>
+          </skills>
           <growth agl="1" int="5" maxlvl="50" atk="23" mp="3" exp="20" hp="9" def="6"/>
         </monster>
       </monsters>
@@ -659,11 +659,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     <family name="beast">
       <monsters>
         <monster name="GulpBeast" in_story="false">
-          <abilities>
-            <ability>Massacre</ability>
-            <ability>Ramming</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>Massacre</skill>
+            <skill>Ramming</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="7" int="1" maxlvl="45" atk="26" mp="1" exp="13" hp="24" def="13"/>
         </monster>
         <monster name="IronTurt" in_story="true">
@@ -673,43 +673,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Fhunt Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MagicWall</ability>
-            <ability>StrongD</ability>
-            <ability>Cover</ability>
-          </abilities>
+          <skills>
+            <skill>MagicWall</skill>
+            <skill>StrongD</skill>
+            <skill>Cover</skill>
+          </skills>
           <growth agl="2" int="11" maxlvl="45" atk="17" mp="5" exp="10" hp="18" def="23"/>
         </monster>
         <monster name="NoctoKing" in_story="false">
-          <abilities>
-            <ability>Surround</ability>
-            <ability>SleepAir</ability>
-            <ability>ThickFog</ability>
-          </abilities>
+          <skills>
+            <skill>Surround</skill>
+            <skill>SleepAir</skill>
+            <skill>ThickFog</skill>
+          </skills>
           <growth agl="20" int="8" maxlvl="40" atk="18" mp="13" exp="13" hp="22" def="15"/>
         </monster>
         <monster name="WildApe" in_story="false">
-          <abilities>
-            <ability>TwinSlash</ability>
-            <ability>SideStep</ability>
-            <ability>Errand</ability>
-          </abilities>
+          <skills>
+            <skill>TwinSlash</skill>
+            <skill>SideStep</skill>
+            <skill>Errand</skill>
+          </skills>
           <growth agl="8" int="4" maxlvl="35" atk="20" mp="1" exp="13" hp="13" def="10"/>
         </monster>
         <monster name="Tonguella" in_story="false">
-          <abilities>
-            <ability>NapAttack</ability>
-            <ability>SleepAir</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>NapAttack</skill>
+            <skill>SleepAir</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="11" int="16" maxlvl="40" atk="15" mp="5" exp="12" hp="14" def="12"/>
         </monster>
         <monster name="Skullroo" in_story="false">
-          <abilities>
-            <ability>ChargeUp</ability>
-            <ability>PaniDance</ability>
-            <ability>EagleEye</ability>
-          </abilities>
+          <skills>
+            <skill>ChargeUp</skill>
+            <skill>PaniDance</skill>
+            <skill>EagleEye</skill>
+          </skills>
           <growth agl="16" int="2" maxlvl="45" atk="11" mp="10" exp="12" hp="14" def="8"/>
         </monster>
         <monster name="Dumbira" in_story="true">
@@ -719,11 +719,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Pei Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MetalCut</ability>
-            <ability>RainSlash</ability>
-            <ability>TwinSlash</ability>
-          </abilities>
+          <skills>
+            <skill>MetalCut</skill>
+            <skill>RainSlash</skill>
+            <skill>TwinSlash</skill>
+          </skills>
           <growth agl="14" int="7" maxlvl="45" atk="9" mp="10" exp="7" hp="15" def="8"/>
         </monster>
         <monster name="Mommonja" in_story="true">
@@ -733,11 +733,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Madcondor's Nest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>LureDance</ability>
-            <ability>MouthShut</ability>
-            <ability>EagleEye</ability>
-          </abilities>
+          <skills>
+            <skill>LureDance</skill>
+            <skill>MouthShut</skill>
+            <skill>EagleEye</skill>
+          </skills>
           <growth agl="20" int="8" maxlvl="35" atk="16" mp="11" exp="9" hp="14" def="14"/>
         </monster>
         <monster name="Catfly" in_story="true">
@@ -747,11 +747,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Land Area 1 Screen Right Of Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Slow</ability>
-            <ability>StopSpell</ability>
-            <ability>OddDance</ability>
-          </abilities>
+          <skills>
+            <skill>Slow</skill>
+            <skill>StopSpell</skill>
+            <skill>OddDance</skill>
+          </skills>
           <growth agl="18" int="14" maxlvl="35" atk="13" mp="10" exp="10" hp="11" def="8"/>
         </monster>
         <monster name="BeastNite" in_story="true">
@@ -761,27 +761,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Near Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>RainSlash</ability>
-            <ability>GigaSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>RainSlash</skill>
+            <skill>GigaSlash</skill>
+          </skills>
           <growth agl="8" int="6" maxlvl="40" atk="22" mp="4" exp="8" hp="21" def="14"/>
         </monster>
         <monster name="Beavern" in_story="false">
-          <abilities>
-            <ability>IceBolt</ability>
-            <ability>ChargeUp</ability>
-            <ability>Geyser</ability>
-          </abilities>
+          <skills>
+            <skill>IceBolt</skill>
+            <skill>ChargeUp</skill>
+            <skill>Geyser</skill>
+          </skills>
           <growth agl="10" int="7" maxlvl="40" atk="8" mp="8" exp="14" hp="22" def="21"/>
         </monster>
         <monster name="Trumpeter" in_story="false">
-          <abilities>
-            <ability>Berserker</ability>
-            <ability>SandStorm</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>Berserker</skill>
+            <skill>SandStorm</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="14" int="13" maxlvl="50" atk="21" mp="8" exp="14" hp="17" def="17"/>
         </monster>
         <monster name="Grizzly" in_story="true">
@@ -791,11 +791,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Weston Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>SquallHit</ability>
-            <ability>BiAttack</ability>
-            <ability>LegSweep</ability>
-          </abilities>
+          <skills>
+            <skill>SquallHit</skill>
+            <skill>BiAttack</skill>
+            <skill>LegSweep</skill>
+          </skills>
           <growth agl="9" int="1" maxlvl="45" atk="27" mp="0" exp="14" hp="20" def="7"/>
         </monster>
         <monster name="CatMage" in_story="true">
@@ -805,11 +805,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Surround</ability>
-            <ability>Transform</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Surround</skill>
+            <skill>Transform</skill>
+          </skills>
           <growth agl="6" int="15" maxlvl="40" atk="10" mp="6" exp="4" hp="7" def="4"/>
         </monster>
         <monster name="FairyRat" in_story="true">
@@ -819,11 +819,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Pei Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Slow</ability>
-            <ability>Surround</ability>
-            <ability>SlimeBlow</ability>
-          </abilities>
+          <skills>
+            <skill>Slow</skill>
+            <skill>Surround</skill>
+            <skill>SlimeBlow</skill>
+          </skills>
           <growth agl="17" int="7" maxlvl="45" atk="13" mp="5" exp="11" hp="12" def="14"/>
         </monster>
         <monster name="Almiraj" in_story="true">
@@ -833,35 +833,35 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside The Spirit Lake</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>ChargeUp</ability>
-            <ability>Berserker</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>ChargeUp</skill>
+            <skill>Berserker</skill>
+          </skills>
           <growth agl="15" int="4" maxlvl="45" atk="14" mp="5" exp="13" hp="18" def="9"/>
         </monster>
         <monster name="DarkHorn" in_story="false">
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>StopSpell</ability>
-            <ability>PsycheUp</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>StopSpell</skill>
+            <skill>PsycheUp</skill>
+          </skills>
           <growth agl="10" int="12" maxlvl="50" atk="19" mp="4" exp="13" hp="17" def="18"/>
         </monster>
         <monster name="WindBeast" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>IceBolt</ability>
-            <ability>VacuSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>IceBolt</skill>
+            <skill>VacuSlash</skill>
+          </skills>
           <growth agl="15" int="13" maxlvl="50" atk="13" mp="20" exp="12" hp="13" def="15"/>
         </monster>
         <monster name="PillowRat" in_story="false">
-          <abilities>
-            <ability>Slow</ability>
-            <ability>Ramming</ability>
-            <ability>SideStep</ability>
-          </abilities>
+          <skills>
+            <skill>Slow</skill>
+            <skill>Ramming</skill>
+            <skill>SideStep</skill>
+          </skills>
           <growth agl="19" int="13" maxlvl="35" atk="8" mp="17" exp="11" hp="14" def="8"/>
         </monster>
         <monster name="HammerMan" in_story="true">
@@ -871,11 +871,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Nofor</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>ChargeUp</ability>
-            <ability>EvilSlash</ability>
-            <ability>Kamikaze</ability>
-          </abilities>
+          <skills>
+            <skill>ChargeUp</skill>
+            <skill>EvilSlash</skill>
+            <skill>Kamikaze</skill>
+          </skills>
           <growth agl="17" int="10" maxlvl="50" atk="17" mp="19" exp="11" hp="17" def="11"/>
         </monster>
         <monster name="Antbear" in_story="true">
@@ -885,11 +885,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MetalCut</ability>
-            <ability>SquallHit</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>MetalCut</skill>
+            <skill>SquallHit</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="9" int="11" maxlvl="40" atk="17" mp="7" exp="8" hp="14" def="11"/>
         </monster>
         <monster name="MadGopher" in_story="true">
@@ -899,11 +899,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Port Of Polona Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>BirdBlow</ability>
-            <ability>ZombieCut</ability>
-            <ability>Informer</ability>
-          </abilities>
+          <skills>
+            <skill>BirdBlow</skill>
+            <skill>ZombieCut</skill>
+            <skill>Informer</skill>
+          </skills>
           <growth agl="8" int="11" maxlvl="40" atk="17" mp="13" exp="12" hp="14" def="9"/>
         </monster>
         <monster name="Yeti" in_story="true">
@@ -913,43 +913,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside The Spirit Lake</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>IceBolt</ability>
-            <ability>IceSlash</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>IceBolt</skill>
+            <skill>IceSlash</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="10" int="8" maxlvl="40" atk="15" mp="11" exp="13" hp="18" def="9"/>
         </monster>
         <monster name="KingLeo" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>FrigidAir</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>FrigidAir</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="17" int="14" maxlvl="60" atk="24" mp="14" exp="15" hp="20" def="23"/>
         </monster>
         <monster name="Unicorn" in_story="false">
-          <abilities>
-            <ability>Heal</ability>
-            <ability>Vivify</ability>
-            <ability>Errand</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>Vivify</skill>
+            <skill>Errand</skill>
+          </skills>
           <growth agl="12" int="25" maxlvl="50" atk="14" mp="21" exp="14" hp="19" def="13"/>
         </monster>
         <monster name="Gorago" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>Massacre</ability>
-            <ability>EerieLite</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>Massacre</skill>
+            <skill>EerieLite</skill>
+          </skills>
           <growth agl="24" int="6" maxlvl="65" atk="30" mp="28" exp="29" hp="29" def="24"/>
         </monster>
         <monster name="MadCat" in_story="false">
-          <abilities>
-            <ability>VacuSlash</ability>
-            <ability>SquallHit</ability>
-            <ability>LegSweep</ability>
-          </abilities>
+          <skills>
+            <skill>VacuSlash</skill>
+            <skill>SquallHit</skill>
+            <skill>LegSweep</skill>
+          </skills>
           <growth agl="17" int="11" maxlvl="40" atk="18" mp="7" exp="12" hp="15" def="14"/>
         </monster>
         <monster name="Saccer" in_story="true">
@@ -959,19 +959,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside The Spirit Lake</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Upper</ability>
-            <ability>PsycheUp</ability>
-            <ability>PalsyAir</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>PsycheUp</skill>
+            <skill>PalsyAir</skill>
+          </skills>
           <growth agl="0" int="13" maxlvl="40" atk="9" mp="5" exp="9" hp="16" def="17"/>
         </monster>
         <monster name="SuperTen" in_story="false">
-          <abilities>
-            <ability>K.O.Dance</ability>
-            <ability>Hustle</ability>
-            <ability>Imitate</ability>
-          </abilities>
+          <skills>
+            <skill>K.O.Dance</skill>
+            <skill>Hustle</skill>
+            <skill>Imitate</skill>
+          </skills>
           <growth agl="11" int="7" maxlvl="45" atk="13" mp="7" exp="9" hp="18" def="12"/>
         </monster>
         <monster name="ArrowDog" in_story="true">
@@ -981,11 +981,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Up From The Port Ritz Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>CallHelp</ability>
-            <ability>MouthShut</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>CallHelp</skill>
+            <skill>MouthShut</skill>
+          </skills>
           <growth agl="13" int="14" maxlvl="40" atk="21" mp="7" exp="5" hp="9" def="19"/>
         </monster>
         <monster name="Goategon" in_story="true">
@@ -995,19 +995,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Down From Sleepherb Mountain</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Slow</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Slow</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="17" int="3" maxlvl="40" atk="17" mp="9" exp="11" hp="19" def="13"/>
         </monster>
         <monster name="BigEye" in_story="false">
-          <abilities>
-            <ability>IceBolt</ability>
-            <ability>FrigidAir</ability>
-            <ability>LoveRain</ability>
-          </abilities>
+          <skills>
+            <skill>IceBolt</skill>
+            <skill>FrigidAir</skill>
+            <skill>LoveRain</skill>
+          </skills>
           <growth agl="7" int="9" maxlvl="40" atk="14" mp="8" exp="11" hp="14" def="11"/>
         </monster>
       </monsters>
@@ -1015,11 +1015,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     <family name="bird">
       <monsters>
         <monster name="Azurile" in_story="false">
-          <abilities>
-            <ability>Hellblast</ability>
-            <ability>Meditate</ability>
-            <ability>LifeSong</ability>
-          </abilities>
+          <skills>
+            <skill>Hellblast</skill>
+            <skill>Meditate</skill>
+            <skill>LifeSong</skill>
+          </skills>
           <growth agl="24" int="12" maxlvl="75" atk="24" mp="24" exp="28" hp="27" def="12"/>
         </monster>
         <monster name="BullBird" in_story="true">
@@ -1029,11 +1029,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Down From Sleepherb Mountain</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Shears</ability>
-            <ability>ChargeUp</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>Shears</skill>
+            <skill>ChargeUp</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="6" int="4" maxlvl="35" atk="17" mp="8" exp="5" hp="14" def="9"/>
         </monster>
         <monster name="Wyvern" in_story="true">
@@ -1043,11 +1043,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Moonrock Tower Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>Sleep</ability>
-            <ability>FrigidAir</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>Sleep</skill>
+            <skill>FrigidAir</skill>
+          </skills>
           <growth agl="16" int="20" maxlvl="45" atk="19" mp="13" exp="6" hp="17" def="11"/>
         </monster>
         <monster name="AquaHawk" in_story="true">
@@ -1057,11 +1057,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CurseOff</ability>
-            <ability>SquallHit</ability>
-            <ability>AquaWall</ability>
-          </abilities>
+          <skills>
+            <skill>CurseOff</skill>
+            <skill>SquallHit</skill>
+            <skill>AquaWall</skill>
+          </skills>
           <growth agl="14" int="19" maxlvl="40" atk="6" mp="8" exp="12" hp="7" def="13"/>
         </monster>
         <monster name="MadGoose" in_story="true">
@@ -1071,19 +1071,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Helm Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>WindBeast</ability>
-            <ability>LureDance</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>WindBeast</skill>
+            <skill>LureDance</skill>
+          </skills>
           <growth agl="20" int="8" maxlvl="30" atk="17" mp="6" exp="3" hp="17" def="15"/>
         </monster>
         <monster name="Garudian" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>WindBeast</ability>
-            <ability>AquaCut</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>WindBeast</skill>
+            <skill>AquaCut</skill>
+          </skills>
           <growth agl="22" int="9" maxlvl="50" atk="8" mp="7" exp="8" hp="10" def="14"/>
         </monster>
         <monster name="CragDevil" in_story="true">
@@ -1093,11 +1093,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Weston Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>PanicAll</ability>
-            <ability>EagleEye</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>PanicAll</skill>
+            <skill>EagleEye</skill>
+          </skills>
           <growth agl="14" int="11" maxlvl="35" atk="13" mp="8" exp="4" hp="7" def="5"/>
         </monster>
         <monster name="FloraJay" in_story="true">
@@ -1107,11 +1107,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Sword Castle</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Speed</ability>
-            <ability>BeastCut</ability>
-            <ability>LifeSong</ability>
-          </abilities>
+          <skills>
+            <skill>Speed</skill>
+            <skill>BeastCut</skill>
+            <skill>LifeSong</skill>
+          </skills>
           <growth agl="21" int="19" maxlvl="50" atk="12" mp="18" exp="5" hp="6" def="3"/>
         </monster>
         <monster name="Dracky" in_story="true">
@@ -1121,35 +1121,35 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Yold Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Antidote</ability>
-            <ability>Sleep</ability>
-            <ability>RobMagic</ability>
-          </abilities>
+          <skills>
+            <skill>Antidote</skill>
+            <skill>Sleep</skill>
+            <skill>RobMagic</skill>
+          </skills>
           <growth agl="17" int="11" maxlvl="50" atk="8" mp="4" exp="2" hp="11" def="13"/>
         </monster>
         <monster name="MadCondor" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>HealUs</ability>
-            <ability>MultiCut</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>HealUs</skill>
+            <skill>MultiCut</skill>
+          </skills>
           <growth agl="17" int="13" maxlvl="45" atk="18" mp="11" exp="6" hp="14" def="12"/>
         </monster>
         <monster name="WhipBird" in_story="false">
-          <abilities>
-            <ability>Ironize</ability>
-            <ability>ThickFog</ability>
-            <ability>TatsuCall</ability>
-          </abilities>
+          <skills>
+            <skill>Ironize</skill>
+            <skill>ThickFog</skill>
+            <skill>TatsuCall</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="60" atk="12" mp="19" exp="15" hp="27" def="20"/>
         </monster>
         <monster name="DuckKite" in_story="false">
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>PanicAll</ability>
-            <ability>Curse</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>PanicAll</skill>
+            <skill>Curse</skill>
+          </skills>
           <growth agl="18" int="7" maxlvl="30" atk="9" mp="11" exp="3" hp="11" def="12"/>
         </monster>
         <monster name="KiteHawk" in_story="true">
@@ -1159,11 +1159,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Sword Castle</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MagicWall</ability>
-            <ability>Curse</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>MagicWall</skill>
+            <skill>Curse</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="9" int="1" maxlvl="40" atk="8" mp="8" exp="5" hp="13" def="7"/>
         </monster>
         <monster name="Emyu" in_story="true">
@@ -1173,51 +1173,51 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Fhunt Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>WindBeast</ability>
-            <ability>Hustle</ability>
-            <ability>Errand</ability>
-          </abilities>
+          <skills>
+            <skill>WindBeast</skill>
+            <skill>Hustle</skill>
+            <skill>Errand</skill>
+          </skills>
           <growth agl="23" int="30" maxlvl="40" atk="20" mp="13" exp="4" hp="9" def="19"/>
         </monster>
         <monster name="FunkyBird" in_story="false">
-          <abilities>
-            <ability>PaniDance</ability>
-            <ability>LifeDance</ability>
-            <ability>Hustle</ability>
-          </abilities>
+          <skills>
+            <skill>PaniDance</skill>
+            <skill>LifeDance</skill>
+            <skill>Hustle</skill>
+          </skills>
           <growth agl="16" int="20" maxlvl="50" atk="8" mp="20" exp="5" hp="14" def="9"/>
         </monster>
         <monster name="MadPecker" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>Sap</ability>
-            <ability>VacuSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>Sap</skill>
+            <skill>VacuSlash</skill>
+          </skills>
           <growth agl="23" int="13" maxlvl="40" atk="20" mp="7" exp="4" hp="9" def="14"/>
         </monster>
         <monster name="BigRoost" in_story="false">
-          <abilities>
-            <ability>VacuSlash</ability>
-            <ability>SandStorm</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>VacuSlash</skill>
+            <skill>SandStorm</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="17" int="8" maxlvl="40" atk="14" mp="5" exp="3" hp="8" def="12"/>
         </monster>
         <monster name="Blizzardy" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>FrigidAir</ability>
-            <ability>IceSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>FrigidAir</skill>
+            <skill>IceSlash</skill>
+          </skills>
           <growth agl="19" int="11" maxlvl="50" atk="11" mp="7" exp="7" hp="20" def="17"/>
         </monster>
         <monster name="RainHawk" in_story="false">
-          <abilities>
-            <ability>MegaMagic</ability>
-            <ability>Surge</ability>
-            <ability>StrongD</ability>
-          </abilities>
+          <skills>
+            <skill>MegaMagic</skill>
+            <skill>Surge</skill>
+            <skill>StrongD</skill>
+          </skills>
           <growth agl="18" int="24" maxlvl="70" atk="15" mp="27" exp="24" hp="25" def="24"/>
         </monster>
         <monster name="MistyWing" in_story="true">
@@ -1227,19 +1227,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Barrier</ability>
-            <ability>EerieLite</ability>
-            <ability>Informer</ability>
-          </abilities>
+          <skills>
+            <skill>Barrier</skill>
+            <skill>EerieLite</skill>
+            <skill>Informer</skill>
+          </skills>
           <growth agl="22" int="13" maxlvl="50" atk="8" mp="17" exp="5" hp="12" def="15"/>
         </monster>
         <monster name="Picky" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>Surround</ability>
-            <ability>BugBlow</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>Surround</skill>
+            <skill>BugBlow</skill>
+          </skills>
           <growth agl="18" int="13" maxlvl="40" atk="14" mp="12" exp="4" hp="11" def="8"/>
         </monster>
         <monster name="LandOwl" in_story="true">
@@ -1249,11 +1249,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>BoltSlash</ability>
-            <ability>SideStep</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>BoltSlash</skill>
+            <skill>SideStep</skill>
+          </skills>
           <growth agl="11" int="18" maxlvl="35" atk="21" mp="10" exp="5" hp="15" def="13"/>
         </monster>
         <monster name="MadRaven" in_story="true">
@@ -1263,19 +1263,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Pei Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>HighJump</ability>
-            <ability>TailWind</ability>
-            <ability>EagleEye</ability>
-          </abilities>
+          <skills>
+            <skill>HighJump</skill>
+            <skill>TailWind</skill>
+            <skill>EagleEye</skill>
+          </skills>
           <growth agl="18" int="5" maxlvl="40" atk="17" mp="14" exp="5" hp="6" def="12"/>
         </monster>
         <monster name="ZapBird" in_story="false">
-          <abilities>
-            <ability>Hellblast</ability>
-            <ability>Lightning</ability>
-            <ability>BoltSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Hellblast</skill>
+            <skill>Lightning</skill>
+            <skill>BoltSlash</skill>
+          </skills>
           <growth agl="22" int="12" maxlvl="50" atk="19" mp="7" exp="7" hp="20" def="17"/>
         </monster>
         <monster name="StubBird" in_story="true">
@@ -1285,19 +1285,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Sleepherb Mountain</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>TwinHits</ability>
-            <ability>BugBlow</ability>
-            <ability>RainSlash</ability>
-          </abilities>
+          <skills>
+            <skill>TwinHits</skill>
+            <skill>BugBlow</skill>
+            <skill>RainSlash</skill>
+          </skills>
           <growth agl="14" int="11" maxlvl="40" atk="20" mp="12" exp="6" hp="16" def="20"/>
         </monster>
         <monster name="Shantak" in_story="false">
-          <abilities>
-            <ability>HealUs</ability>
-            <ability>FireAir</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>HealUs</skill>
+            <skill>FireAir</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="24" int="22" maxlvl="60" atk="18" mp="22" exp="22" hp="24" def="20"/>
         </monster>
         <monster name="Phoenix" in_story="true">
@@ -1307,11 +1307,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Helm Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>SquallHit</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>SquallHit</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="19" int="12" maxlvl="50" atk="19" mp="13" exp="7" hp="16" def="8"/>
         </monster>
       </monsters>
@@ -1325,11 +1325,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Sleepherb Mountain</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Farewell</ability>
-            <ability>ZombieCut</ability>
-            <ability>StepGuard</ability>
-          </abilities>
+          <skills>
+            <skill>Farewell</skill>
+            <skill>ZombieCut</skill>
+            <skill>StepGuard</skill>
+          </skills>
           <growth agl="14" int="7" maxlvl="35" atk="6" mp="20" exp="7" hp="12" def="11"/>
         </monster>
         <monster name="StubSuck" in_story="true">
@@ -1339,27 +1339,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Spooky Forest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>ZombieCut</ability>
-            <ability>StepGuard</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>ZombieCut</skill>
+            <skill>StepGuard</skill>
+          </skills>
           <growth agl="9" int="14" maxlvl="40" atk="4" mp="11" exp="8" hp="17" def="2"/>
         </monster>
         <monster name="HerbMan" in_story="false">
-          <abilities>
-            <ability>Curse</ability>
-            <ability>Focus</ability>
-            <ability>DanceShut</ability>
-          </abilities>
+          <skills>
+            <skill>Curse</skill>
+            <skill>Focus</skill>
+            <skill>DanceShut</skill>
+          </skills>
           <growth agl="15" int="23" maxlvl="40" atk="7" mp="17" exp="13" hp="19" def="10"/>
         </monster>
         <monster name="Rosevine" in_story="false">
-          <abilities>
-            <ability>BiAttack</ability>
-            <ability>UltraDown</ability>
-            <ability>BladeD</ability>
-          </abilities>
+          <skills>
+            <skill>BiAttack</skill>
+            <skill>UltraDown</skill>
+            <skill>BladeD</skill>
+          </skills>
           <growth agl="18" int="18" maxlvl="70" atk="23" mp="30" exp="24" hp="24" def="21"/>
         </monster>
         <monster name="DanceVegi" in_story="true">
@@ -1369,11 +1369,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Land Area 1 Screen Down Of Moonrock Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>K.O.Dance</ability>
-            <ability>LureDance</ability>
-            <ability>SideStep</ability>
-          </abilities>
+          <skills>
+            <skill>K.O.Dance</skill>
+            <skill>LureDance</skill>
+            <skill>SideStep</skill>
+          </skills>
           <growth agl="20" int="11" maxlvl="40" atk="7" mp="21" exp="12" hp="11" def="6"/>
         </monster>
         <monster name="CactiBall" in_story="true">
@@ -1383,11 +1383,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Near Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Paralyze</ability>
-            <ability>HighJump</ability>
-            <ability>OddDance</ability>
-          </abilities>
+          <skills>
+            <skill>Paralyze</skill>
+            <skill>HighJump</skill>
+            <skill>OddDance</skill>
+          </skills>
           <growth agl="9" int="5" maxlvl="30" atk="12" mp="18" exp="6" hp="18" def="15"/>
         </monster>
         <monster name="EvilSeed" in_story="true">
@@ -1397,35 +1397,35 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Helm Cave Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CleanCut</ability>
-            <ability>Paralyze</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>CleanCut</skill>
+            <skill>Paralyze</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="1" int="3" maxlvl="30" atk="8" mp="11" exp="6" hp="8" def="5"/>
         </monster>
         <monster name="Oniono" in_story="false">
-          <abilities>
-            <ability>RobMagic</ability>
-            <ability>ChargeUp</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>RobMagic</skill>
+            <skill>ChargeUp</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="3" int="16" maxlvl="35" atk="14" mp="20" exp="9" hp="13" def="11"/>
         </monster>
         <monster name="Warubou" in_story="false">
-          <abilities>
-            <ability>MPass</ability>
-            <ability>DeMagic</ability>
-            <ability>Pheromone</ability>
-          </abilities>
+          <skills>
+            <skill>MPass</skill>
+            <skill>DeMagic</skill>
+            <skill>Pheromone</skill>
+          </skills>
           <growth agl="24" int="4" maxlvl="80" atk="12" mp="7" exp="15" hp="22" def="13"/>
         </monster>
         <monster name="BeanMan" in_story="false">
-          <abilities>
-            <ability>TwinHits</ability>
-            <ability>RobMagic</ability>
-            <ability>MapMagic</ability>
-          </abilities>
+          <skills>
+            <skill>TwinHits</skill>
+            <skill>RobMagic</skill>
+            <skill>MapMagic</skill>
+          </skills>
           <growth agl="15" int="9" maxlvl="35" atk="12" mp="15" exp="10" hp="14" def="14"/>
         </monster>
         <monster name="MadPlant" in_story="true">
@@ -1435,27 +1435,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>NumbOff</ability>
-            <ability>Sap</ability>
-            <ability>Slow</ability>
-          </abilities>
+          <skills>
+            <skill>NumbOff</skill>
+            <skill>Sap</skill>
+            <skill>Slow</skill>
+          </skills>
           <growth agl="6" int="18" maxlvl="40" atk="11" mp="24" exp="10" hp="15" def="13"/>
         </monster>
         <monster name="Egdracil" in_story="false">
-          <abilities>
-            <ability>Vivify</ability>
-            <ability>SleepAir</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>Vivify</skill>
+            <skill>SleepAir</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="15" int="23" maxlvl="70" atk="21" mp="18" exp="24" hp="25" def="24"/>
         </monster>
         <monster name="Toadstool" in_story="false">
-          <abilities>
-            <ability>NapAttack</ability>
-            <ability>SleepAir</ability>
-            <ability>MouthShut</ability>
-          </abilities>
+          <skills>
+            <skill>NapAttack</skill>
+            <skill>SleepAir</skill>
+            <skill>MouthShut</skill>
+          </skills>
           <growth agl="13" int="13" maxlvl="45" atk="8" mp="18" exp="9" hp="14" def="9"/>
         </monster>
         <monster name="Gulpple" in_story="true">
@@ -1465,11 +1465,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Near Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>NapAttack</ability>
-            <ability>HighJump</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>NapAttack</skill>
+            <skill>HighJump</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="2" int="14" maxlvl="40" atk="9" mp="17" exp="11" hp="16" def="6"/>
         </monster>
         <monster name="TreeBoy" in_story="true">
@@ -1479,11 +1479,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Goldmine Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MPass</ability>
-            <ability>CurseOff</ability>
-            <ability>Hustle</ability>
-          </abilities>
+          <skills>
+            <skill>MPass</skill>
+            <skill>CurseOff</skill>
+            <skill>Hustle</skill>
+          </skills>
           <growth agl="12" int="15" maxlvl="40" atk="8" mp="18" exp="11" hp="15" def="3"/>
         </monster>
         <monster name="ManEater" in_story="true">
@@ -1493,15 +1493,15 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Spooky Forest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>DrakSlash</ability>
-            <ability>PsycheUp</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>DrakSlash</skill>
+            <skill>PsycheUp</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="10" int="6" maxlvl="45" atk="19" mp="12" exp="9" hp="14" def="7"/>
         </monster>
         <monster name="Watabou" in_story="false">
-          <abilities/>
+          <skills/>
           <growth agl="24" int="30" maxlvl="80" atk="11" mp="27" exp="0" hp="10" def="14"/>
         </monster>
         <monster name="FireWeed" in_story="true">
@@ -1511,27 +1511,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Hitano Castle (Not Village)</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>DeChaos</ability>
-            <ability>PalsyAir</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>DeChaos</skill>
+            <skill>PalsyAir</skill>
+          </skills>
           <growth agl="5" int="17" maxlvl="45" atk="10" mp="26" exp="15" hp="14" def="12"/>
         </monster>
         <monster name="AmberWeed" in_story="false">
-          <abilities>
-            <ability>TwinHits</ability>
-            <ability>Barrier</ability>
-            <ability>MagicWall</ability>
-          </abilities>
+          <skills>
+            <skill>TwinHits</skill>
+            <skill>Barrier</skill>
+            <skill>MagicWall</skill>
+          </skills>
           <growth agl="12" int="10" maxlvl="50" atk="8" mp="24" exp="12" hp="12" def="17"/>
         </monster>
         <monster name="Devipine" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>SleepAir</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>SleepAir</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="5" int="3" maxlvl="40" atk="8" mp="7" exp="10" hp="14" def="4"/>
         </monster>
         <monster name="Snapper" in_story="true">
@@ -1541,11 +1541,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Agdevils Hideout</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>StopSpell</ability>
-            <ability>CallHelp</ability>
-            <ability>RainSlash</ability>
-          </abilities>
+          <skills>
+            <skill>StopSpell</skill>
+            <skill>CallHelp</skill>
+            <skill>RainSlash</skill>
+          </skills>
           <growth agl="10" int="16" maxlvl="50" atk="20" mp="14" exp="11" hp="17" def="13"/>
         </monster>
         <monster name="Eggplaton" in_story="true">
@@ -1555,11 +1555,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside The Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MPass</ability>
-            <ability>OddDance</ability>
-            <ability>LureDance</ability>
-          </abilities>
+          <skills>
+            <skill>MPass</skill>
+            <skill>OddDance</skill>
+            <skill>LureDance</skill>
+          </skills>
           <growth agl="7" int="14" maxlvl="30" atk="13" mp="14" exp="3" hp="8" def="19"/>
         </monster>
         <monster name="FloraMan" in_story="true">
@@ -1569,11 +1569,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Fhunt Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Antidote</ability>
-            <ability>CurseOff</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Antidote</skill>
+            <skill>CurseOff</skill>
+          </skills>
           <growth agl="2" int="19" maxlvl="40" atk="6" mp="20" exp="7" hp="17" def="9"/>
         </monster>
         <monster name="Slurperon" in_story="true">
@@ -1583,11 +1583,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Pei Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>OddDance</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>OddDance</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="7" int="2" maxlvl="40" atk="7" mp="5" exp="3" hp="8" def="2"/>
         </monster>
         <monster name="FaceTree" in_story="true">
@@ -1597,11 +1597,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>StopSpell</ability>
-            <ability>Curse</ability>
-            <ability>OddDance</ability>
-          </abilities>
+          <skills>
+            <skill>StopSpell</skill>
+            <skill>Curse</skill>
+            <skill>OddDance</skill>
+          </skills>
           <growth agl="10" int="17" maxlvl="45" atk="11" mp="20" exp="9" hp="12" def="8"/>
         </monster>
         <monster name="GhosTree" in_story="true">
@@ -1611,11 +1611,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Sword Castle</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>RobMagic</ability>
-            <ability>LureDance</ability>
-            <ability>EerieLite</ability>
-          </abilities>
+          <skills>
+            <skill>RobMagic</skill>
+            <skill>LureDance</skill>
+            <skill>EerieLite</skill>
+          </skills>
           <growth agl="7" int="15" maxlvl="50" atk="9" mp="13" exp="9" hp="8" def="6"/>
         </monster>
         <monster name="FooHero" in_story="true">
@@ -1625,11 +1625,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Helm Cave Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Bolt</ability>
-            <ability>Heal</ability>
-            <ability>GigaSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Bolt</skill>
+            <skill>Heal</skill>
+            <skill>GigaSlash</skill>
+          </skills>
           <growth agl="9" int="7" maxlvl="45" atk="7" mp="4" exp="16" hp="8" def="4"/>
         </monster>
       </monsters>
@@ -1637,11 +1637,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     <family name="bug">
       <monsters>
         <monster name="Catapila" in_story="false">
-          <abilities>
-            <ability>Upper</ability>
-            <ability>PoisonHit</ability>
-            <ability>ThickFog</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>PoisonHit</skill>
+            <skill>ThickFog</skill>
+          </skills>
           <growth agl="11" int="9" maxlvl="40" atk="11" mp="5" exp="4" hp="13" def="14"/>
         </monster>
         <monster name="StagBug" in_story="true">
@@ -1651,11 +1651,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Agdevils Hideout</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>FireAir</ability>
-            <ability>LegSweep</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>FireAir</skill>
+            <skill>LegSweep</skill>
+          </skills>
           <growth agl="9" int="7" maxlvl="45" atk="16" mp="7" exp="3" hp="13" def="20"/>
         </monster>
         <monster name="Eyeder" in_story="true">
@@ -1665,11 +1665,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Moonrock Tower 1St Floor</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Heal</ability>
-            <ability>MapMagic</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Heal</skill>
+            <skill>MapMagic</skill>
+          </skills>
           <growth agl="10" int="9" maxlvl="45" atk="6" mp="11" exp="4" hp="9" def="3"/>
         </monster>
         <monster name="WarMantis" in_story="true">
@@ -1679,11 +1679,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Left Of Pei Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>VacuSlash</ability>
-            <ability>Shears</ability>
-            <ability>GigaSlash</ability>
-          </abilities>
+          <skills>
+            <skill>VacuSlash</skill>
+            <skill>Shears</skill>
+            <skill>GigaSlash</skill>
+          </skills>
           <growth agl="11" int="8" maxlvl="50" atk="12" mp="16" exp="18" hp="23" def="9"/>
         </monster>
         <monster name="MultiEyes" in_story="true">
@@ -1701,19 +1701,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <map>Down From The Door Shrine</map>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sap</ability>
-            <ability>TwinHits</ability>
-            <ability>PalsyAir</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>TwinHits</skill>
+            <skill>PalsyAir</skill>
+          </skills>
           <growth agl="2" int="3" maxlvl="35" atk="19" mp="15" exp="4" hp="14" def="13"/>
         </monster>
         <monster name="Gophecada" in_story="true">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>MagicBack</ability>
-            <ability>CallHelp</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>MagicBack</skill>
+            <skill>CallHelp</skill>
+          </skills>
           <growth agl="8" int="7" maxlvl="30" atk="14" mp="11" exp="1" hp="6" def="18"/>
         </monster>
         <monster name="Pyuro" in_story="true">
@@ -1723,11 +1723,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Up From The Port Ritz Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Speed</ability>
-            <ability>WindBeast</ability>
-            <ability>MouthShut</ability>
-          </abilities>
+          <skills>
+            <skill>Speed</skill>
+            <skill>WindBeast</skill>
+            <skill>MouthShut</skill>
+          </skills>
           <growth agl="11" int="14" maxlvl="40" atk="7" mp="8" exp="7" hp="8" def="13"/>
         </monster>
         <monster name="GiantMoth" in_story="true">
@@ -1737,19 +1737,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Sleepherb Mountain</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>WindBeast</ability>
-            <ability>Paralyze</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>WindBeast</skill>
+            <skill>Paralyze</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="20" int="12" maxlvl="30" atk="16" mp="9" exp="2" hp="14" def="12"/>
         </monster>
         <monster name="HornBeet" in_story="false">
-          <abilities>
-            <ability>RockThrow</ability>
-            <ability>BoltSlash</ability>
-            <ability>DevilCut</ability>
-          </abilities>
+          <skills>
+            <skill>RockThrow</skill>
+            <skill>BoltSlash</skill>
+            <skill>DevilCut</skill>
+          </skills>
           <growth agl="12" int="14" maxlvl="50" atk="23" mp="19" exp="7" hp="21" def="20"/>
         </monster>
         <monster name="Butterfly" in_story="true">
@@ -1759,11 +1759,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Surround</ability>
-            <ability>CallHelp</ability>
-            <ability>Curse</ability>
-          </abilities>
+          <skills>
+            <skill>Surround</skill>
+            <skill>CallHelp</skill>
+            <skill>Curse</skill>
+          </skills>
           <growth agl="12" int="8" maxlvl="30" atk="13" mp="2" exp="0" hp="11" def="7"/>
         </monster>
         <monster name="ArmyAnt" in_story="true">
@@ -1773,19 +1773,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Yold Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>NapAttack</ability>
-            <ability>Kamikaze</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>NapAttack</skill>
+            <skill>Kamikaze</skill>
+          </skills>
           <growth agl="13" int="1" maxlvl="35" atk="11" mp="4" exp="2" hp="8" def="17"/>
         </monster>
         <monster name="ArmyCrab" in_story="false">
-          <abilities>
-            <ability>Upper</ability>
-            <ability>CallHelp</ability>
-            <ability>MetalCut</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>CallHelp</skill>
+            <skill>MetalCut</skill>
+          </skills>
           <growth agl="5" int="1" maxlvl="40" atk="14" mp="8" exp="6" hp="16" def="19"/>
         </monster>
         <monster name="Droll" in_story="true">
@@ -1795,27 +1795,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Goldmine Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Slow</ability>
-            <ability>Shears</ability>
-            <ability>StepGuard</ability>
-          </abilities>
+          <skills>
+            <skill>Slow</skill>
+            <skill>Shears</skill>
+            <skill>StepGuard</skill>
+          </skills>
           <growth agl="7" int="14" maxlvl="40" atk="15" mp="10" exp="5" hp="17" def="16"/>
         </monster>
         <monster name="Armorpion" in_story="false">
-          <abilities>
-            <ability>ZombieCut</ability>
-            <ability>RainSlash</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>ZombieCut</skill>
+            <skill>RainSlash</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="15" int="18" maxlvl="55" atk="24" mp="20" exp="24" hp="22" def="23"/>
         </monster>
         <monster name="Sickler" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>DevilCut</ability>
-            <ability>SquallHit</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>DevilCut</skill>
+            <skill>SquallHit</skill>
+          </skills>
           <growth agl="14" int="5" maxlvl="45" atk="9" mp="13" exp="7" hp="19" def="7"/>
         </monster>
         <monster name="GiantWorm" in_story="true">
@@ -1825,19 +1825,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Underground Tunnel Stairs At Kalka Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>BeastCut</ability>
-            <ability>OddDance</ability>
-            <ability>StepGuard</ability>
-          </abilities>
+          <skills>
+            <skill>BeastCut</skill>
+            <skill>OddDance</skill>
+            <skill>StepGuard</skill>
+          </skills>
           <growth agl="13" int="14" maxlvl="35" atk="16" mp="8" exp="6" hp="13" def="8"/>
         </monster>
         <monster name="WeedBug" in_story="false">
-          <abilities>
-            <ability>RobMagic</ability>
-            <ability>Barrier</ability>
-            <ability>MagicWall</ability>
-          </abilities>
+          <skills>
+            <skill>RobMagic</skill>
+            <skill>Barrier</skill>
+            <skill>MagicWall</skill>
+          </skills>
           <growth agl="5" int="19" maxlvl="40" atk="10" mp="13" exp="4" hp="17" def="12"/>
         </monster>
         <monster name="TailEater" in_story="true">
@@ -1847,11 +1847,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>2 Screens Right Of Asiya Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>IceSlash</ability>
-            <ability>PoisonGas</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>IceSlash</skill>
+            <skill>PoisonGas</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="14" int="5" maxlvl="45" atk="16" mp="10" exp="5" hp="12" def="11"/>
         </monster>
         <monster name="GoHopper" in_story="false">
@@ -1869,11 +1869,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <map>Right From Elvin Village</map>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>RobMagic</ability>
-            <ability>CallHelp</ability>
-            <ability>ChargeUp</ability>
-          </abilities>
+          <skills>
+            <skill>RobMagic</skill>
+            <skill>CallHelp</skill>
+            <skill>ChargeUp</skill>
+          </skills>
           <growth agl="14" int="4" maxlvl="35" atk="8" mp="4" exp="0" hp="11" def="14"/>
         </monster>
         <monster name="MadHornet" in_story="true">
@@ -1883,27 +1883,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Heaven Armor Tower Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>PoisonHit</ability>
-            <ability>Paralyze</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>PoisonHit</skill>
+            <skill>Paralyze</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="20" int="4" maxlvl="40" atk="19" mp="5" exp="7" hp="20" def="13"/>
         </monster>
         <monster name="Digster" in_story="false">
-          <abilities>
-            <ability>Farewell</ability>
-            <ability>StrongD</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>Farewell</skill>
+            <skill>StrongD</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="1" int="15" maxlvl="50" atk="19" mp="10" exp="11" hp="24" def="26"/>
         </monster>
         <monster name="GiantSlug" in_story="false">
-          <abilities>
-            <ability>LushLicks</ability>
-            <ability>Dodge</ability>
-            <ability>Whistle</ability>
-          </abilities>
+          <skills>
+            <skill>LushLicks</skill>
+            <skill>Dodge</skill>
+            <skill>Whistle</skill>
+          </skills>
           <growth agl="11" int="7" maxlvl="35" atk="14" mp="8" exp="2" hp="11" def="9"/>
         </monster>
         <monster name="Lipsy" in_story="true">
@@ -1913,11 +1913,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Travelers Hut</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>LushLicks</ability>
-            <ability>Ahhh</ability>
-            <ability>Pheromone</ability>
-          </abilities>
+          <skills>
+            <skill>LushLicks</skill>
+            <skill>Ahhh</skill>
+            <skill>Pheromone</skill>
+          </skills>
           <growth agl="4" int="1" maxlvl="40" atk="9" mp="8" exp="4" hp="12" def="9"/>
         </monster>
         <monster name="ArmorPede" in_story="true">
@@ -1927,11 +1927,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Heaven Armor Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Upper</ability>
-            <ability>TwinHits</ability>
-            <ability>TwinSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>TwinHits</skill>
+            <skill>TwinSlash</skill>
+          </skills>
           <growth agl="11" int="2" maxlvl="35" atk="17" mp="10" exp="6" hp="15" def="20"/>
         </monster>
         <monster name="Belzebub" in_story="true">
@@ -1941,19 +1941,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Fhunt Tower Floor 4</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Farewell</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Farewell</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="14" int="3" maxlvl="35" atk="8" mp="19" exp="12" hp="23" def="7"/>
         </monster>
         <monster name="Skularach" in_story="false">
-          <abilities>
-            <ability>Lightning</ability>
-            <ability>BiAttack</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>Lightning</skill>
+            <skill>BiAttack</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="30" int="21" maxlvl="65" atk="25" mp="23" exp="25" hp="18" def="24"/>
         </monster>
       </monsters>
@@ -1967,11 +1967,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Fhunt Tower Floor 4</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Ironize</ability>
-            <ability>FrigidAir</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Ironize</skill>
+            <skill>FrigidAir</skill>
+          </skills>
           <growth agl="4" int="12" maxlvl="50" atk="20" mp="10" exp="20" hp="16" def="22"/>
         </monster>
         <monster name="Demonite" in_story="true">
@@ -1981,19 +1981,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Spooky Forest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>FireAir</ability>
-            <ability>FrigidAir</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>FireAir</skill>
+            <skill>FrigidAir</skill>
+          </skills>
           <growth agl="9" int="20" maxlvl="30" atk="5" mp="1" exp="13" hp="13" def="4"/>
         </monster>
         <monster name="GoatHorn" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>Infernos</ability>
-            <ability>IceBolt</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>Infernos</skill>
+            <skill>IceBolt</skill>
+          </skills>
           <growth agl="11" int="20" maxlvl="40" atk="17" mp="11" exp="22" hp="20" def="13"/>
         </monster>
         <monster name="1EyeClown" in_story="true">
@@ -2003,11 +2003,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>1 Screen Up From The Port Ritz Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Firebal</ability>
-            <ability>IceBolt</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Firebal</skill>
+            <skill>IceBolt</skill>
+          </skills>
           <growth agl="9" int="17" maxlvl="25" atk="5" mp="1" exp="13" hp="10" def="9"/>
         </monster>
         <monster name="Grendal" in_story="true">
@@ -2017,11 +2017,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>3 Screens Right From Elvin Village</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FireSlash</ability>
-            <ability>DrakSlash</ability>
-            <ability>Cover</ability>
-          </abilities>
+          <skills>
+            <skill>FireSlash</skill>
+            <skill>DrakSlash</skill>
+            <skill>Cover</skill>
+          </skills>
           <growth agl="12" int="12" maxlvl="60" atk="18" mp="1" exp="20" hp="23" def="24"/>
         </monster>
         <monster name="Ogre" in_story="true">
@@ -2031,11 +2031,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Travelers Hut</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MetalCut</ability>
-            <ability>PsycheUp</ability>
-            <ability>Massacre</ability>
-          </abilities>
+          <skills>
+            <skill>MetalCut</skill>
+            <skill>PsycheUp</skill>
+            <skill>Massacre</skill>
+          </skills>
           <growth agl="10" int="12" maxlvl="40" atk="20" mp="8" exp="19" hp="15" def="12"/>
         </monster>
         <monster name="MadKnight" in_story="true">
@@ -2045,19 +2045,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Fhunt Tower Floor 4</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>BeastCut</ability>
-            <ability>GigaSlash</ability>
-            <ability>Massacre</ability>
-          </abilities>
+          <skills>
+            <skill>BeastCut</skill>
+            <skill>GigaSlash</skill>
+            <skill>Massacre</skill>
+          </skills>
           <growth agl="10" int="12" maxlvl="55" atk="18" mp="9" exp="23" hp="17" def="20"/>
         </monster>
         <monster name="Durran" in_story="false">
-          <abilities>
-            <ability>WindBeast</ability>
-            <ability>DrakSlash</ability>
-            <ability>BirdBlow</ability>
-          </abilities>
+          <skills>
+            <skill>WindBeast</skill>
+            <skill>DrakSlash</skill>
+            <skill>BirdBlow</skill>
+          </skills>
           <growth agl="17" int="20" maxlvl="70" atk="23" mp="24" exp="28" hp="25" def="15"/>
         </monster>
         <monster name="DarkEye" in_story="true">
@@ -2067,19 +2067,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CleanCut</ability>
-            <ability>PalsyAir</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>CleanCut</skill>
+            <skill>PalsyAir</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="9" int="12" maxlvl="40" atk="10" mp="18" exp="18" hp="11" def="16"/>
         </monster>
         <monster name="Gremlin" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Heal</ability>
-            <ability>StopSpell</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Heal</skill>
+            <skill>StopSpell</skill>
+          </skills>
           <growth agl="2" int="18" maxlvl="25" atk="8" mp="7" exp="13" hp="13" def="4"/>
         </monster>
         <monster name="GateGuard" in_story="true">
@@ -2089,27 +2089,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Sword Castle Basement Floor 2</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>CleanCut</ability>
-            <ability>ThickFog</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>CleanCut</skill>
+            <skill>ThickFog</skill>
+          </skills>
           <growth agl="10" int="14" maxlvl="50" atk="18" mp="12" exp="23" hp="18" def="14"/>
         </monster>
         <monster name="EvilWell" in_story="false">
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>ChargeUp</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>ChargeUp</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="6" int="8" maxlvl="50" atk="10" mp="14" exp="15" hp="23" def="15"/>
         </monster>
         <monster name="Titanis" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>Berserker</ability>
-            <ability>UltraDown</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>Berserker</skill>
+            <skill>UltraDown</skill>
+          </skills>
           <growth agl="23" int="13" maxlvl="75" atk="25" mp="24" exp="27" hp="25" def="22"/>
         </monster>
         <monster name="EyeBall" in_story="true">
@@ -2119,19 +2119,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Helm Cave Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MagicBack</ability>
-            <ability>WarCry</ability>
-            <ability>Outside</ability>
-          </abilities>
+          <skills>
+            <skill>MagicBack</skill>
+            <skill>WarCry</skill>
+            <skill>Outside</skill>
+          </skills>
           <growth agl="13" int="8" maxlvl="35" atk="14" mp="17" exp="16" hp="16" def="14"/>
         </monster>
         <monster name="ArcDemon" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>VacuSlash</ability>
-            <ability>BoltSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>VacuSlash</skill>
+            <skill>BoltSlash</skill>
+          </skills>
           <growth agl="7" int="21" maxlvl="45" atk="17" mp="13" exp="20" hp="14" def="12"/>
         </monster>
         <monster name="ChopClown" in_story="true">
@@ -2141,11 +2141,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>TwinHits</ability>
-            <ability>VacuSlash</ability>
-            <ability>SquallHit</ability>
-          </abilities>
+          <skills>
+            <skill>TwinHits</skill>
+            <skill>VacuSlash</skill>
+            <skill>SquallHit</skill>
+          </skills>
           <growth agl="20" int="15" maxlvl="50" atk="20" mp="12" exp="22" hp="17" def="11"/>
         </monster>
         <monster name="Gigantes" in_story="true">
@@ -2155,43 +2155,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Madcondor's Nest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>SlimeBlow</ability>
-            <ability>ChargeUp</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>SlimeBlow</skill>
+            <skill>ChargeUp</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="0" int="0" maxlvl="45" atk="27" mp="0" exp="22" hp="27" def="7"/>
         </monster>
         <monster name="LampGenie" in_story="false">
-          <abilities>
-            <ability>Heal</ability>
-            <ability>Sleep</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>Sleep</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="15" int="10" maxlvl="60" atk="11" mp="12" exp="21" hp="10" def="22"/>
         </monster>
         <monster name="Pixy" in_story="false">
-          <abilities>
-            <ability>Antidote</ability>
-            <ability>TwinHits</ability>
-            <ability>SealPray</ability>
-          </abilities>
+          <skills>
+            <skill>Antidote</skill>
+            <skill>TwinHits</skill>
+            <skill>SealPray</skill>
+          </skills>
           <growth agl="15" int="4" maxlvl="40" atk="15" mp="7" exp="19" hp="11" def="8"/>
         </monster>
         <monster name="EvilArmor" in_story="false">
-          <abilities>
-            <ability>FireSlash</ability>
-            <ability>BoltSlash</ability>
-            <ability>AquaCut</ability>
-          </abilities>
+          <skills>
+            <skill>FireSlash</skill>
+            <skill>BoltSlash</skill>
+            <skill>AquaCut</skill>
+          </skills>
           <growth agl="5" int="13" maxlvl="40" atk="17" mp="1" exp="22" hp="16" def="29"/>
         </monster>
         <monster name="SkulRider" in_story="false">
-          <abilities>
-            <ability>FireSlash</ability>
-            <ability>RainSlash</ability>
-            <ability>LegSweep</ability>
-          </abilities>
+          <skills>
+            <skill>FireSlash</skill>
+            <skill>RainSlash</skill>
+            <skill>LegSweep</skill>
+          </skills>
           <growth agl="15" int="12" maxlvl="45" atk="17" mp="11" exp="18" hp="17" def="13"/>
         </monster>
         <monster name="AgDevil" in_story="true">
@@ -2201,11 +2201,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Ice Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Sacrifice</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Sacrifice</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="16" int="19" maxlvl="35" atk="18" mp="11" exp="16" hp="16" def="12"/>
         </monster>
         <monster name="Lionex" in_story="true">
@@ -2215,19 +2215,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Hitano Castle (Not Village)</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>HealUs</ability>
-            <ability>VacuSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>HealUs</skill>
+            <skill>VacuSlash</skill>
+          </skills>
           <growth agl="12" int="19" maxlvl="45" atk="14" mp="11" exp="21" hp="15" def="15"/>
         </monster>
         <monster name="Bubblemon" in_story="false">
-          <abilities>
-            <ability>Watershot</ability>
-            <ability>IceSlash</ability>
-            <ability>BladeD</ability>
-          </abilities>
+          <skills>
+            <skill>Watershot</skill>
+            <skill>IceSlash</skill>
+            <skill>BladeD</skill>
+          </skills>
           <growth agl="7" int="4" maxlvl="45" atk="15" mp="13" exp="12" hp="14" def="7"/>
         </monster>
         <monster name="BossTroll" in_story="true">
@@ -2237,11 +2237,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Massacre</ability>
-            <ability>Ramming</ability>
-            <ability>Cover</ability>
-          </abilities>
+          <skills>
+            <skill>Massacre</skill>
+            <skill>Ramming</skill>
+            <skill>Cover</skill>
+          </skills>
           <growth agl="4" int="1" maxlvl="50" atk="25" mp="3" exp="24" hp="24" def="22"/>
         </monster>
         <monster name="Orc" in_story="true">
@@ -2251,43 +2251,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Spooky Forest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Vivify</ability>
-            <ability>Sap</ability>
-            <ability>BirdBlow</ability>
-          </abilities>
+          <skills>
+            <skill>Vivify</skill>
+            <skill>Sap</skill>
+            <skill>BirdBlow</skill>
+          </skills>
           <growth agl="13" int="18" maxlvl="50" atk="19" mp="7" exp="17" hp="19" def="13"/>
         </monster>
         <monster name="Centasaur" in_story="false">
-          <abilities>
-            <ability>StopSpell</ability>
-            <ability>FireSlash</ability>
-            <ability>RainSlash</ability>
-          </abilities>
+          <skills>
+            <skill>StopSpell</skill>
+            <skill>FireSlash</skill>
+            <skill>RainSlash</skill>
+          </skills>
           <growth agl="18" int="19" maxlvl="45" atk="24" mp="1" exp="23" hp="20" def="21"/>
         </monster>
         <monster name="Akubar" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>FrigidAir</ability>
-            <ability>Focus</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>FrigidAir</skill>
+            <skill>Focus</skill>
+          </skills>
           <growth agl="18" int="21" maxlvl="70" atk="23" mp="30" exp="30" hp="24" def="21"/>
         </monster>
         <monster name="MedusaEye" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>Surround</ability>
-            <ability>Shears</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>Surround</skill>
+            <skill>Shears</skill>
+          </skills>
           <growth agl="8" int="11" maxlvl="30" atk="14" mp="13" exp="19" hp="11" def="15"/>
         </monster>
         <monster name="Jamirus" in_story="false">
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>BiAttack</ability>
-            <ability>TailWind</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>BiAttack</skill>
+            <skill>TailWind</skill>
+          </skills>
           <growth agl="23" int="18" maxlvl="60" atk="21" mp="9" exp="21" hp="24" def="24"/>
         </monster>
       </monsters>
@@ -2301,11 +2301,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Sword Castle Basement Floor 2</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Transform</ability>
-            <ability>OddDance</ability>
-            <ability>Imitate</ability>
-          </abilities>
+          <skills>
+            <skill>Transform</skill>
+            <skill>OddDance</skill>
+            <skill>Imitate</skill>
+          </skills>
           <growth agl="21" int="5" maxlvl="40" atk="1" mp="20" exp="1" hp="11" def="2"/>
         </monster>
         <monster name="Spooky" in_story="true">
@@ -2315,11 +2315,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Underground Tunnel Stairs At Kalka Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Radiant</ability>
-            <ability>MouthShut</ability>
-            <ability>Outside</ability>
-          </abilities>
+          <skills>
+            <skill>Radiant</skill>
+            <skill>MouthShut</skill>
+            <skill>Outside</skill>
+          </skills>
           <growth agl="18" int="15" maxlvl="40" atk="13" mp="12" exp="11" hp="11" def="8"/>
         </monster>
         <monster name="DeadNite" in_story="true">
@@ -2329,35 +2329,35 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Heaven Sword Castle Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>DeChaos</ability>
-            <ability>CurseOff</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>DeChaos</skill>
+            <skill>CurseOff</skill>
+          </skills>
           <growth agl="12" int="8" maxlvl="45" atk="19" mp="7" exp="13" hp="17" def="9"/>
         </monster>
         <monster name="WindMerge" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>CurseOff</ability>
-            <ability>BirdBlow</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>CurseOff</skill>
+            <skill>BirdBlow</skill>
+          </skills>
           <growth agl="13" int="6" maxlvl="35" atk="19" mp="19" exp="9" hp="16" def="12"/>
         </monster>
         <monster name="WhiteKing" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>Bolt</ability>
-            <ability>Chance</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>Bolt</skill>
+            <skill>Chance</skill>
+          </skills>
           <growth agl="15" int="27" maxlvl="60" atk="14" mp="24" exp="25" hp="20" def="20"/>
         </monster>
         <monster name="PomPomBom" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>ThickFog</ability>
-            <ability>LifeDance</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>ThickFog</skill>
+            <skill>LifeDance</skill>
+          </skills>
           <growth agl="14" int="21" maxlvl="40" atk="13" mp="21" exp="8" hp="5" def="11"/>
         </monster>
         <monster name="MadSpirit" in_story="true">
@@ -2367,19 +2367,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Sword Castle</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>SleepAir</ability>
-            <ability>Radiant</ability>
-            <ability>ThickFog</ability>
-          </abilities>
+          <skills>
+            <skill>SleepAir</skill>
+            <skill>Radiant</skill>
+            <skill>ThickFog</skill>
+          </skills>
           <growth agl="16" int="10" maxlvl="50" atk="15" mp="12" exp="13" hp="14" def="12"/>
         </monster>
         <monster name="Putrepup" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>Slow</ability>
-            <ability>MagicBack</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>Slow</skill>
+            <skill>MagicBack</skill>
+          </skills>
           <growth agl="11" int="4" maxlvl="35" atk="17" mp="13" exp="6" hp="17" def="8"/>
         </monster>
         <monster name="Skullgon" in_story="true">
@@ -2389,11 +2389,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Merchants' Tower Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FrigidAir</ability>
-            <ability>IceSlash</ability>
-            <ability>TwinSlash</ability>
-          </abilities>
+          <skills>
+            <skill>FrigidAir</skill>
+            <skill>IceSlash</skill>
+            <skill>TwinSlash</skill>
+          </skills>
           <growth agl="4" int="6" maxlvl="45" atk="23" mp="1" exp="13" hp="6" def="15"/>
         </monster>
         <monster name="Skulpent" in_story="true">
@@ -2403,11 +2403,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Merchants' Tower Floor 2</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Beat</ability>
-            <ability>PoisonHit</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>PoisonHit</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="12" int="10" maxlvl="45" atk="23" mp="19" exp="9" hp="17" def="9"/>
         </monster>
         <monster name="Shadow" in_story="true">
@@ -2417,51 +2417,51 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Spooky Forest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FrigidAir</ability>
-            <ability>K.O.Dance</ability>
-            <ability>ThickFog</ability>
-          </abilities>
+          <skills>
+            <skill>FrigidAir</skill>
+            <skill>K.O.Dance</skill>
+            <skill>ThickFog</skill>
+          </skills>
           <growth agl="8" int="12" maxlvl="50" atk="6" mp="6" exp="12" hp="9" def="20"/>
         </monster>
         <monster name="Inverzon" in_story="false">
-          <abilities>
-            <ability>Surround</ability>
-            <ability>PoisonGas</ability>
-            <ability>SideStep</ability>
-          </abilities>
+          <skills>
+            <skill>Surround</skill>
+            <skill>PoisonGas</skill>
+            <skill>SideStep</skill>
+          </skills>
           <growth agl="4" int="1" maxlvl="35" atk="14" mp="2" exp="4" hp="7" def="7"/>
         </monster>
         <monster name="Reaper" in_story="false">
-          <abilities>
-            <ability>DevilCut</ability>
-            <ability>Curse</ability>
-            <ability>EerieLite</ability>
-          </abilities>
+          <skills>
+            <skill>DevilCut</skill>
+            <skill>Curse</skill>
+            <skill>EerieLite</skill>
+          </skills>
           <growth agl="19" int="6" maxlvl="40" atk="21" mp="3" exp="10" hp="19" def="17"/>
         </monster>
         <monster name="Skeletor" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>BirdBlow</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>BirdBlow</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="16" int="19" maxlvl="55" atk="18" mp="11" exp="12" hp="16" def="12"/>
         </monster>
         <monster name="BoneSlave" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>BoltSlash</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>BoltSlash</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="7" int="1" maxlvl="40" atk="17" mp="13" exp="10" hp="14" def="12"/>
         </monster>
         <monster name="Niterich" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>ThickFog</ability>
-            <ability>BladeD</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>ThickFog</skill>
+            <skill>BladeD</skill>
+          </skills>
           <growth agl="19" int="21" maxlvl="65" atk="24" mp="13" exp="20" hp="27" def="23"/>
         </monster>
         <monster name="RotRaven" in_story="true">
@@ -2471,19 +2471,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Lightning</ability>
-            <ability>BoltSlash</ability>
-            <ability>Kamikaze</ability>
-          </abilities>
+          <skills>
+            <skill>Lightning</skill>
+            <skill>BoltSlash</skill>
+            <skill>Kamikaze</skill>
+          </skills>
           <growth agl="18" int="9" maxlvl="35" atk="12" mp="8" exp="5" hp="14" def="11"/>
         </monster>
         <monster name="Hork" in_story="false">
-          <abilities>
-            <ability>PoisonGas</ability>
-            <ability>EerieLite</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>PoisonGas</skill>
+            <skill>EerieLite</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="11" int="10" maxlvl="40" atk="16" mp="13" exp="8" hp="17" def="8"/>
         </monster>
         <monster name="FoxFire" in_story="true">
@@ -2493,19 +2493,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Area Outside Spooky Forest</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Firebal</ability>
-            <ability>Outside</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Firebal</skill>
+            <skill>Outside</skill>
+          </skills>
           <growth agl="13" int="4" maxlvl="40" atk="6" mp="15" exp="7" hp="9" def="8"/>
         </monster>
         <monster name="Servant" in_story="false">
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>IceBolt</ability>
-            <ability>Focus</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>IceBolt</skill>
+            <skill>Focus</skill>
+          </skills>
           <growth agl="15" int="20" maxlvl="70" atk="25" mp="21" exp="20" hp="23" def="18"/>
         </monster>
         <monster name="Mummy" in_story="true">
@@ -2515,59 +2515,59 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Goldmine Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>Paralyze</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>Paralyze</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="4" int="8" maxlvl="50" atk="12" mp="17" exp="10" hp="15" def="9"/>
         </monster>
         <monster name="Mudron" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>MPass</ability>
-            <ability>Vivify</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>MPass</skill>
+            <skill>Vivify</skill>
+          </skills>
           <growth agl="7" int="14" maxlvl="30" atk="11" mp="10" exp="10" hp="6" def="17"/>
         </monster>
         <monster name="CaptDead" in_story="false">
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>AquaCut</ability>
-            <ability>SquallHit</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>AquaCut</skill>
+            <skill>SquallHit</skill>
+          </skills>
           <growth agl="8" int="5" maxlvl="40" atk="17" mp="20" exp="13" hp="9" def="16"/>
         </monster>
         <monster name="Lazamanus" in_story="false">
-          <abilities>
-            <ability>TakeMagic</ability>
-            <ability>K.O.Dance</ability>
-            <ability>LifeDance</ability>
-          </abilities>
+          <skills>
+            <skill>TakeMagic</skill>
+            <skill>K.O.Dance</skill>
+            <skill>LifeDance</skill>
+          </skills>
           <growth agl="12" int="14" maxlvl="75" atk="30" mp="20" exp="26" hp="24" def="20"/>
         </monster>
         <monster name="DarkCrab" in_story="false">
-          <abilities>
-            <ability>Ironize</ability>
-            <ability>MagicWall</ability>
-            <ability>StepGuard</ability>
-          </abilities>
+          <skills>
+            <skill>Ironize</skill>
+            <skill>MagicWall</skill>
+            <skill>StepGuard</skill>
+          </skills>
           <growth agl="1" int="11" maxlvl="30" atk="15" mp="8" exp="8" hp="12" def="20"/>
         </monster>
         <monster name="NiteWhip" in_story="false">
-          <abilities>
-            <ability>WindBeast</ability>
-            <ability>Lightning</ability>
-            <ability>Informer</ability>
-          </abilities>
+          <skills>
+            <skill>WindBeast</skill>
+            <skill>Lightning</skill>
+            <skill>Informer</skill>
+          </skills>
           <growth agl="15" int="9" maxlvl="35" atk="10" mp="4" exp="12" hp="17" def="3"/>
         </monster>
         <monster name="DeadNoble" in_story="false">
-          <abilities>
-            <ability>HealUs</ability>
-            <ability>AquaCut</ability>
-            <ability>TatsuCall</ability>
-          </abilities>
+          <skills>
+            <skill>HealUs</skill>
+            <skill>AquaCut</skill>
+            <skill>TatsuCall</skill>
+          </skills>
           <growth agl="15" int="13" maxlvl="50" atk="26" mp="2" exp="16" hp="21" def="19"/>
         </monster>
       </monsters>
@@ -2581,59 +2581,59 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Land Area 1 Screen Down Of Moonrock Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>OddDance</ability>
-            <ability>SandStorm</ability>
-            <ability>LoveRain</ability>
-          </abilities>
+          <skills>
+            <skill>OddDance</skill>
+            <skill>SandStorm</skill>
+            <skill>LoveRain</skill>
+          </skills>
           <growth agl="4" int="3" maxlvl="30" atk="14" mp="6" exp="8" hp="7" def="4"/>
         </monster>
         <monster name="IceMan" in_story="false">
-          <abilities>
-            <ability>IceBolt</ability>
-            <ability>FrigidAir</ability>
-            <ability>StrongD</ability>
-          </abilities>
+          <skills>
+            <skill>IceBolt</skill>
+            <skill>FrigidAir</skill>
+            <skill>StrongD</skill>
+          </skills>
           <growth agl="4" int="7" maxlvl="45" atk="18" mp="6" exp="13" hp="16" def="24"/>
         </monster>
         <monster name="BombCrag" in_story="false">
-          <abilities>
-            <ability>Sacrifice</ability>
-            <ability>Farewell</ability>
-            <ability>RockThrow</ability>
-          </abilities>
+          <skills>
+            <skill>Sacrifice</skill>
+            <skill>Farewell</skill>
+            <skill>RockThrow</skill>
+          </skills>
           <growth agl="0" int="13" maxlvl="50" atk="17" mp="11" exp="14" hp="15" def="20"/>
         </monster>
         <monster name="Facer" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>Sacrifice</ability>
-            <ability>LifeSong</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>Sacrifice</skill>
+            <skill>LifeSong</skill>
+          </skills>
           <growth agl="3" int="19" maxlvl="45" atk="11" mp="23" exp="12" hp="8" def="12"/>
         </monster>
         <monster name="Voodoll" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>Surround</ability>
-            <ability>PanicAll</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>Surround</skill>
+            <skill>PanicAll</skill>
+          </skills>
           <growth agl="8" int="14" maxlvl="35" atk="12" mp="17" exp="11" hp="14" def="12"/>
         </monster>
         <monster name="Roboster1" in_story="false">
-          <abilities>
-            <ability>SquallHit</ability>
-            <ability>BiAttack</ability>
-            <ability>RainSlash</ability>
-          </abilities>
+          <skills>
+            <skill>SquallHit</skill>
+            <skill>BiAttack</skill>
+            <skill>RainSlash</skill>
+          </skills>
           <growth agl="24" int="17" maxlvl="40" atk="21" mp="5" exp="13" hp="12" def="22"/>
         </monster>
         <monster name="DarkMate" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>Hellblast</ability>
-            <ability>EerieLite</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>Hellblast</skill>
+            <skill>EerieLite</skill>
+          </skills>
           <growth agl="21" int="10" maxlvl="70" atk="12" mp="21" exp="24" hp="24" def="25"/>
         </monster>
         <monster name="Mimic" in_story="true">
@@ -2643,19 +2643,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 2</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Beat</ability>
-            <ability>EagleEye</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Beat</skill>
+            <skill>EagleEye</skill>
+          </skills>
           <growth agl="1" int="20" maxlvl="40" atk="20" mp="10" exp="11" hp="25" def="12"/>
         </monster>
         <monster name="GoldGolem" in_story="false">
-          <abilities>
-            <ability>BigBang</ability>
-            <ability>Surge</ability>
-            <ability>TatsuCall</ability>
-          </abilities>
+          <skills>
+            <skill>BigBang</skill>
+            <skill>Surge</skill>
+            <skill>TatsuCall</skill>
+          </skills>
           <growth agl="17" int="23" maxlvl="75" atk="24" mp="21" exp="18" hp="24" def="27"/>
         </monster>
         <monster name="SpikyBoy" in_story="true">
@@ -2665,19 +2665,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 3</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sacrifice</ability>
-            <ability>SlimeBlow</ability>
-            <ability>HighJump</ability>
-          </abilities>
+          <skills>
+            <skill>Sacrifice</skill>
+            <skill>SlimeBlow</skill>
+            <skill>HighJump</skill>
+          </skills>
           <growth agl="7" int="11" maxlvl="30" atk="14" mp="13" exp="8" hp="9" def="17"/>
         </monster>
         <monster name="MetalDrak" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>Massacre</ability>
-            <ability>SandStorm</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>Massacre</skill>
+            <skill>SandStorm</skill>
+          </skills>
           <growth agl="9" int="10" maxlvl="45" atk="20" mp="13" exp="15" hp="18" def="23"/>
         </monster>
         <monster name="SabreMan" in_story="true">
@@ -2687,19 +2687,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Fhunt Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>RobMagic</ability>
-            <ability>DevilCut</ability>
-            <ability>Paralyze</ability>
-          </abilities>
+          <skills>
+            <skill>RobMagic</skill>
+            <skill>DevilCut</skill>
+            <skill>Paralyze</skill>
+          </skills>
           <growth agl="12" int="6" maxlvl="30" atk="9" mp="3" exp="11" hp="8" def="11"/>
         </monster>
         <monster name="Roboster2" in_story="false">
-          <abilities>
-            <ability>BoltSlash</ability>
-            <ability>MetalCut</ability>
-            <ability>GigaSlash</ability>
-          </abilities>
+          <skills>
+            <skill>BoltSlash</skill>
+            <skill>MetalCut</skill>
+            <skill>GigaSlash</skill>
+          </skills>
           <growth agl="22" int="12" maxlvl="45" atk="24" mp="13" exp="22" hp="23" def="26"/>
         </monster>
         <monster name="Gismo" in_story="true">
@@ -2709,11 +2709,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Weston Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>FrigidAir</ability>
-            <ability>SuckAir</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>FrigidAir</skill>
+            <skill>SuckAir</skill>
+          </skills>
           <growth agl="20" int="18" maxlvl="40" atk="11" mp="15" exp="9" hp="13" def="14"/>
         </monster>
         <monster name="Exaucers" in_story="true">
@@ -2723,11 +2723,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Heaven Armor Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>TakeMagic</ability>
-            <ability>WindBeast</ability>
-            <ability>PaniDance</ability>
-          </abilities>
+          <skills>
+            <skill>TakeMagic</skill>
+            <skill>WindBeast</skill>
+            <skill>PaniDance</skill>
+          </skills>
           <growth agl="7" int="4" maxlvl="45" atk="15" mp="13" exp="11" hp="20" def="6"/>
         </monster>
         <monster name="Golem" in_story="true">
@@ -2737,27 +2737,27 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Ice Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>ChargeUp</ability>
-            <ability>PsycheUp</ability>
-            <ability>Meditate</ability>
-          </abilities>
+          <skills>
+            <skill>ChargeUp</skill>
+            <skill>PsycheUp</skill>
+            <skill>Meditate</skill>
+          </skills>
           <growth agl="4" int="6" maxlvl="45" atk="12" mp="4" exp="18" hp="17" def="21"/>
         </monster>
         <monster name="JewelBag" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>StopSpell</ability>
-            <ability>PanicAll</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>StopSpell</skill>
+            <skill>PanicAll</skill>
+          </skills>
           <growth agl="17" int="15" maxlvl="40" atk="9" mp="11" exp="12" hp="13" def="18"/>
         </monster>
         <monster name="CloudKing" in_story="false">
-          <abilities>
-            <ability>Infernos</ability>
-            <ability>Barrier</ability>
-            <ability>Surge</ability>
-          </abilities>
+          <skills>
+            <skill>Infernos</skill>
+            <skill>Barrier</skill>
+            <skill>Surge</skill>
+          </skills>
           <growth agl="11" int="26" maxlvl="45" atk="14" mp="24" exp="8" hp="8" def="16"/>
         </monster>
         <monster name="MadMirror" in_story="true">
@@ -2767,11 +2767,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Inside Fhunt Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>MagicBack</ability>
-            <ability>Transform</ability>
-            <ability>Outside</ability>
-          </abilities>
+          <skills>
+            <skill>MagicBack</skill>
+            <skill>Transform</skill>
+            <skill>Outside</skill>
+          </skills>
           <growth agl="11" int="19" maxlvl="45" atk="8" mp="11" exp="14" hp="15" def="6"/>
         </monster>
         <monster name="MadCandle" in_story="true">
@@ -2781,19 +2781,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Underground Tunnel Stairs At Kalka Town</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>PsycheUp</ability>
-            <ability>Whistle</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>PsycheUp</skill>
+            <skill>Whistle</skill>
+          </skills>
           <growth agl="17" int="12" maxlvl="35" atk="14" mp="10" exp="10" hp="12" def="6"/>
         </monster>
         <monster name="Balzak" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>Bolt</ability>
-            <ability>MultiCut</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>Bolt</skill>
+            <skill>MultiCut</skill>
+          </skills>
           <growth agl="18" int="19" maxlvl="35" atk="23" mp="11" exp="13" hp="21" def="21"/>
         </monster>
         <monster name="Puppetor" in_story="true">
@@ -2803,19 +2803,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Ice Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>OddDance</ability>
-            <ability>LureDance</ability>
-            <ability>Pheromone</ability>
-          </abilities>
+          <skills>
+            <skill>OddDance</skill>
+            <skill>LureDance</skill>
+            <skill>Pheromone</skill>
+          </skills>
           <growth agl="7" int="11" maxlvl="35" atk="7" mp="9" exp="6" hp="13" def="4"/>
         </monster>
         <monster name="EvilPot" in_story="false">
-          <abilities>
-            <ability>Beat</ability>
-            <ability>Massacre</ability>
-            <ability>Outside</ability>
-          </abilities>
+          <skills>
+            <skill>Beat</skill>
+            <skill>Massacre</skill>
+            <skill>Outside</skill>
+          </skills>
           <growth agl="9" int="19" maxlvl="40" atk="15" mp="19" exp="11" hp="18" def="18"/>
         </monster>
         <monster name="CurseLamp" in_story="true">
@@ -2825,43 +2825,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Merchants' Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Upper</ability>
-            <ability>Speed</ability>
-            <ability>TwinHits</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>Speed</skill>
+            <skill>TwinHits</skill>
+          </skills>
           <growth agl="13" int="15" maxlvl="45" atk="9" mp="18" exp="9" hp="12" def="19"/>
         </monster>
         <monster name="MudDoll" in_story="false">
-          <abilities>
-            <ability>OddDance</ability>
-            <ability>Hustle</ability>
-            <ability>SideStep</ability>
-          </abilities>
+          <skills>
+            <skill>OddDance</skill>
+            <skill>Hustle</skill>
+            <skill>SideStep</skill>
+          </skills>
           <growth agl="1" int="15" maxlvl="40" atk="13" mp="3" exp="8" hp="12" def="14"/>
         </monster>
         <monster name="LavaMan" in_story="false">
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>FireAir</ability>
-            <ability>Cover</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>FireAir</skill>
+            <skill>Cover</skill>
+          </skills>
           <growth agl="4" int="7" maxlvl="45" atk="17" mp="12" exp="13" hp="18" def="24"/>
         </monster>
         <monster name="ProtoMech" in_story="false">
-          <abilities>
-            <ability>SlimeBlow</ability>
-            <ability>ChargeUp</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>SlimeBlow</skill>
+            <skill>ChargeUp</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="4" int="6" maxlvl="40" atk="6" mp="2" exp="5" hp="3" def="3"/>
         </monster>
         <monster name="StoneMan" in_story="false">
-          <abilities>
-            <ability>StrongD</ability>
-            <ability>Cover</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>StrongD</skill>
+            <skill>Cover</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="1" int="14" maxlvl="50" atk="23" mp="10" exp="15" hp="24" def="24"/>
         </monster>
         <monster name="EvilWand" in_story="true">
@@ -2871,11 +2871,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Harmirror Cave Basement Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>DeChaos</ability>
-            <ability>FrigidAir</ability>
-            <ability>MapMagic</ability>
-          </abilities>
+          <skills>
+            <skill>DeChaos</skill>
+            <skill>FrigidAir</skill>
+            <skill>MapMagic</skill>
+          </skills>
           <growth agl="9" int="13" maxlvl="50" atk="17" mp="15" exp="14" hp="14" def="12"/>
         </monster>
         <monster name="CoilBird" in_story="true">
@@ -2885,11 +2885,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Heaven Armor Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>DeChaos</ability>
-            <ability>NumbOff</ability>
-            <ability>SuckAll</ability>
-          </abilities>
+          <skills>
+            <skill>DeChaos</skill>
+            <skill>NumbOff</skill>
+            <skill>SuckAll</skill>
+          </skills>
           <growth agl="14" int="7" maxlvl="35" atk="5" mp="13" exp="10" hp="16" def="14"/>
         </monster>
         <monster name="RogueNite" in_story="true">
@@ -2899,11 +2899,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>MetalCut</ability>
-            <ability>EvilSlash</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>MetalCut</skill>
+            <skill>EvilSlash</skill>
+          </skills>
           <growth agl="10" int="13" maxlvl="45" atk="20" mp="4" exp="12" hp="14" def="21"/>
         </monster>
         <monster name="Goopi" in_story="true">
@@ -2913,11 +2913,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Goldmine Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>LegSweep</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>LegSweep</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="7" int="4" maxlvl="40" atk="11" mp="13" exp="8" hp="8" def="14"/>
         </monster>
       </monsters>
@@ -2925,19 +2925,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     <family name="water">
       <monsters>
         <monster name="Grakos" in_story="false">
-          <abilities>
-            <ability>TwinHits</ability>
-            <ability>HighJump</ability>
-            <ability>SandStorm</ability>
-          </abilities>
+          <skills>
+            <skill>TwinHits</skill>
+            <skill>HighJump</skill>
+            <skill>SandStorm</skill>
+          </skills>
           <growth agl="16" int="10" maxlvl="55" atk="25" mp="18" exp="21" hp="23" def="18"/>
         </monster>
         <monster name="Aquarella" in_story="false">
-          <abilities>
-            <ability>Barrier</ability>
-            <ability>SquallHit</ability>
-            <ability>Geyser</ability>
-          </abilities>
+          <skills>
+            <skill>Barrier</skill>
+            <skill>SquallHit</skill>
+            <skill>Geyser</skill>
+          </skills>
           <growth agl="6" int="4" maxlvl="45" atk="17" mp="8" exp="6" hp="11" def="14"/>
         </monster>
         <monster name="Moray" in_story="true">
@@ -2947,11 +2947,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Hoodsquid Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Sleep</ability>
-            <ability>PsycheUp</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>Sleep</skill>
+            <skill>PsycheUp</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="22" int="9" maxlvl="40" atk="18" mp="17" exp="5" hp="12" def="19"/>
         </monster>
         <monster name="FishRider" in_story="true">
@@ -2961,11 +2961,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>BoltSlash</ability>
-            <ability>RainSlash</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>BoltSlash</skill>
+            <skill>RainSlash</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="13" int="7" maxlvl="50" atk="16" mp="19" exp="13" hp="18" def="22"/>
         </monster>
         <monster name="Octokid" in_story="true">
@@ -2975,19 +2975,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Water Outside The Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Heal</ability>
-            <ability>MPass</ability>
-            <ability>LureDance</ability>
-          </abilities>
+          <skills>
+            <skill>Heal</skill>
+            <skill>MPass</skill>
+            <skill>LureDance</skill>
+          </skills>
           <growth agl="17" int="21" maxlvl="35" atk="7" mp="15" exp="10" hp="7" def="13"/>
         </monster>
         <monster name="Scallopa" in_story="false">
-          <abilities>
-            <ability>Upper</ability>
-            <ability>MagicWall</ability>
-            <ability>Radiant</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>MagicWall</skill>
+            <skill>Radiant</skill>
+          </skills>
           <growth agl="7" int="19" maxlvl="35" atk="9" mp="19" exp="10" hp="17" def="23"/>
         </monster>
         <monster name="Gamanian" in_story="true">
@@ -2997,43 +2997,43 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Hoodsquid Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>NapAttack</ability>
-            <ability>LushLicks</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>NapAttack</skill>
+            <skill>LushLicks</skill>
+          </skills>
           <growth agl="22" int="15" maxlvl="40" atk="21" mp="10" exp="14" hp="11" def="17"/>
         </monster>
         <monster name="KingSquid" in_story="false">
-          <abilities>
-            <ability>Vivify</ability>
-            <ability>RainSlash</ability>
-            <ability>PsycheUp</ability>
-          </abilities>
+          <skills>
+            <skill>Vivify</skill>
+            <skill>RainSlash</skill>
+            <skill>PsycheUp</skill>
+          </skills>
           <growth agl="12" int="21" maxlvl="55" atk="26" mp="14" exp="24" hp="25" def="23"/>
         </monster>
         <monster name="HoodSquid" in_story="false">
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>BiAttack</ability>
-            <ability>LureDance</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>BiAttack</skill>
+            <skill>LureDance</skill>
+          </skills>
           <growth agl="14" int="19" maxlvl="45" atk="16" mp="21" exp="17" hp="11" def="10"/>
         </monster>
         <monster name="Poseidon" in_story="false">
-          <abilities>
-            <ability>Bolt</ability>
-            <ability>Focus</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>Bolt</skill>
+            <skill>Focus</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="13" int="9" maxlvl="65" atk="23" mp="22" exp="30" hp="28" def="24"/>
         </monster>
         <monster name="WhaleMage" in_story="false">
-          <abilities>
-            <ability>Antidote</ability>
-            <ability>Watershot</ability>
-            <ability>Geyser</ability>
-          </abilities>
+          <skills>
+            <skill>Antidote</skill>
+            <skill>Watershot</skill>
+            <skill>Geyser</skill>
+          </skills>
           <growth agl="3" int="10" maxlvl="45" atk="23" mp="21" exp="30" hp="29" def="18"/>
         </monster>
         <monster name="Petiteel" in_story="true">
@@ -3043,11 +3043,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Water Outside The Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Speed</ability>
-            <ability>TwinHits</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>Speed</skill>
+            <skill>TwinHits</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="14" int="10" maxlvl="35" atk="12" mp="17" exp="3" hp="15" def="9"/>
         </monster>
         <monster name="Starfish" in_story="true">
@@ -3057,11 +3057,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Outside Ice Tower</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Upper</ability>
-            <ability>PoisonHit</ability>
-            <ability>OddDance</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>PoisonHit</skill>
+            <skill>OddDance</skill>
+          </skills>
           <growth agl="9" int="15" maxlvl="30" atk="5" mp="19" exp="5" hp="7" def="9"/>
         </monster>
         <monster name="Merman" in_story="true">
@@ -3071,11 +3071,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Water Outside The Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Vivify</ability>
-            <ability>Sap</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>Vivify</skill>
+            <skill>Sap</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="20" int="19" maxlvl="35" atk="14" mp="17" exp="9" hp="16" def="18"/>
         </monster>
         <monster name="WalrusMan" in_story="true">
@@ -3085,19 +3085,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>BugBlow</ability>
-            <ability>EvilSlash</ability>
-            <ability>Massacre</ability>
-          </abilities>
+          <skills>
+            <skill>BugBlow</skill>
+            <skill>EvilSlash</skill>
+            <skill>Massacre</skill>
+          </skills>
           <growth agl="7" int="8" maxlvl="40" atk="23" mp="8" exp="13" hp="23" def="16"/>
         </monster>
         <monster name="RushFish" in_story="false">
-          <abilities>
-            <ability>Upper</ability>
-            <ability>Kamikaze</ability>
-            <ability>SandStorm</ability>
-          </abilities>
+          <skills>
+            <skill>Upper</skill>
+            <skill>Kamikaze</skill>
+            <skill>SandStorm</skill>
+          </skills>
           <growth agl="18" int="6" maxlvl="40" atk="12" mp="6" exp="8" hp="9" def="7"/>
         </monster>
         <monster name="PutreFish" in_story="true">
@@ -3107,11 +3107,11 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Hoodsquid Cave</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>PanicAll</ability>
-            <ability>Watershot</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>PanicAll</skill>
+            <skill>Watershot</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="14" int="7" maxlvl="35" atk="8" mp="4" exp="4" hp="5" def="3"/>
         </monster>
         <monster name="SeaHorse" in_story="true">
@@ -3121,35 +3121,35 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>FrigidAir</ability>
-            <ability>Geyser</ability>
-            <ability>BladeD</ability>
-          </abilities>
+          <skills>
+            <skill>FrigidAir</skill>
+            <skill>Geyser</skill>
+            <skill>BladeD</skill>
+          </skills>
           <growth agl="15" int="8" maxlvl="40" atk="17" mp="9" exp="12" hp="21" def="14"/>
         </monster>
         <monster name="Clawster" in_story="false">
-          <abilities>
-            <ability>DrakSlash</ability>
-            <ability>MetalCut</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>DrakSlash</skill>
+            <skill>MetalCut</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="20" int="14" maxlvl="45" atk="24" mp="20" exp="11" hp="12" def="18"/>
         </monster>
         <monster name="Digong" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>Ramming</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>Ramming</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="10" int="10" maxlvl="55" atk="25" mp="23" exp="21" hp="18" def="11"/>
         </monster>
         <monster name="MerTiger" in_story="false">
-          <abilities>
-            <ability>IceBolt</ability>
-            <ability>Sleep</ability>
-            <ability>WarCry</ability>
-          </abilities>
+          <skills>
+            <skill>IceBolt</skill>
+            <skill>Sleep</skill>
+            <skill>WarCry</skill>
+          </skills>
           <growth agl="10" int="13" maxlvl="50" atk="26" mp="5" exp="16" hp="23" def="24"/>
         </monster>
         <monster name="Pumpoise" in_story="true">
@@ -3159,19 +3159,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Outside Castle Of Estria</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>SuckAir</ability>
-            <ability>Dodge</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>SuckAir</skill>
+            <skill>Dodge</skill>
+          </skills>
           <growth agl="7" int="8" maxlvl="35" atk="13" mp="8" exp="12" hp="17" def="22"/>
         </monster>
         <monster name="Aquadon" in_story="false">
-          <abilities>
-            <ability>RobMagic</ability>
-            <ability>WindBeast</ability>
-            <ability>Berserker</ability>
-          </abilities>
+          <skills>
+            <skill>RobMagic</skill>
+            <skill>WindBeast</skill>
+            <skill>Berserker</skill>
+          </skills>
           <growth agl="17" int="9" maxlvl="50" atk="26" mp="20" exp="24" hp="24" def="10"/>
         </monster>
         <monster name="RayGigas" in_story="true">
@@ -3181,73 +3181,65 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Moonrock Tower Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>MouthShut</ability>
-            <ability>AquaWall</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>MouthShut</skill>
+            <skill>AquaWall</skill>
+          </skills>
           <growth agl="9" int="7" maxlvl="40" atk="24" mp="9" exp="10" hp="22" def="19"/>
         </monster>
         <monster name="Octoreach" in_story="false">
-          <abilities>
-            <ability>OddDance</ability>
-            <ability>PaniDance</ability>
-            <ability>Geyser</ability>
-          </abilities>
+          <skills>
+            <skill>OddDance</skill>
+            <skill>PaniDance</skill>
+            <skill>Geyser</skill>
+          </skills>
           <growth agl="8" int="14" maxlvl="40" atk="24" mp="21" exp="14" hp="23" def="20"/>
         </monster>
         <monster name="CancerMan" in_story="false">
-          <abilities>
-            <ability>BoltSlash</ability>
-            <ability>BeastCut</ability>
-            <ability>RainSlash</ability>
-          </abilities>
+          <skills>
+            <skill>BoltSlash</skill>
+            <skill>BeastCut</skill>
+            <skill>RainSlash</skill>
+          </skills>
           <growth agl="14" int="9" maxlvl="45" atk="24" mp="13" exp="15" hp="23" def="21"/>
         </monster>
         <monster name="AxeShark" in_story="false">
-          <abilities>
-            <ability>Sap</ability>
-            <ability>RainSlash</ability>
-            <ability>Cover</ability>
-          </abilities>
+          <skills>
+            <skill>Sap</skill>
+            <skill>RainSlash</skill>
+            <skill>Cover</skill>
+          </skills>
           <growth agl="14" int="13" maxlvl="50" atk="28" mp="20" exp="25" hp="25" def="21"/>
         </monster>
         <monster name="Octoraid" in_story="false">
-          <abilities>
-            <ability>DrakSlash</ability>
-            <ability>SquallHit</ability>
-            <ability>GigaSlash</ability>
-          </abilities>
+          <skills>
+            <skill>DrakSlash</skill>
+            <skill>SquallHit</skill>
+            <skill>GigaSlash</skill>
+          </skills>
           <growth agl="21" int="13" maxlvl="50" atk="27" mp="9" exp="26" hp="18" def="21"/>
         </monster>
         <monster name="Anemon" in_story="true">
           <spawn-locations>
             <location>
               <map>Oasis World</map>
-            </location>
-            <location>
-              <map></map>
-            </location>
-            <location>
-              <map></map>
-            </location>
-            <location>
-              <map>Surf In The Underground Tunnel</map>
+              <description>Surf In The Underground Tunnel</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Paralyze</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Paralyze</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="5" int="7" maxlvl="40" atk="10" mp="14" exp="4" hp="9" def="13"/>
         </monster>
         <monster name="Angleron" in_story="false">
-          <abilities>
-            <ability>Bolt</ability>
-            <ability>Surround</ability>
-            <ability>SleepAir</ability>
-          </abilities>
+          <skills>
+            <skill>Bolt</skill>
+            <skill>Surround</skill>
+            <skill>SleepAir</skill>
+          </skills>
           <growth agl="9" int="19" maxlvl="45" atk="23" mp="16" exp="12" hp="17" def="20"/>
         </monster>
         <monster name="RogueWave" in_story="true">
@@ -3257,19 +3249,19 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
               <description>Surf Water Outside The Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Watershot</ability>
-            <ability>PoisonGas</ability>
-            <ability>AquaWall</ability>
-          </abilities>
+          <skills>
+            <skill>Watershot</skill>
+            <skill>PoisonGas</skill>
+            <skill>AquaWall</skill>
+          </skills>
           <growth agl="24" int="19" maxlvl="40" atk="18" mp="7" exp="9" hp="11" def="9"/>
         </monster>
         <monster name="Octogon" in_story="false">
-          <abilities>
-            <ability>MPass</ability>
-            <ability>BiAttack</ability>
-            <ability>Hustle</ability>
-          </abilities>
+          <skills>
+            <skill>MPass</skill>
+            <skill>BiAttack</skill>
+            <skill>Hustle</skill>
+          </skills>
           <growth agl="9" int="20" maxlvl="45" atk="25" mp="9" exp="19" hp="24" def="18"/>
         </monster>
       </monsters>
@@ -3277,179 +3269,179 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     <family name="????">
       <monsters>
         <monster name="LordDraco" in_story="false">
-          <abilities>
-            <ability>Bolt</ability>
-            <ability>Hellblast</ability>
-            <ability>Focus</ability>
-          </abilities>
+          <skills>
+            <skill>Bolt</skill>
+            <skill>Hellblast</skill>
+            <skill>Focus</skill>
+          </skills>
           <growth agl="24" int="22" maxlvl="80" atk="24" mp="31" exp="27" hp="22" def="22"/>
         </monster>
         <monster name="AsuraZoma" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>GigaSlash</ability>
-            <ability>Focus</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>GigaSlash</skill>
+            <skill>Focus</skill>
+          </skills>
           <growth agl="23" int="12" maxlvl="80" atk="29" mp="30" exp="29" hp="26" def="22"/>
         </monster>
         <monster name="Mudou" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>FrigidAir</ability>
-            <ability>PoisonGas</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>FrigidAir</skill>
+            <skill>PoisonGas</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="60" atk="26" mp="30" exp="28" hp="21" def="24"/>
         </monster>
         <monster name="Orgodemir2" in_story="false">
-          <abilities>
-            <ability>MegaMagic</ability>
-            <ability>DeMagic</ability>
-            <ability>LifeSong</ability>
-          </abilities>
+          <skills>
+            <skill>MegaMagic</skill>
+            <skill>DeMagic</skill>
+            <skill>LifeSong</skill>
+          </skills>
           <growth agl="24" int="31" maxlvl="70" atk="30" mp="31" exp="31" hp="27" def="23"/>
         </monster>
         <monster name="Hargon" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Bang</ability>
-            <ability>TatsuCall</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Bang</skill>
+            <skill>TatsuCall</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="60" atk="20" mp="30" exp="24" hp="19" def="21"/>
         </monster>
         <monster name="Pizzaro" in_story="false">
-          <abilities>
-            <ability>Hellblast</ability>
-            <ability>FireAir</ability>
-            <ability>BiAttack</ability>
-          </abilities>
+          <skills>
+            <skill>Hellblast</skill>
+            <skill>FireAir</skill>
+            <skill>BiAttack</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="70" atk="26" mp="30" exp="24" hp="21" def="21"/>
         </monster>
         <monster name="DeathMore1" in_story="false">
-          <abilities>
-            <ability>BigBang</ability>
-            <ability>Hellblast</ability>
-            <ability>TatsuCall</ability>
-          </abilities>
+          <skills>
+            <skill>BigBang</skill>
+            <skill>Hellblast</skill>
+            <skill>TatsuCall</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="60" atk="26" mp="30" exp="27" hp="21" def="21"/>
         </monster>
         <monster name="Darck" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>Bang</ability>
-            <ability>ChargeUp</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>Bang</skill>
+            <skill>ChargeUp</skill>
+          </skills>
           <growth agl="14" int="17" maxlvl="60" atk="18" mp="25" exp="26" hp="23" def="23"/>
         </monster>
         <monster name="Sidoh" in_story="false">
-          <abilities>
-            <ability>Hellblast</ability>
-            <ability>FireAir</ability>
-            <ability>FrigidAir</ability>
-          </abilities>
+          <skills>
+            <skill>Hellblast</skill>
+            <skill>FireAir</skill>
+            <skill>FrigidAir</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="70" atk="24" mp="30" exp="25" hp="24" def="21"/>
         </monster>
         <monster name="PsychoPiz" in_story="false">
-          <abilities>
-            <ability>BigBang</ability>
-            <ability>FrigidAir</ability>
-            <ability>DeMagic</ability>
-          </abilities>
+          <skills>
+            <skill>BigBang</skill>
+            <skill>FrigidAir</skill>
+            <skill>DeMagic</skill>
+          </skills>
           <growth agl="24" int="21" maxlvl="80" atk="27" mp="30" exp="29" hp="30" def="18"/>
         </monster>
         <monster name="DeathMore2" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>Ramming</ability>
-            <ability>UltraDown</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>Ramming</skill>
+            <skill>UltraDown</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="70" atk="26" mp="30" exp="29" hp="24" def="21"/>
         </monster>
         <monster name="Genosidoh" in_story="false">
-          <abilities>
-            <ability>Barrier</ability>
-            <ability>WindBeast</ability>
-            <ability>MultiCut</ability>
-          </abilities>
+          <skills>
+            <skill>Barrier</skill>
+            <skill>WindBeast</skill>
+            <skill>MultiCut</skill>
+          </skills>
           <growth agl="18" int="22" maxlvl="80" atk="25" mp="31" exp="30" hp="25" def="17"/>
         </monster>
         <monster name="Esterk" in_story="false">
-          <abilities>
-            <ability>BiAttack</ability>
-            <ability>RainSlash</ability>
-            <ability>GigaSlash</ability>
-          </abilities>
+          <skills>
+            <skill>BiAttack</skill>
+            <skill>RainSlash</skill>
+            <skill>GigaSlash</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="80" atk="26" mp="30" exp="31" hp="29" def="24"/>
         </monster>
         <monster name="DeathMore3" in_story="false">
-          <abilities>
-            <ability>BigBang</ability>
-            <ability>DeMagic</ability>
-            <ability>Focus</ability>
-          </abilities>
+          <skills>
+            <skill>BigBang</skill>
+            <skill>DeMagic</skill>
+            <skill>Focus</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="80" atk="30" mp="30" exp="31" hp="29" def="24"/>
         </monster>
         <monster name="DracoLord1" in_story="false">
-          <abilities>
-            <ability>Firebal</ability>
-            <ability>BeDragon</ability>
-            <ability>Meditate</ability>
-          </abilities>
+          <skills>
+            <skill>Firebal</skill>
+            <skill>BeDragon</skill>
+            <skill>Meditate</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="50" atk="21" mp="30" exp="24" hp="20" def="20"/>
         </monster>
         <monster name="Baramos" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>Hellblast</ability>
-            <ability>RockThrow</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>Hellblast</skill>
+            <skill>RockThrow</skill>
+          </skills>
           <growth agl="22" int="21" maxlvl="60" atk="20" mp="30" exp="24" hp="20" def="20"/>
         </monster>
         <monster name="Mirudraas1" in_story="false">
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Bang</ability>
-            <ability>Bolt</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Bang</skill>
+            <skill>Bolt</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="70" atk="26" mp="30" exp="30" hp="21" def="21"/>
         </monster>
         <monster name="DarkDrium" in_story="false">
-          <abilities>
-            <ability>Bolt</ability>
-            <ability>FireAir</ability>
-            <ability>FrigidAir</ability>
-          </abilities>
+          <skills>
+            <skill>Bolt</skill>
+            <skill>FireAir</skill>
+            <skill>FrigidAir</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="80" atk="31" mp="30" exp="30" hp="31" def="24"/>
         </monster>
         <monster name="DracoLord2" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>Massacre</ability>
-            <ability>Surge</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>Massacre</skill>
+            <skill>Surge</skill>
+          </skills>
           <growth agl="23" int="21" maxlvl="70" atk="24" mp="30" exp="25" hp="21" def="21"/>
         </monster>
         <monster name="Zoma" in_story="false">
-          <abilities>
-            <ability>BigBang</ability>
-            <ability>FrigidAir</ability>
-            <ability>DeMagic</ability>
-          </abilities>
+          <skills>
+            <skill>BigBang</skill>
+            <skill>FrigidAir</skill>
+            <skill>DeMagic</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="70" atk="26" mp="30" exp="25" hp="24" def="21"/>
         </monster>
         <monster name="Mirudraas2" in_story="false">
-          <abilities>
-            <ability>FireAir</ability>
-            <ability>DeMagic</ability>
-            <ability>SuckAir</ability>
-          </abilities>
+          <skills>
+            <skill>FireAir</skill>
+            <skill>DeMagic</skill>
+            <skill>SuckAir</skill>
+          </skills>
           <growth agl="23" int="23" maxlvl="80" atk="26" mp="30" exp="31" hp="29" def="21"/>
         </monster>
         <monster name="Orgodemir1" in_story="false">
-          <abilities>
-            <ability>Bang</ability>
-            <ability>EvilSlash</ability>
-            <ability>Focus</ability>
-          </abilities>
+          <skills>
+            <skill>Bang</skill>
+            <skill>EvilSlash</skill>
+            <skill>Focus</skill>
+          </skills>
           <growth agl="22" int="31" maxlvl="65" atk="26" mp="25" exp="30" hp="24" def="23"/>
         </monster>
       </monsters>

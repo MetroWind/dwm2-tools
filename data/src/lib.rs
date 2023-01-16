@@ -85,7 +85,7 @@ impl GameData
         impl Iterator<Item = &Monster> + 'a
     {
         self.monster_data.monsters.iter().filter(
-            move |m| m.abilities.iter().any(|a| a == skill_name))
+            move |m| m.skills.iter().any(|a| a == skill_name))
     }
 
     /// Find all monsters in a family.
@@ -136,11 +136,11 @@ mod tests {
               <description>Near Door Shrine</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>CallHelp</ability>
-            <ability>LushLicks</ability>
-            <ability>Imitate</ability>
-          </abilities>
+          <skills>
+            <skill>CallHelp</skill>
+            <skill>LushLicks</skill>
+            <skill>Imitate</skill>
+          </skills>
           <growth agl="17" int="8" maxlvl="35" atk="17" mp="1" exp="10" hp="17" def="4"/>
         </monster>
         <monster name="BoxSlime" in_story="true">
@@ -150,11 +150,11 @@ mod tests {
               <description>Heaven Helm Cave Floor 1</description>
             </location>
           </spawn-locations>
-          <abilities>
-            <ability>Blaze</ability>
-            <ability>Upper</ability>
-            <ability>Ramming</ability>
-          </abilities>
+          <skills>
+            <skill>Blaze</skill>
+            <skill>Upper</skill>
+            <skill>Ramming</skill>
+          </skills>
           <growth agl="14" int="13" maxlvl="50" atk="14" mp="10" exp="11" hp="11" def="19"/>
         </monster>
       </monsters>
@@ -191,12 +191,21 @@ mod tests {
         assert_eq!(data.monster_data.monsters.len(), 2);
         assert_eq!(data.monster_data.families.len(), 1);
         assert_eq!(data.monster_data.families[0].members.len(), 2);
+        assert_eq!(data.monster_data.monsters[0].skills.len(), 3);
         assert_eq!(data.skills.len(), 2);
         assert_eq!(data.skills["VacuSlash"].combine_from,
                    vec![String::from("WindBeast"), String::from("ChargeUp")]);
         assert_eq!(data.skills["VacuSlash"].upgrade_from, None);
         assert_eq!(data.skills["Vacuum"].upgrade_from,
                    Some(String::from("WindBeast")));
+        Ok(())
+    }
+
+    #[test]
+    fn gameDataOk() -> Result<()>
+    {
+        let content = include_bytes!("../../monster-data.xml");
+        GameData::fromXML(content)?;
         Ok(())
     }
 }

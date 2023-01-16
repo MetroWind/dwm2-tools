@@ -10,32 +10,32 @@ use crate::xml;
 #[derive(Clone, Serialize, Default)]
 pub struct Requirements
 {
-    pub agility: u8,
-    pub intelligence: u8,
-    pub level: u8,
-    pub attack: u8,
-    pub defense: u8,
-    pub mp: u8,
-    pub hp: u8,
+    pub agility: u32,
+    pub intelligence: u32,
+    pub level: u32,
+    pub attack: u32,
+    pub defense: u32,
+    pub mp: u32,
+    pub hp: u32,
 }
 
 impl Requirements
 {
     fn fromXMLTag(tag: &BytesStart) -> Result<Self, Error>
     {
-        let agility: u8 =  xml::getTagAttr(tag, "agl")?.ok_or_else(
+        let agility: u32 =  xml::getTagAttr(tag, "agl")?.ok_or_else(
             || xmlerr!("Agility value not found"))?;
-        let intelligence: u8 =  xml::getTagAttr(tag, "int")?.ok_or_else(
+        let intelligence: u32 =  xml::getTagAttr(tag, "int")?.ok_or_else(
             || xmlerr!("Inteligence value not found"))?;
-        let level: u8 =  xml::getTagAttr(tag, "lvl")?.ok_or_else(
+        let level: u32 =  xml::getTagAttr(tag, "lvl")?.ok_or_else(
             || xmlerr!("Level value not found"))?;
-        let attack: u8 =  xml::getTagAttr(tag, "atk")?.ok_or_else(
+        let attack: u32 =  xml::getTagAttr(tag, "atk")?.ok_or_else(
             || xmlerr!("Attack value not found"))?;
-        let defense: u8 =  xml::getTagAttr(tag, "def")?.ok_or_else(
+        let defense: u32 =  xml::getTagAttr(tag, "def")?.ok_or_else(
             || xmlerr!("Defense value not found"))?;
-        let mp: u8 =  xml::getTagAttr(tag, "mp")?.ok_or_else(
+        let mp: u32 =  xml::getTagAttr(tag, "mp")?.ok_or_else(
             || xmlerr!("MP value not found"))?;
-        let hp: u8 =  xml::getTagAttr(tag, "hp")?.ok_or_else(
+        let hp: u32 =  xml::getTagAttr(tag, "hp")?.ok_or_else(
             || xmlerr!("HP value not found"))?;
         Ok(Self {
             agility, intelligence, level, attack, defense, mp, hp,
