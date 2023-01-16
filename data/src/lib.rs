@@ -29,7 +29,7 @@ pub struct GameData
     /// All breed formulae
     pub breed_formulae: Vec<Formula>,
     /// All skills
-    skills: HashMap<String, Skill>,
+    pub skills: HashMap<String, Skill>,
 }
 
 impl GameData
@@ -57,6 +57,20 @@ impl GameData
         });
         p.parse(x)?;
         drop(p);
+
+        // Populate Skill::upgrade_to
+        let keys: Vec<String> = skills.keys().map(|k| k.to_owned()).collect();
+        for s in keys
+        {
+            if let Some(precursor) = skills[&s].upgrade_from.clone()
+            {
+                skills.get_mut(&precursor).ok_or_else(
+                    || rterr!("{} is upgraded from {}, which is not found.",
+                              s, precursor))?
+                    .upgrade_to = Some(s.to_owned());
+            }
+        }
+
         Ok(Self { monster_data, breed_formulae, skills })
     }
 
@@ -111,6 +125,75 @@ impl GameData
     {
         self.breed_formulae.iter()
             .filter(move |form| &form.offspring == offspring)
+    }
+
+    /// Find all the upgrades of `skill`. This includes skills that
+    /// are not the ultimate upgrades.
+    fn skillUpgrades<'a>(&'a self, skill: &'a Skill) -> Vec<&'a Skill>
+    {
+        let mut result: Vec<&Skill> = vec![skill];
+        if let Some(name) = &skill.upgrade_to
+        {
+            let upgrade = self.skill(name).unwrap();
+            result.append(&mut self.skillUpgrades(upgrade));
+        }
+        result
+    }
+
+    fn skillFirstPrecursor<'a>(&'a self, skill: &'a Skill) -> &'a Skill
+    {
+        if let Some(name) = &skill.upgrade_from
+        {
+            let precursor = self.skill(name).unwrap();
+            self.skillFirstPrecursor(precursor)
+        }
+        else
+        {
+            skill
+        }
+    }
+
+    /// Return the skill update path the skill is in. The result is
+    /// arranged from weak to strong. Exmaple:
+    ///
+    /// ```
+    /// # use data::*;
+    /// let content = include_bytes!("../../monster-data.xml");
+    /// let data = GameData::fromXML(content).unwrap();
+    /// let upgrade_path = data.skillUpgradePath(
+    ///     data.skill("Infermore").unwrap());
+    /// assert_eq!(upgrade_path.iter().map(|s| &s.name).collect::<Vec<&String>>(),
+    ///            vec!["Infernos", "Infermore", "Infermost"]);
+    /// ```
+    pub fn skillUpgradePath<'a>(&'a self, skill: &'a Skill) -> Vec<&'a Skill>
+    {
+        if skill.upgrade_from.is_some() || skill.upgrade_to.is_some()
+        {
+            self.skillUpgrades(self.skillFirstPrecursor(skill))
+        }
+        else
+        {
+            Vec::new()
+        }
+    }
+
+    /// Return all the skills that `skill` and its upgrades combines
+    /// into.
+    pub fn skillCombinesInto<'a>(&'a self, skill: &'a Skill) ->
+        impl Iterator<Item = &Skill> + 'a
+    {
+        let mut upgrades = self.skillUpgrades(skill);
+        upgrades.push(skill);
+        self.skills.values().filter(move |s| {
+            for upgrade in &upgrades
+            {
+                if s.combine_from.contains(&upgrade.name)
+                {
+                    return true;
+                }
+            }
+            false
+        })
     }
 }
 
@@ -181,7 +264,7 @@ mod tests {
     </skill-data>
     <skill-data name="Vacuum">
       <skill-requirements lvl="19" hp="112" mp="0" atk="114" def="0" agl="132" int="0"/>
-      <precursor>WindBeast</precursor>
+      <precursor>VacuSlash</precursor>
     </skill-data>
   </skills-data>
 </monster-data>
@@ -198,7 +281,7 @@ mod tests {
         assert_eq!(data.skill("VacuSlash").unwrap().requirements.hp, 77);
         assert_eq!(data.skill("VacuSlash").unwrap().upgrade_from, None);
         assert_eq!(data.skill("Vacuum").unwrap().upgrade_from,
-                   Some(String::from("WindBeast")));
+                   Some(String::from("VacuSlash")));
         Ok(())
     }
 

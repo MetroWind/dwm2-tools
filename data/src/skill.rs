@@ -44,7 +44,7 @@ impl Requirements
 }
 
 /// A skill
-#[derive(Default, Clone)]
+#[derive(Default, Clone, Serialize)]
 pub struct Skill
 {
     /// Name of the skill
@@ -52,11 +52,13 @@ pub struct Skill
     /// Stats requirements of the skill
     pub requirements: Requirements,
     pub upgrade_from: Option<String>,
+    pub upgrade_to: Option<String>,
     pub combine_from: Vec<String>,
 }
 
 impl Skill
 {
+    /// This will not populate the `upgrade_to` field.
     pub fn fromXML(x: &[u8]) -> Result<Self, Error>
     {
         let mut skill = Self::default();
