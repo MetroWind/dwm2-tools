@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["Requirements","Stat requirement for a skill to be learnt"],["Skill","A skill"]]};

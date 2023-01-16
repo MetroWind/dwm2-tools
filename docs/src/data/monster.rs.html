@@ -304,8 +304,8 @@
     <span class="doccomment">/// Spawn location of the monster. Only monsters with `in_story ==
     /// true` has this.
     </span><span class="kw">pub </span>locations: Vec&lt;MapLocation&gt;,
-    <span class="doccomment">/// Natural abilities of the monster
-    </span><span class="kw">pub </span>abilities: Vec&lt;String&gt;,
+    <span class="doccomment">/// Natural skills of the monster
+    </span><span class="kw">pub </span>skills: Vec&lt;String&gt;,
     <span class="doccomment">/// Monster growth data
     </span><span class="kw">pub </span>growth: Growth,
     <span class="doccomment">/// Family the monster belongs to
@@ -319,7 +319,7 @@
         <span class="kw">let </span><span class="kw-2">mut </span>name = String::new();
         <span class="kw">let </span><span class="kw-2">mut </span>in_story = <span class="bool-val">false</span>;
         <span class="kw">let </span><span class="kw-2">mut </span>locations = Vec::new();
-        <span class="kw">let </span><span class="kw-2">mut </span>abilities = Vec::new();
+        <span class="kw">let </span><span class="kw-2">mut </span>skills = Vec::new();
         <span class="kw">let </span><span class="kw-2">mut </span>growth = Growth::default();
 
         <span class="kw">let </span><span class="kw-2">mut </span>p = xml::Parser::new();
@@ -334,8 +334,8 @@
             locations.push(MapLocation::fromXML(tag)<span class="question-mark">?</span>);
             <span class="prelude-val">Ok</span>(())
         });
-        p.addTextHandler(<span class="string">&quot;ability&quot;</span>, |<span class="kw">_</span>, text| {
-            abilities.push(text.to_owned());
+        p.addTextHandler(<span class="string">&quot;skill&quot;</span>, |<span class="kw">_</span>, text| {
+            skills.push(text.to_owned());
             <span class="prelude-val">Ok</span>(())
         });
         p.addBeginHandler(<span class="string">&quot;growth&quot;</span>, |<span class="kw">_</span>, tag| {
@@ -345,7 +345,7 @@
         p.parse(x)<span class="question-mark">?</span>;
         drop(p);
 
-        <span class="prelude-val">Ok</span>(<span class="self">Self </span>{ name, in_story, locations, abilities, growth, family})
+        <span class="prelude-val">Ok</span>(<span class="self">Self </span>{ name, in_story, locations, skills, growth, family})
     }
 }
 
