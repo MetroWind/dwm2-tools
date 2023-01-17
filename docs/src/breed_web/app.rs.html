@@ -312,6 +312,8 @@
 <span id="312">312</span>
 <span id="313">313</span>
 <span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
 </pre><pre class="rust"><code><span class="kw">use </span>std::io::Read;
 <span class="kw">use </span>std::path::{PathBuf, Path};
 <span class="kw">use </span>std::collections::HashMap;
@@ -374,8 +376,10 @@
 {
     <span class="kw">let </span><span class="kw-2">mut </span>context = tera::Context::new();
     context.insert(<span class="string">&quot;families&quot;</span>, <span class="kw-2">&amp;</span>data.monster_data.families);
-    context.insert(<span class="string">&quot;skills&quot;</span>, <span class="kw-2">&amp;</span>data.skills.keys().map(|k| k.as_ref())
-                   .collect::&lt;Vec&lt;<span class="kw-2">&amp;</span>str&gt;&gt;());
+    <span class="kw">let </span><span class="kw-2">mut </span>skills: Vec&lt;<span class="kw-2">&amp;</span>str&gt; =
+        data.skills.keys().map(|k| k.as_ref()).collect();
+    skills.sort_unstable();
+    context.insert(<span class="string">&quot;skills&quot;</span>, <span class="kw-2">&amp;</span>skills);
 
     templates.render(<span class="string">&quot;index.html&quot;</span>, <span class="kw-2">&amp;</span>context).map_err(
         |e| <span class="macro">rterr!</span>(<span class="string">&quot;Failed to render template index.html: {}&quot;</span>, e))
