@@ -60,8 +60,10 @@ fn handleIndex(data: &data::GameData, templates: &Tera) -> Result<String, Error>
 {
     let mut context = tera::Context::new();
     context.insert("families", &data.monster_data.families);
-    context.insert("skills", &data.skills.keys().map(|k| k.as_ref())
-                   .collect::<Vec<&str>>());
+    let mut skills: Vec<&str> =
+        data.skills.keys().map(|k| k.as_ref()).collect();
+    skills.sort_unstable();
+    context.insert("skills", &skills);
 
     templates.render("index.html", &context).map_err(
         |e| rterr!("Failed to render template index.html: {}", e))
