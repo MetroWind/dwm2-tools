@@ -124,7 +124,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="21" int="15" maxlvl="35" atk="14" mp="7" exp="10" hp="15" def="8"/>
         </monster>
-        <monster name="MimeSlime" in_story="false">
+        <monster name="MimeSlime" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>PanicAll</skill>
             <skill>Ahhh</skill>
@@ -132,7 +138,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="20" int="17" maxlvl="40" atk="8" mp="12" exp="17" hp="10" def="19"/>
         </monster>
-        <monster name="TreeSlime" in_story="false">
+        <monster name="TreeSlime" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Lonely Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Sap</skill>
             <skill>Paralyze</skill>
@@ -168,7 +180,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="31" int="13" maxlvl="20" atk="11" mp="30" exp="25" hp="0" def="30"/>
         </monster>
-        <monster name="KingSlime" in_story="false">
+        <monster name="KingSlime" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>MPass</skill>
             <skill>Barrier</skill>
@@ -216,7 +234,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Area Outside Hoodsquid Cave</description>
+              <description>Area Outside Hoodsquid Cave (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -226,7 +244,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="20" int="18" maxlvl="50" atk="11" mp="15" exp="11" hp="11" def="11"/>
         </monster>
-        <monster name="Metabble" in_story="false">
+        <monster name="Metabble" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Down 1 And Left 4 Screens From Monster King's Castle (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Firebal</skill>
             <skill>Bang</skill>
@@ -242,7 +266,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="31" int="18" maxlvl="70" atk="19" mp="31" exp="31" hp="0" def="31"/>
         </monster>
-        <monster name="DrakSlime" in_story="false">
+        <monster name="DrakSlime" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>BeDragon</skill>
             <skill>FireAir</skill>
@@ -268,7 +298,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Hitano Castle (Not Village)</description>
+              <description>Outside Hitano Castle (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -331,7 +361,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="Spikerous" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Outside Merchants' Tower</description>
             </location>
           </spawn-locations>
@@ -368,7 +398,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>1 Screen Up From The Port Ritz Town</description>
+              <description>1 Screen Up From The Port Ritz Town (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -426,7 +456,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Limbo Key World</map>
-              <description>Outside Door Shrine</description>
+              <description>Outside Door Shrine (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -440,7 +470,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Inside Heaven Armor Tower Floor 3</description>
+              <description>Inside Heaven Armor Tower Floor 3 (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -520,7 +550,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Area Outside Port Ritz Town</description>
+              <description>Area Outside Port Ritz Town (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -544,7 +574,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="19" int="11" maxlvl="40" atk="16" mp="8" exp="20" hp="18" def="13"/>
         </monster>
-        <monster name="WingSnake" in_story="false">
+        <monster name="WingSnake" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Elf Key World</map>
+			  <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>SquallHit</skill>
             <skill>HighJump</skill>
@@ -552,7 +588,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="14" int="11" maxlvl="45" atk="20" mp="8" exp="20" hp="15" def="17"/>
         </monster>
-        <monster name="SnakeBat" in_story="false">
+        <monster name="SnakeBat" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>RockThrow</skill>
             <skill>LushLicks</skill>
@@ -580,7 +622,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Outside Castle Of Estria</description>
+              <description>Outside Castle Of Estria (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -602,7 +644,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Heaven Armor Tower</description>
+              <description>Outside Heaven Armor Tower (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -630,7 +672,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Heaven Armor Tower</description>
+              <description>Outside Heaven Armor Tower (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -644,7 +686,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Heaven Helm Cave</description>
+              <description>Outside Heaven Helm Cave (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -680,7 +722,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="2" int="11" maxlvl="45" atk="17" mp="5" exp="10" hp="18" def="23"/>
         </monster>
-        <monster name="NoctoKing" in_story="false">
+        <monster name="NoctoKing" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Inside Heaven Armor Tower (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Surround</skill>
             <skill>SleepAir</skill>
@@ -688,7 +736,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="20" int="8" maxlvl="40" atk="18" mp="13" exp="13" hp="22" def="15"/>
         </monster>
-        <monster name="WildApe" in_story="false">
+        <monster name="WildApe" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Cobi Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>TwinSlash</skill>
             <skill>SideStep</skill>
@@ -696,7 +750,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="8" int="4" maxlvl="35" atk="20" mp="1" exp="13" hp="13" def="10"/>
         </monster>
-        <monster name="Tonguella" in_story="false">
+        <monster name="Tonguella" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>NapAttack</skill>
             <skill>SleepAir</skill>
@@ -704,7 +764,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="11" int="16" maxlvl="40" atk="15" mp="5" exp="12" hp="14" def="12"/>
         </monster>
-        <monster name="Skullroo" in_story="false">
+        <monster name="Skullroo" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>ChargeUp</skill>
             <skill>PaniDance</skill>
@@ -716,7 +782,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Pei Village</description>
+              <description>Outside Pei Village (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -744,7 +810,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Land Area 1 Screen Right Of Door Shrine</description>
+              <description>Land Area 1 Screen Right Of Door Shrine (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -758,7 +824,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Near Door Shrine</description>
+              <description>Near Door Shrine (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -801,7 +867,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="CatMage" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
@@ -928,7 +994,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="17" int="14" maxlvl="60" atk="24" mp="14" exp="15" hp="20" def="23"/>
         </monster>
-        <monster name="Unicorn" in_story="false">
+        <monster name="Unicorn" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Inside Spooky Forest (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Heal</skill>
             <skill>Vivify</skill>
@@ -1196,7 +1268,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="23" int="13" maxlvl="40" atk="20" mp="7" exp="4" hp="9" def="14"/>
         </monster>
-        <monster name="BigRoost" in_story="false">
+        <monster name="BigRoost" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Outside Heaven Armor Tower (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>VacuSlash</skill>
             <skill>SandStorm</skill>
@@ -1234,7 +1312,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="22" int="13" maxlvl="50" atk="8" mp="17" exp="5" hp="12" def="15"/>
         </monster>
-        <monster name="Picky" in_story="false">
+        <monster name="Picky" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Sap</skill>
             <skill>Surround</skill>
@@ -1246,7 +1330,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Outside Castle Of Estria</description>
+              <description>Outside Castle Of Estria (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1336,7 +1420,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Inside Spooky Forest</description>
+              <description>Inside Spooky Forest (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1346,7 +1430,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="9" int="14" maxlvl="40" atk="4" mp="11" exp="8" hp="17" def="2"/>
         </monster>
-        <monster name="HerbMan" in_story="false">
+        <monster name="HerbMan" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Inside Ice Tower (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Curse</skill>
             <skill>Focus</skill>
@@ -1366,7 +1456,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Land Area 1 Screen Down Of Moonrock Tower</description>
+              <description>Land Area 1 Screen Down Of Moonrock Tower (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1450,7 +1540,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="15" int="23" maxlvl="70" atk="21" mp="18" exp="24" hp="25" def="24"/>
         </monster>
-        <monster name="Toadstool" in_story="false">
+        <monster name="Toadstool" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>NapAttack</skill>
             <skill>SleepAir</skill>
@@ -1518,7 +1614,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="5" int="17" maxlvl="45" atk="10" mp="26" exp="15" hp="14" def="12"/>
         </monster>
-        <monster name="AmberWeed" in_story="false">
+        <monster name="AmberWeed" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Outside Castle Of Estria (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>TwinHits</skill>
             <skill>Barrier</skill>
@@ -1538,7 +1640,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Elf Key World</map>
-              <description>Inside Agdevils Hideout</description>
+              <description>Inside Agdevils Hideout (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1552,7 +1654,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Area Outside The Door Shrine</description>
+              <description>Area Outside The Door Shrine (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1593,7 +1695,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="FaceTree" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
@@ -1622,7 +1724,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Heaven Helm Cave Floor 1</description>
+              <description>Heaven Helm Cave Floor 1 (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1636,7 +1738,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
     </family>
     <family name="bug">
       <monsters>
-        <monster name="Catapila" in_story="false">
+        <monster name="Catapila" in_story="true">
+		  <spawn-locations>
+            <location>
+              <map>Oasis Key World</map>
+              <description>2 Screens Right Of Asiya Town (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Upper</skill>
             <skill>PoisonHit</skill>
@@ -1662,7 +1770,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Moonrock Tower 1St Floor</description>
+              <description>Moonrock Tower 1st Floor</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1676,7 +1784,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>1 Screen Left Of Pei Village</description>
+              <description>1 Screen Left Of Pei Village (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1690,15 +1798,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Elf Key World</map>
-            </location>
-            <location>
-              <map></map>
-            </location>
-            <location>
-              <map>4 Screens</map>
-            </location>
-            <location>
-              <map>Down From The Door Shrine</map>
+			  <description>4 Screens Down From The Door Shrine (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1720,7 +1820,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>1 Screen Up From The Port Ritz Town</description>
+              <description>1 Screen Up From The Port Ritz Town (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1755,7 +1855,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="Butterfly" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Outside Door Shrine</description>
             </location>
           </spawn-locations>
@@ -1810,7 +1910,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="15" int="18" maxlvl="55" atk="24" mp="20" exp="24" hp="22" def="23"/>
         </monster>
-        <monster name="Sickler" in_story="false">
+        <monster name="Sickler" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Infernos</skill>
             <skill>DevilCut</skill>
@@ -1844,7 +1950,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Oasis Key World</map>
-              <description>2 Screens Right Of Asiya Town</description>
+              <description>2 Screens Right Of Asiya Town (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1858,15 +1964,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Elf Key World</map>
-            </location>
-            <location>
-              <map></map>
-            </location>
-            <location>
-              <map>3 Screens</map>
-            </location>
-            <location>
-              <map>Right From Elvin Village</map>
+			  <description>3 Screens Right From Elvin Village</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1909,7 +2007,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="Lipsy" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Outside Travelers Hut</description>
             </location>
           </spawn-locations>
@@ -1938,7 +2036,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Inside Fhunt Tower Floor 4</description>
+              <description>Inside Fhunt Tower Floor 4 (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -1978,7 +2076,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Inside Spooky Forest</description>
+              <description>Inside Spooky Forest (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2000,7 +2098,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>1 Screen Up From The Port Ritz Town</description>
+              <description>1 Screen Up From The Port Ritz Town (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2027,7 +2125,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="Ogre" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Outside Travelers Hut</description>
             </location>
           </spawn-locations>
@@ -2074,7 +2172,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="9" int="12" maxlvl="40" atk="10" mp="18" exp="18" hp="11" def="16"/>
         </monster>
-        <monster name="Gremlin" in_story="false">
+        <monster name="Gremlin" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Heaven Helm Cave Floor 1 (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Firebal</skill>
             <skill>Heal</skill>
@@ -2170,7 +2274,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="15" int="10" maxlvl="60" atk="11" mp="12" exp="21" hp="10" def="22"/>
         </monster>
-        <monster name="Pixy" in_story="false">
+        <monster name="Pixy" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Antidote</skill>
             <skill>TwinHits</skill>
@@ -2186,7 +2296,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="5" int="13" maxlvl="40" atk="17" mp="1" exp="22" hp="16" def="29"/>
         </monster>
-        <monster name="SkulRider" in_story="false">
+        <monster name="SkulRider" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Lonely Key World</map>
+              <description>Overworld</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>FireSlash</skill>
             <skill>RainSlash</skill>
@@ -2212,7 +2328,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Hitano Castle (Not Village)</description>
+              <description>Outside Hitano Castle (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2326,7 +2442,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Heaven Sword Castle Floor 1</description>
+              <description>Heaven Sword Castle Floor 1 (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2374,7 +2490,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="16" int="10" maxlvl="50" atk="15" mp="12" exp="13" hp="14" def="12"/>
         </monster>
-        <monster name="Putrepup" in_story="false">
+        <monster name="Putrepup" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Heaven Sword Castle Floor 1 (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Sap</skill>
             <skill>Slow</skill>
@@ -2385,7 +2507,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="Skullgon" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Merchants' Tower Floor 3</description>
             </location>
           </spawn-locations>
@@ -2399,7 +2521,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="Skulpent" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Merchants' Tower Floor 2</description>
             </location>
           </spawn-locations>
@@ -2414,7 +2536,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Inside Spooky Forest</description>
+              <description>Inside Spooky Forest (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2424,7 +2546,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="8" int="12" maxlvl="50" atk="6" mp="6" exp="12" hp="9" def="20"/>
         </monster>
-        <monster name="Inverzon" in_story="false">
+        <monster name="Inverzon" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Pirate Ship (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Surround</skill>
             <skill>PoisonGas</skill>
@@ -2468,7 +2596,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Harmirror Cave Basement Floor 3</description>
+              <description>Harmirror Cave Basement Floor 3 (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2478,7 +2606,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="18" int="9" maxlvl="35" atk="12" mp="8" exp="5" hp="14" def="11"/>
         </monster>
-        <monster name="Hork" in_story="false">
+        <monster name="Hork" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Pirate Ship (Cobi Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>PoisonGas</skill>
             <skill>EerieLite</skill>
@@ -2512,7 +2646,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Goldmine Cave</description>
+              <description>Goldmine Cave (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2522,7 +2656,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="4" int="8" maxlvl="50" atk="12" mp="17" exp="10" hp="15" def="9"/>
         </monster>
-        <monster name="Mudron" in_story="false">
+        <monster name="Mudron" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Inside Spooky Forest (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Beat</skill>
             <skill>MPass</skill>
@@ -2554,7 +2694,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="1" int="11" maxlvl="30" atk="15" mp="8" exp="8" hp="12" def="20"/>
         </monster>
-        <monster name="NiteWhip" in_story="false">
+        <monster name="NiteWhip" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>WindBeast</skill>
             <skill>Lightning</skill>
@@ -2604,7 +2750,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="0" int="13" maxlvl="50" atk="17" mp="11" exp="14" hp="15" def="20"/>
         </monster>
-        <monster name="Facer" in_story="false">
+        <monster name="Facer" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Infernos</skill>
             <skill>Sacrifice</skill>
@@ -2612,7 +2764,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="3" int="19" maxlvl="45" atk="11" mp="23" exp="12" hp="8" def="12"/>
         </monster>
-        <monster name="Voodoll" in_story="false">
+        <monster name="Voodoll" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Goldmine Cave (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Sap</skill>
             <skill>Surround</skill>
@@ -2620,7 +2778,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="8" int="14" maxlvl="35" atk="12" mp="17" exp="11" hp="14" def="12"/>
         </monster>
-        <monster name="Roboster1" in_story="false">
+        <monster name="Roboster1" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Overworld (Cobi Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>SquallHit</skill>
             <skill>BiAttack</skill>
@@ -2672,7 +2836,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="7" int="11" maxlvl="30" atk="14" mp="13" exp="8" hp="9" def="17"/>
         </monster>
-        <monster name="MetalDrak" in_story="false">
+        <monster name="MetalDrak" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Inside Ice Tower (Cobi Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>FireAir</skill>
             <skill>Massacre</skill>
@@ -2744,7 +2914,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="4" int="6" maxlvl="45" atk="12" mp="4" exp="18" hp="17" def="21"/>
         </monster>
-        <monster name="JewelBag" in_story="false">
+        <monster name="JewelBag" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Pirate Ship</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Firebal</skill>
             <skill>StopSpell</skill>
@@ -2821,7 +2997,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
         <monster name="CurseLamp" in_story="true">
           <spawn-locations>
             <location>
-              <map>Traveler World</map>
+              <map>Traveler Key World</map>
               <description>Merchants' Tower Floor 1</description>
             </location>
           </spawn-locations>
@@ -2848,7 +3024,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="4" int="7" maxlvl="45" atk="17" mp="12" exp="13" hp="18" def="24"/>
         </monster>
-        <monster name="ProtoMech" in_story="false">
+        <monster name="ProtoMech" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Lonely Key World</map>
+              <description>Basement</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>SlimeBlow</skill>
             <skill>ChargeUp</skill>
@@ -2856,7 +3038,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="4" int="6" maxlvl="40" atk="6" mp="2" exp="5" hp="3" def="3"/>
         </monster>
-        <monster name="StoneMan" in_story="false">
+        <monster name="StoneMan" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Sky Key World</map>
+              <description>Inside Fhunt Tower Floor 4 (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>StrongD</skill>
             <skill>Cover</skill>
@@ -2868,7 +3056,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Harmirror Cave Basement Floor 1</description>
+              <description>Harmirror Cave Basement Floor 1 (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2882,7 +3070,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Sky Key World</map>
-              <description>Outside Heaven Armor Tower</description>
+              <description>Outside Heaven Armor Tower (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2932,7 +3120,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="16" int="10" maxlvl="55" atk="25" mp="18" exp="21" hp="23" def="18"/>
         </monster>
-        <monster name="Aquarella" in_story="false">
+        <monster name="Aquarella" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Hoodsquid Cave (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Barrier</skill>
             <skill>SquallHit</skill>
@@ -2944,7 +3138,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Hoodsquid Cave</description>
+              <description>Hoodsquid Cave (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2958,7 +3152,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Surf Outside Castle Of Estria</description>
+              <description>Surf Outside Castle Of Estria (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -2982,7 +3176,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="17" int="21" maxlvl="35" atk="7" mp="15" exp="10" hp="7" def="13"/>
         </monster>
-        <monster name="Scallopa" in_story="false">
+        <monster name="Scallopa" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Traveler Key World</map>
+              <description>Surf Outside Travelers Hut</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Upper</skill>
             <skill>MagicWall</skill>
@@ -2994,7 +3194,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Hoodsquid Cave</description>
+              <description>Hoodsquid Cave (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -3004,7 +3204,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="22" int="15" maxlvl="40" atk="21" mp="10" exp="14" hp="11" def="17"/>
         </monster>
-        <monster name="KingSquid" in_story="false">
+        <monster name="KingSquid" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>3 Screens North Of The Door Shrine (Static Boss)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Vivify</skill>
             <skill>RainSlash</skill>
@@ -3054,7 +3260,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Outside Ice Tower</description>
+              <description>Outside Ice Tower (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -3082,7 +3288,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Ice Key World</map>
-              <description>Surf Outside Castle Of Estria</description>
+              <description>Surf Outside Castle Of Estria (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -3092,7 +3298,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="7" int="8" maxlvl="40" atk="23" mp="8" exp="13" hp="23" def="16"/>
         </monster>
-        <monster name="RushFish" in_story="false">
+        <monster name="RushFish" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Ice Key World</map>
+              <description>Surf On Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>Upper</skill>
             <skill>Kamikaze</skill>
@@ -3104,7 +3316,7 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           <spawn-locations>
             <location>
               <map>Pirate Key World</map>
-              <description>Hoodsquid Cave</description>
+              <description>Hoodsquid Cave (Cobi Version)</description>
             </location>
           </spawn-locations>
           <skills>
@@ -3128,7 +3340,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="15" int="8" maxlvl="40" atk="17" mp="9" exp="12" hp="21" def="14"/>
         </monster>
-        <monster name="Clawster" in_story="false">
+        <monster name="Clawster" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Traveler Key World</map>
+              <description>Surf Outside Travelers Hut</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>DrakSlash</skill>
             <skill>MetalCut</skill>
@@ -3188,7 +3406,13 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
           </skills>
           <growth agl="9" int="7" maxlvl="40" atk="24" mp="9" exp="10" hp="22" def="19"/>
         </monster>
-        <monster name="Octoreach" in_story="false">
+        <monster name="Octoreach" in_story="true">
+          <spawn-locations>
+            <location>
+              <map>Pirate Key World</map>
+              <description>Overworld (Tara Version)</description>
+            </location>
+          </spawn-locations>
           <skills>
             <skill>OddDance</skill>
             <skill>PaniDance</skill>
@@ -3443,6 +3667,30 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
             <skill>Focus</skill>
           </skills>
           <growth agl="22" int="31" maxlvl="65" atk="26" mp="25" exp="30" hp="24" def="23"/>
+        </monster>
+        <monster name="Lamia" in_story="false">
+          <skills>
+            <skill>HealUs</skill>
+            <skill>MPass</skill>
+            <skill>Vivify</skill>
+          </skills>
+          <growth agl="18" int="24" maxlvl="99" atk="19" mp="24" exp="28" hp="20" def="21"/>
+        </monster>
+        <monster name="Dimensaur" in_story="false">
+          <skills>
+            <skill>MegaMagic</skill>
+            <skill>Hellblast</skill>
+            <skill>WhiteFire</skill>
+          </skills>
+          <growth agl="31" int="31" maxlvl="9" atk="31" mp="31" exp="29" hp="31" def="31"/>
+        </monster>
+        <monster name="Kagebou" in_story="false">
+          <skills>
+            <skill>BeDragon</skill>
+            <skill>Chance</skill>
+            <skill>TatsuCall</skill>
+          </skills>
+          <growth agl="24" int="9" maxlvl="99" atk="24" mp="15" exp="0" hp="23" def="16"/>
         </monster>
       </monsters>
     </family>
@@ -8280,6 +8528,18 @@ https://gamefaqs.gamespot.com/gbc/525414-dragon-warrior-monsters-2-cobis-journey
       <mate>
         <breed-requirement monster="Sidoh"/>
       </mate>
+    </breed>
+	<breed target="Lamia">
+      <base/>
+      <mate/>
+    </breed>
+	<breed target="Dimensaur">
+      <base/>
+      <mate/>
+    </breed>
+	<breed target="Kagebou">
+      <base/>
+      <mate/>
     </breed>
   </breeds>
   <skills-data>
