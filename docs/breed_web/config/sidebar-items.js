@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["defaultListenAddr",""],["defaultListenPort",""],["defaultServePath",""]],"struct":[["Configuration",""]]};
+window.SIDEBAR_ITEMS = {"fn":["defaultListenAddr","defaultListenPort","defaultServePath"],"struct":["Configuration"]};

@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":[["Family","A family of monsters"],["Growth","Monster growth data"],["Info","Data about a set of monsters and families."],["MapLocation","A location in a map"],["Monster","The info of a monster"]]};
+window.SIDEBAR_ITEMS = {"struct":["Family","Growth","Info","MapLocation","Monster"]};

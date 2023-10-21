@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":[["Parent","A parent in a breed formula."]],"struct":[["Formula","A breed formula"],["ParentRequirement","A parent in a breed formula, with some extra requirements."]]};
+window.SIDEBAR_ITEMS = {"enum":["Parent"],"struct":["Formula","ParentRequirement"]};

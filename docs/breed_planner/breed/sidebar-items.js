@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":[["BreedOrSpec",""],["Role",""],["Sex",""]],"struct":[["Breed",""],["BreedPlan",""],["Monster","A monster of some kind, like “a female RainHawk”. In a breed plan, a monster is uniquely identified (only) by the name, the sex, and the index."],["MonsterVis","Monster visualization spec. This defines how the monster is displayed in the generated breed plan."]]};
+window.SIDEBAR_ITEMS = {"enum":["BreedOrSpec","Role","Sex"],"struct":["Breed","BreedPlan","Monster","MonsterVis"]};

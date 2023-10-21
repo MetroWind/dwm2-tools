@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["main",""]],"mod":[["app",""],["config",""],["skill_detail",""]]};
+window.SIDEBAR_ITEMS = {"fn":["main"],"mod":["app","config","skill_detail"]};
