@@ -331,34 +331,27 @@ struct Breed
 impl FromStr for Breed
 {
     type Err = Error;
+
     fn from_str(s: &str) -> Result<Self, Self::Err>
     {
-        let pattern = Regex::new(
-            r"(.+)[ \t]+\+[ \t]+(.+)[ \t]+=[ \t]+(.+)"
-        ).unwrap();
-        if let Some(groups) = pattern.captures(s)
-        {
-            // Make sure it’s a complete match.
-            let whole = groups.get(0).unwrap();
-            if whole.start() != 0 || whole.end() != s.len()
-            {
-                return Err(error!(FormatError,
-                                  "Invalid monster specification: {}",
-                                  s));
-            }
+        let s = s.trim();
 
-            Ok(Self {
-                base: groups.get(1).unwrap().as_str().parse()?,
-                mate: groups.get(2).unwrap().as_str().parse()?,
-                outcome: groups.get(3).unwrap().as_str().parse()?,
-            })
-        }
-        else
-        {
-            Err(error!(FormatError, "Invalid breed: {}", s))
-        }
+        let (lhs, rhs) = s.split_once('=')
+            .ok_or_else(|| error!(FormatError, "Invalid breed: {}", s))?;
+
+        let outcome_str = rhs.trim();
+
+        let (base_str, mate_str) = lhs.split_once('+')
+            .ok_or_else(|| error!(FormatError, "Invalid breed: {}", s))?;
+
+        Ok(Self {
+            base: base_str.trim().parse()?,
+            mate: mate_str.trim().parse()?,
+            outcome: outcome_str.parse()?,
+        })
     }
 }
+
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 enum BreedOrSpec
@@ -586,12 +579,28 @@ mod tests
     fn parseBreed() -> Result<(), Error>
     {
         assert_eq!("Base + Mate = Result".parse::<Breed>()?,
-                   Breed
-                   {
-                       base: Monster::new("Base", Sex::Any),
-                       mate: Monster::new("Mate", Sex::Any),
-                       outcome: Monster::new("Result", Sex::Any),
-                   });
+                Breed {
+                    base: Monster::new("Base", Sex::Any),
+                    mate: Monster::new("Mate", Sex::Any),
+                    outcome: Monster::new("Result", Sex::Any),
+                });
+
+        // Regression: allow extra spaces around '='
+        assert_eq!("Blizzardy + Phoenix  = RainHawk".parse::<Breed>()?,
+                Breed {
+                    base: Monster::new("Blizzardy", Sex::Any),
+                    mate: Monster::new("Phoenix", Sex::Any),
+                    outcome: Monster::new("RainHawk", Sex::Any),
+                });
+
+        // Bonus: allow no spaces too
+        assert_eq!("Base+Mate=Result".parse::<Breed>()?,
+                Breed {
+                    base: Monster::new("Base", Sex::Any),
+                    mate: Monster::new("Mate", Sex::Any),
+                    outcome: Monster::new("Result", Sex::Any),
+                });
+
         Ok(())
     }
 
