@@ -180,7 +180,7 @@ impl<'a> Parser<'a>
                     {
                         reader.read_to_end(e.to_end().name()).map_err(
                             |_| xmlerr!("Failed to find end tag of {}.", tag))?;
-                        f(&path, &x[pos_before..reader.buffer_position()])?;
+                        f(&path, &x[pos_before as usize .. reader.buffer_position() as usize])?;
                         path.pop();
                     }
                 },
