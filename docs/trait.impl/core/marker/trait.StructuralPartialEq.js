@@ -1,0 +1,9 @@
+(function() {
+    var implementors = Object.fromEntries([["breed_planner",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.92.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"breed_planner/breed/enum.BreedOrSpec.html\" title=\"enum breed_planner::breed::BreedOrSpec\">BreedOrSpec</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.92.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"breed_planner/breed/enum.Role.html\" title=\"enum breed_planner::breed::Role\">Role</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.92.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"breed_planner/breed/enum.Sex.html\" title=\"enum breed_planner::breed::Sex\">Sex</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.92.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"struct\" href=\"breed_planner/breed/struct.Breed.html\" title=\"struct breed_planner::breed::Breed\">Breed</a>"]]],["data",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.92.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"data/breed/enum.Parent.html\" title=\"enum data::breed::Parent\">Parent</a>"]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":57,"fragment_lengths":[1262,303]}
